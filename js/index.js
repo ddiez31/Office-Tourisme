@@ -26,7 +26,7 @@
             var circle = L.circle([43.108053, 0.725208]).addTo(map);
             $(circle).on("click", function(){
             console.log("OK!") 
-            circle.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+            circle.bindPopup("<b>Hello world!</b>""<br>"(Placeholder.disable["(/img/eragon-wallpaper_276929_15948.jpg)"])"<br>""I am a popup.").openPopup();
         });
         }
 
