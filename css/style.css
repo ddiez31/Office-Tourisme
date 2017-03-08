@@ -1,11 +1,19 @@
   /*carte interactive
-    Carole, Julien*/
+  Carole, Julien*/
   
   #cdf_map {
-      height: 400px;
-      width: 700px;
+    height: 690px;
+    width: 680px;
+
+  }
+  #photo{
+    background-image: url(../image/01-collegialeSL.jpg)  no repeat;
+    height: 690px;
+    width: 680px;
+    border:black solid 1px;
+
   }
   /*phototheque
-    Odile, Aymeric*/
+  Odile, Aymeric*/
   /*admin
     David*/
