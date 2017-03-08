@@ -31,4 +31,25 @@
 
     };
     app.initmap();
+    // unitegallery
+    $("#gallery").unitegallery({
+                    //theme options:
+
+        theme_gallery_padding: 200,           //the horizontal padding of the gallery from the sides
+
+                    //gallery options:
+                    
+        gallery_theme: "tiles",             //choose gallery theme (if more then one themes includes)
+        gallery_width:"60%",                //gallery width
+        gallery_background_color: "grey",       //set custom background color. If not set it will be taken from css.
+
+                    //tiles options:
+
+        tiles_type: "justified",            //must option for the tiles - justified type
+        tiles_justified_row_height: 60,    //base row height of the justified type
+        tiles_justified_space_between: 3,   //space between the tiles justified type
+        tiles_set_initial_height: true,     //columns type related only
+        tiles_enable_transition: true,      //enable transition when screen width change
+
+    });
 })();
