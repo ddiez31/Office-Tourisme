@@ -90,9 +90,9 @@
                 fillOpacity: 1
             }).addTo(map);
 
-             $(ocre).on("click", function() {
+             $(ocre).on("click", function() { //Julien
                 console.log("OK!")
-                ocre.bindPopup("<h2>Hello world!</h2>"+"<br>"+'<img src="../images/1.JPG" width="200" height="150">' +
+                ocre.bindPopup("<h2>Hello world!</h2>"+"<br>"+'<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
                 "<br><p>I am a popup.</p>").openPopup();
             });
 
