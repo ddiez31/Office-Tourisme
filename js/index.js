@@ -72,20 +72,35 @@
 
         read: function(data) {
             console.log("read ok");
-            console.log(data.themes);
-            theme = $(".theme").val();
-            marqueur = $(".marqueur").val();
-            titre = $(".titre").val();
-            latitude = $(".latidude").val();
-            longitude = $(".longitude").val();
-            description = $(".description").val();
+            for (i = 0; i < data.ocre.length; i++) {
+                console.log(data.ocre[i]);
+            };
+            for (i = 0; i < data.vert.length; i++) {
+                console.log(data.vert[i]);
+            };
+            for (i = 0; i < data.annexes.length; i++) {
+                console.log(data.annexes[i]);
+            };
+            for (i = 0; i < data.etoiles.length; i++) {
+                console.log(data.etoiles[i]);
+            };
+
+
+
             url = $(".upload").val();
             $('.send').on('click', function() {
-                console.log(theme);
+                theme = $(".theme").val();
+                marqueur = $(".marqueur").val();
+                titre = $(".titre").val();
+                latitude = $(".latidude").val();
+                longitude = $(".longitude").val();
+                description = $(".description").val();
+            });
 
-                console.log(marqueur);
-            })
+        },
 
+        write: function() {
+            console.log("write ok");
         }
 
 
