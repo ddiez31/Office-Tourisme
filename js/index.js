@@ -92,8 +92,8 @@
 
              $(ocre).on("click", function() {
                 console.log("OK!")
-                ocre.bindPopup("<h2>Hello world!</2>"+"<br>"+'<img src="../images/1.JPG" width="200" height="150"' +
-                "<br><p>I am a popup.<p>").openPopup();
+                ocre.bindPopup("<h2>Hello world!</h2>"+"<br>"+'<img src="../images/1.JPG" width="200" height="150">' +
+                "<br><p>I am a popup.</p>").openPopup();
             });
 
 
