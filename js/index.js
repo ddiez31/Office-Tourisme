@@ -50,7 +50,7 @@
            var m9Ocre = new Ocre(43.106210, 0.720790);
            L.circle([m9Ocre.lat, m9Ocre.long], m9Ocre.size, { color: m9Ocre.color, fillColor: m9Ocre.fillColor, fillOpacity: m9Ocre.fillOpacity }).addTo(map);
            
-           var m10Ocre = new Ocre(43.109000, 0.724839);
+           var m10Ocre = new Ocre(43.106436, 0.719825);
            L.circle([m10Ocre.lat, m10Ocre.long], m10Ocre.size, { color: m10Ocre.color, fillColor: m10Ocre.fillColor, fillOpacity: m10Ocre.fillOpacity }).addTo(map);
            
            var m11Ocre = new Ocre(43.107202, 0.722536);
@@ -59,7 +59,7 @@
            var m12Ocre = new Ocre(43.108430, 0.723737);
            L.circle([m12Ocre.lat, m12Ocre.long], m12Ocre.size, { color: m12Ocre.color, fillColor: m12Ocre.fillColor, fillOpacity: m12Ocre.fillOpacity }).addTo(map);
            
-           var m13Ocre = new Ocre(43.107483, 0.724824);
+           var m13Ocre = new Ocre(43.109000, 0.724839);
            L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
         
 
