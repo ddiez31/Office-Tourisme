@@ -90,6 +90,11 @@
                 fillOpacity: 1
             }).addTo(map);
 
+             $(ocre).on("click", function() {
+                console.log("OK!")
+                ocre.bindPopup("<b>Hello world!</b>"+"<br>"+'<img src="http://placehold.it/1000x600&text=Full+Size+Image" + style="width:100%;height:100%;margin-bottom:-3px"/>' +
+                "<br>I am a popup.").openPopup();
+            });
 
 
             //circuit vert clair
@@ -157,12 +162,12 @@
                         fillOpacity: 1
                     }).addTo(map);*/
 
-            var circle = L.circle([43.108053, 0.725208]).addTo(map);
-            $(circle).on("click", function() {
-                console.log("OK!")
-                circle.bindPopup("<b>Hello world!</b><br><br>I am a popup.").openPopup();
-                //(Placeholder.disable["()"])
-            });
+            // var circle = L.circle([43.108053, 0.725208]).addTo(map);
+            // $(ocre).on("click", function() {
+            //     console.log("OK!")
+            //     ocre.bindPopup("<b>Hello world!</b><br><br>I am a popup.").openPopup();
+            //     //(Placeholder.disable["()"])
+            // });
         },
 
 
