@@ -13,13 +13,13 @@
             map.addLayer(osm);
 
           //circuit ocre
-        var ocre = L.circle ([43.108053, 0.725208], 5, {
+          var ocre = L.circle ([43.108053, 0.725208], 5, {
             color:'#DD985C',
             fillColor:'#DD985C',
             fillOpacity: 1
         }).addTo(map);
 
-         L.circle ([43.107483, 0.724824], 5, {
+          L.circle ([43.107483, 0.724824], 5, {
             color:'#DD985C',
             fillColor:'#DD985C',
             fillOpacity: 1
@@ -92,7 +92,7 @@
         }).addTo(map);
 
 
-     
+
             //circuit vert clair
 
 
@@ -158,13 +158,13 @@
             fillOpacity: 1
         }).addTo(map);*/
 
-            var circle = L.circle([43.108053, 0.725208]).addTo(map);
-            $(circle).on("click", function(){
+        var circle = L.circle([43.108053, 0.725208]).addTo(map);
+        $(circle).on("click", function(){
             console.log("OK!") 
             circle.bindPopup("<b>Hello world!</b><br><br>I am a popup.").openPopup();
             //(Placeholder.disable["()"])
         });
-        }
+    }
 
 
     
@@ -172,7 +172,6 @@
 
 
         // phototheque Odile, Aymeric
-
 
 
 
@@ -205,4 +204,45 @@
         tiles_enable_transition: true,      //enable transition when screen width change
 
     });
-})();
+
+    var resizeImage = require('resize-image');
+
+    var img = new Image();
+    img.onload= function () {
+      var min = resizeImage.resize(img, 150, 100, resizeImage.PNG);
+      console.log(data);
+  };
+  img.src = url; // local image url 
+
+
+
+
+
+
+
+  
+
+  $('.story-small img').each(function() {
+        var maxWidth = 100; // Max width for the image
+        var maxHeight = 100;    // Max height for the image
+        var ratio = 0;  // Used for aspect ratio
+        var width = $(this).width();    // Current image width
+        var height = $(this).height();  // Current image height
+
+        // Check if the current width is larger than the max
+        if(width > maxWidth){
+            ratio = maxWidth / width;   // get ratio for scaling image
+            $(this).css("width", maxWidth); // Set new width
+            $(this).css("height", height * ratio);  // Scale height based on ratio
+            height = height * ratio;    // Reset height to match scaled image
+            width = width * ratio;    // Reset width to match scaled image
+        }
+
+        // Check if current height is larger than max
+        if(height > maxHeight){
+            ratio = maxHeight / height; // get ratio for scaling image
+            $(this).css("height", maxHeight);   // Set new height
+            $(this).css("width", width * ratio);    // Scale width based on ratio
+            width = width * ratio;
+        }
+    });
