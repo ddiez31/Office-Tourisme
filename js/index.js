@@ -11,84 +11,64 @@
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
+            
+
             //circuit ocre
-            var ocre = L.circle([43.108053, 0.725208], 5, {
-                color: '#DD985C',
-                fillColor: '#DD985C',
-                fillOpacity: 1
-            }).addTo(map);
+            var Ocre = function(lat, long) {
+               this.lat = lat;
+               this.long = long;
+               this.size = 5;
+               this.color = '#FF5200';
+               this.fillColor = '#FF5200';
+               this.fillOpacity = 1;
+           };
+           var m1Ocre = new Ocre(43.108053, 0.725208);
+           L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity }).addTo(map);
+           
+           var m2Ocre = new Ocre(43.107483, 0.724824);
+           L.circle([m2Ocre.lat, m2Ocre.long], m2Ocre.size, { color: m2Ocre.color, fillColor: m2Ocre.fillColor, fillOpacity: m2Ocre.fillOpacity }).addTo(map);
+           
+           var m3Ocre = new Ocre(43.107288, 0.724600);
+           L.circle([m3Ocre.lat, m3Ocre.long], m3Ocre.size, { color: m3Ocre.color, fillColor: m3Ocre.fillColor, fillOpacity: m3Ocre.fillOpacity }).addTo(map);
+           
+           var m4Ocre = new Ocre(43.107448, 0.725673);
+           L.circle([m4Ocre.lat, m4Ocre.long], m4Ocre.size, { color: m4Ocre.color, fillColor: m4Ocre.fillColor, fillOpacity: m4Ocre.fillOpacity }).addTo(map);
+           
+           var m5Ocre = new Ocre(43.107065, 0.725235);
+           L.circle([m5Ocre.lat, m5Ocre.long], m5Ocre.size, { color: m5Ocre.color, fillColor: m5Ocre.fillColor, fillOpacity: m5Ocre.fillOpacity }).addTo(map);
+           
+           var m6Ocre = new Ocre(43.107166, 0.725182);
+           L.circle([m6Ocre.lat, m6Ocre.long], m6Ocre.size, { color: m6Ocre.color, fillColor: m6Ocre.fillColor, fillOpacity: m6Ocre.fillOpacity }).addTo(map);
+           
+           var m7Ocre = new Ocre(43.107483, 0.725024);
+           L.circle([m7Ocre.lat, m7Ocre.long], m7Ocre.size, { color: m7Ocre.color, fillColor: m7Ocre.fillColor, fillOpacity: m7Ocre.fillOpacity }).addTo(map);
+           
+           var m8Ocre = new Ocre(43.106316, 0.720450);
+           L.circle([m8Ocre.lat, m8Ocre.long], m8Ocre.size, { color: m8Ocre.color, fillColor: m8Ocre.fillColor, fillOpacity: m8Ocre.fillOpacity }).addTo(map);
+           
+           var m9Ocre = new Ocre(43.106210, 0.720790);
+           L.circle([m9Ocre.lat, m9Ocre.long], m9Ocre.size, { color: m9Ocre.color, fillColor: m9Ocre.fillColor, fillOpacity: m9Ocre.fillOpacity }).addTo(map);
+           
+           var m10Ocre = new Ocre(43.109000, 0.724839);
+           L.circle([m10Ocre.lat, m10Ocre.long], m10Ocre.size, { color: m10Ocre.color, fillColor: m10Ocre.fillColor, fillOpacity: m10Ocre.fillOpacity }).addTo(map);
+           
+           var m11Ocre = new Ocre(43.107202, 0.722536);
+           L.circle([m11Ocre.lat, m11Ocre.long], m11Ocre.size, { color: m11Ocre.color, fillColor: m11Ocre.fillColor, fillOpacity: m11Ocre.fillOpacity }).addTo(map);
+           
+           var m12Ocre = new Ocre(43.108430, 0.723737);
+           L.circle([m12Ocre.lat, m12Ocre.long], m12Ocre.size, { color: m12Ocre.color, fillColor: m12Ocre.fillColor, fillOpacity: m12Ocre.fillOpacity }).addTo(map);
+           
+           var m13Ocre = new Ocre(43.107483, 0.724824);
+           L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
+        
 
-            L.circle([43.107483, 0.724824], 5, {
-                color: '#DD985C',
-                fillColor: '#DD985C',
-                fillOpacity: 1
-            }).addTo(map);
 
-            /*3     L.circle ([43.107483, 0.724824], 5, {    
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);
 
-            4    L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);
 
-            5    L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);
 
-            6    L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);
 
-            7    L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);
 
-            8    L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);
-
-            9   L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);*/
-
-            L.circle([43.106436, 0.719825], 5, {
-                color: '#DD985C',
-                fillColor: '#DD985C',
-                fillOpacity: 1
-            }).addTo(map);
-
-            /*11  L.circle ([43.107483, 0.724824], 5, {
-                    color:'#DD985C',
-                    fillColor:'#DD985C',
-                    fillOpacity: 1
-                }).addTo(map);*/
-
-            L.circle([43.108430, 0.723737], 5, {
-                color: '#DD985C',
-                fillColor: '#DD985C',
-                fillOpacity: 1
-            }).addTo(map);
-
-            L.circle([43.107483, 0.724824], 5, {
-                color: '#DD985C',
-                fillColor: '#DD985C',
-                fillOpacity: 1
-            }).addTo(map);
+                
 
 
 
@@ -121,13 +101,13 @@
 
 
             //batiments officiels
-            /*  1    var annexes = L.circle ([43.108053, 0.725208], 5, {
+      var annexes = L.circle ([43.106970, 0.723584], 5, {
                         color:'#006400',
                         fillColor:'#006400',
                         fillOpacity: 1
                     }).addTo(map);
 
-                2    L.circle ([43.108053, 0.725208], 5, {
+                /*2    L.circle ([43.108053, 0.725208], 5, {
                         color:'#006400',
                         fillColor:'#006400',
                         fillOpacity: 1
