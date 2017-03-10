@@ -19,20 +19,17 @@
                     map.remove();
                     app.initmap();
                 }
+            });
 
             //button pour ouvrir la gallerie sur la map
-            $('#btnGalerie').on('click', function() {
+            L.easyButton('gallerie', function(btn, map) {
                 console.log('ok');
-            });
-            L.easyButton('gallerie', function(btn, map){
-                console.log('ok');
-                $( "button" ).click(function() {
-                    $( "#cdf_map" ).remove();
-                    $( "#gallery" ).removeClass('hide');
+                $("button").click(function() {
+                    $("#cdf_map").remove();
+                    $("#gallery").removeClass('hide');
                     app.initgallery();
-
                 });
-            }).addTo( map );
+            }).addTo(map);
 
             //circuit ocre
             var Ocre = function(lat, long) {
@@ -81,15 +78,6 @@
 
             var m13Ocre = new Ocre(43.109000, 0.724839);
             m13Ocre = L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
-
-
-
-
-
-
-
-
-
 
 
 
@@ -170,10 +158,6 @@
 
             var m6Annexes = new Annexes(43.108053, 0.725208);
             L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);*/
-
-
-
-
 
 
 
@@ -290,48 +274,46 @@
         etoiles: function(dataEtoiles) {
             console.log(dataEtoiles);
         },
-                // unitegallery
-                initgallery: function() {
-                    $("#gallery").unitegallery({
+        // unitegallery
+        initgallery: function() {
+            $("#gallery").unitegallery({
 
-        //theme options:
+                //theme options:
 
-        theme_gallery_padding: 200, //the horizontal padding of the gallery from the sides
+                theme_gallery_padding: 200, //the horizontal padding of the gallery from the sides
 
-        //gallery options:
+                //gallery options:
 
-        gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
-        gallery_width: "60%", //gallery width
-        gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
+                gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
+                gallery_width: "60%", //gallery width
+                gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
 
-        //tiles options:
+                //tiles options:
 
-        tiles_type: "justified", //must option for the tiles - justified type
-        tiles_justified_row_height: 60, //base row height of the justified type
-        tiles_justified_space_between: 3, //space between the tiles justified type
-        tiles_set_initial_height: true, //columns type related only
-        tiles_enable_transition: true, //enable transition when screen width change
+                tiles_type: "justified", //must option for the tiles - justified type
+                tiles_justified_row_height: 60, //base row height of the justified type
+                tiles_justified_space_between: 3, //space between the tiles justified type
+                tiles_set_initial_height: true, //columns type related only
+                tiles_enable_transition: true, //enable transition when screen width change
 
-        tile_overlay_opacity: 0.4, //tile overlay opacity
-        tile_overlay_color: "#000000", //tile overlay color
+                tile_overlay_opacity: 0.4, //tile overlay opacity
+                tile_overlay_color: "#000000", //tile overlay color
 
-        tile_enable_image_effect: false, //enable tile image effect
+                tile_enable_image_effect: false, //enable tile image effect
 
-        tile_enable_textpanel: true,
-        tile_textpanel_title_text_align: "center",
-        tile_textpanel_always_on: true,
-        
-        lightbox_textpanel_enable_description: true,       //enable the description text
-        lightbox_type: "compact",                          //compact / wide - lightbox type
-        lightbox_overlay_opacity:0.8,                     //the opacity of the overlay. for compact type - 0.6
-        lightbox_slider_image_border: false,             //enable border around the image (for compact type only)
-    });
-                };
-                
+                tile_enable_textpanel: true,
+                tile_textpanel_title_text_align: "center",
+                tile_textpanel_always_on: true,
 
-
-                app.initmap();
-                app.init();
+                lightbox_textpanel_enable_description: true, //enable the description text
+                lightbox_type: "compact", //compact / wide - lightbox type
+                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
+                lightbox_slider_image_border: false, //enable border around the image (for compact type only)
+            });
+        }
+    }
+    app.initmap();
+    app.init();
 
 
-            })();
+})();
