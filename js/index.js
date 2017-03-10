@@ -4,7 +4,7 @@
 
         // carte interactive Carole, Julien
         initmap: function() {
-            var map = new L.Map('cdf_map', { fullscreenControl: true });
+            var map = new L.Map('cdf_map');
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
@@ -12,10 +12,6 @@
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
 
-
-            $('#btnGalerie').on('click', function() {
-                console.log('ok');
-            });
 
             //circuit ocre
             var Ocre = function(lat, long) {
@@ -27,7 +23,13 @@
                 this.fillOpacity = 1;
             };
             var m1Ocre = new Ocre(43.108053, 0.725208);
-            L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity, }).addTo(map);
+            L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity }).addTo(map);
+
+            $(Ocre).on("click", function() { //Julien
+                console.log("OK!")
+                m1Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
+                    "<br><p>I am a popup.</p>").openPopup();
+            });
 
             var m2Ocre = new Ocre(43.107483, 0.724824);
             L.circle([m2Ocre.lat, m2Ocre.long], m2Ocre.size, { color: m2Ocre.color, fillColor: m2Ocre.fillColor, fillOpacity: m2Ocre.fillOpacity }).addTo(map);
@@ -146,12 +148,6 @@
 
 
 
-            $(m1Ocre).on("click", function() { //Julien
-
-                console.log("OK!")
-                m1Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-                    "<br><p>I am a popup.</p>").openPopup();
-            });
 
             // var circle = L.circle([43.108053, 0.725208]).addTo(map);
             // $(ocre).on("click", function() {
