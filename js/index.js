@@ -4,7 +4,7 @@
 
         // carte interactive Carole, Julien
         initmap: function() {
-            var map = new L.Map('cdf_map');
+            var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
@@ -45,7 +45,7 @@
 
             var m1Ocre = new Ocre(43.108053, 0.725208);
             m1Ocre = L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity, }).addTo(map);
-       
+
 
             var m2Ocre = new Ocre(43.107483, 0.724824);
             m2Ocre = L.circle([m2Ocre.lat, m2Ocre.long], m2Ocre.size, { color: m2Ocre.color, fillColor: m2Ocre.fillColor, fillOpacity: m2Ocre.fillOpacity }).addTo(map);
@@ -81,38 +81,38 @@
             m12Ocre = L.circle([m12Ocre.lat, m12Ocre.long], m12Ocre.size, { color: m12Ocre.color, fillColor: m12Ocre.fillColor, fillOpacity: m12Ocre.fillOpacity }).addTo(map);
 
             var m13Ocre = new Ocre(43.109000, 0.724839);
-            m13Ocre =L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
+            m13Ocre = L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
 
-            
+
             var latlngsOcre = [
-             [43.108053, 0.725208],
-             [43.107660, 0.724620],
-             [43.107483, 0.725024],
-             [43.107288, 0.724600],
-             [43.107448, 0.725673],
-             [43.107065, 0.725235],
-             [43.107166, 0.725182],
-             [43.106210, 0.720790],
-             [43.106316, 0.720450],
-             [43.106436, 0.719825],
-             [43.106830, 0.720598],
-             [43.107202, 0.722536],
-             [43.107446, 0.723788],
-             [43.108430, 0.723737],
-             [43.108556, 0.724396],
-             [43.108991, 0.724479],
-             [43.109000, 0.724839],
-             [43.108926, 0.725601],
-             [43.108430, 0.725550],
-             [43.108053, 0.725208]
+                [43.108053, 0.725208],
+                [43.107660, 0.724620],
+                [43.107483, 0.725024],
+                [43.107288, 0.724600],
+                [43.107448, 0.725673],
+                [43.107065, 0.725235],
+                [43.107166, 0.725182],
+                [43.106210, 0.720790],
+                [43.106316, 0.720450],
+                [43.106436, 0.719825],
+                [43.106830, 0.720598],
+                [43.107202, 0.722536],
+                [43.107446, 0.723788],
+                [43.108430, 0.723737],
+                [43.108556, 0.724396],
+                [43.108991, 0.724479],
+                [43.109000, 0.724839],
+                [43.108926, 0.725601],
+                [43.108430, 0.725550],
+                [43.108053, 0.725208]
             ];
-            
-            var polyline = L.polyline(latlngsOcre, {color:'#FF5200'}).addTo(map);
+
+            var polyline = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
             map.fitBounds(polyline.getBounds());
 
 
 
-           
+
 
             //circuit vert clair
             var Vert = function(lat, long) {
@@ -133,23 +133,23 @@
             m3Vert = L.circle([m3Vert.lat, m3Vert.long], m3Vert.size, { color: m3Vert.color, fillColor: m3Vert.fillColor, fillOpacity: m3Vert.fillOpacity }).addTo(map);
 
             var m4Vert = new Vert(43.108684, 0.708875);
-            m4Vert = L.circle([m4Vert.lat, m4Vert.long], m4Vert.size, { color: m4Vert.color, fillColor: m4Vert.fillColor, fillOpacity: m4Vert.fillOpacity }).addTo(map); 
+            m4Vert = L.circle([m4Vert.lat, m4Vert.long], m4Vert.size, { color: m4Vert.color, fillColor: m4Vert.fillColor, fillOpacity: m4Vert.fillOpacity }).addTo(map);
 
-         
+
             var latlngsVert = [
-             [43.105065, 0.719648],
-             [43.099973, 0.710764],
-             [43.105457, 0.709841],
-             [43.108684, 0.708875],
-             [43.105065, 0.719648]
+                [43.105065, 0.719648],
+                [43.099973, 0.710764],
+                [43.105457, 0.709841],
+                [43.108684, 0.708875],
+                [43.105065, 0.719648]
             ];
 
-            var polyline = L.polyline(latlngsVert, {color: '#00AB39'}).addTo(map);
+            var polyline = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
             map.fitBounds(polyline.getBounds());
-  
 
 
-            
+
+
             //batiments officiels
             var Annexes = function(lat, long) {
                 this.lat = lat;
@@ -368,7 +368,7 @@
 
                 //gallery options:
 
-                
+
                 gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
                 gallery_width: "60%", //gallery width
                 gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
