@@ -27,176 +27,140 @@
                 this.fillOpacity = 1;
             };
             var m1Ocre = new Ocre(43.108053, 0.725208);
-            L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity, }).addTo(map);
-
-            var m2Ocre = new Ocre(43.107483, 0.724824);
-            L.circle([m2Ocre.lat, m2Ocre.long], m2Ocre.size, { color: m2Ocre.color, fillColor: m2Ocre.fillColor, fillOpacity: m2Ocre.fillOpacity }).addTo(map);
+            m1Ocre = L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity, }).addTo(map);
+ 
+            var m2Ocre = new Ocre(43.107660, 0.724620);
+            m2Ocre = L.circle([m2Ocre.lat, m2Ocre.long], m2Ocre.size, { color: m2Ocre.color, fillColor: m2Ocre.fillColor, fillOpacity: m2Ocre.fillOpacity }).addTo(map);
 
             var m3Ocre = new Ocre(43.107288, 0.724600);
-            L.circle([m3Ocre.lat, m3Ocre.long], m3Ocre.size, { color: m3Ocre.color, fillColor: m3Ocre.fillColor, fillOpacity: m3Ocre.fillOpacity }).addTo(map);
+            m3Ocre = L.circle([m3Ocre.lat, m3Ocre.long], m3Ocre.size, { color: m3Ocre.color, fillColor: m3Ocre.fillColor, fillOpacity: m3Ocre.fillOpacity }).addTo(map);
 
             var m4Ocre = new Ocre(43.107448, 0.725673);
-            L.circle([m4Ocre.lat, m4Ocre.long], m4Ocre.size, { color: m4Ocre.color, fillColor: m4Ocre.fillColor, fillOpacity: m4Ocre.fillOpacity }).addTo(map);
+            m4Ocre = L.circle([m4Ocre.lat, m4Ocre.long], m4Ocre.size, { color: m4Ocre.color, fillColor: m4Ocre.fillColor, fillOpacity: m4Ocre.fillOpacity }).addTo(map);
 
             var m5Ocre = new Ocre(43.107065, 0.725235);
-            L.circle([m5Ocre.lat, m5Ocre.long], m5Ocre.size, { color: m5Ocre.color, fillColor: m5Ocre.fillColor, fillOpacity: m5Ocre.fillOpacity }).addTo(map);
+            m5Ocre = L.circle([m5Ocre.lat, m5Ocre.long], m5Ocre.size, { color: m5Ocre.color, fillColor: m5Ocre.fillColor, fillOpacity: m5Ocre.fillOpacity }).addTo(map);
 
             var m6Ocre = new Ocre(43.107166, 0.725182);
-            L.circle([m6Ocre.lat, m6Ocre.long], m6Ocre.size, { color: m6Ocre.color, fillColor: m6Ocre.fillColor, fillOpacity: m6Ocre.fillOpacity }).addTo(map);
+            m6Ocre = L.circle([m6Ocre.lat, m6Ocre.long], m6Ocre.size, { color: m6Ocre.color, fillColor: m6Ocre.fillColor, fillOpacity: m6Ocre.fillOpacity }).addTo(map);
 
             var m7Ocre = new Ocre(43.107483, 0.725024);
-            L.circle([m7Ocre.lat, m7Ocre.long], m7Ocre.size, { color: m7Ocre.color, fillColor: m7Ocre.fillColor, fillOpacity: m7Ocre.fillOpacity }).addTo(map);
+            m7Ocre = L.circle([m7Ocre.lat, m7Ocre.long], m7Ocre.size, { color: m7Ocre.color, fillColor: m7Ocre.fillColor, fillOpacity: m7Ocre.fillOpacity }).addTo(map);
 
             var m8Ocre = new Ocre(43.106316, 0.720450);
-            L.circle([m8Ocre.lat, m8Ocre.long], m8Ocre.size, { color: m8Ocre.color, fillColor: m8Ocre.fillColor, fillOpacity: m8Ocre.fillOpacity }).addTo(map);
+            m8Ocre = L.circle([m8Ocre.lat, m8Ocre.long], m8Ocre.size, { color: m8Ocre.color, fillColor: m8Ocre.fillColor, fillOpacity: m8Ocre.fillOpacity }).addTo(map);
 
             var m9Ocre = new Ocre(43.106210, 0.720790);
-            L.circle([m9Ocre.lat, m9Ocre.long], m9Ocre.size, { color: m9Ocre.color, fillColor: m9Ocre.fillColor, fillOpacity: m9Ocre.fillOpacity }).addTo(map);
+            m9Ocre = L.circle([m9Ocre.lat, m9Ocre.long], m9Ocre.size, { color: m9Ocre.color, fillColor: m9Ocre.fillColor, fillOpacity: m9Ocre.fillOpacity }).addTo(map);
 
             var m10Ocre = new Ocre(43.106436, 0.719825);
-            L.circle([m10Ocre.lat, m10Ocre.long], m10Ocre.size, { color: m10Ocre.color, fillColor: m10Ocre.fillColor, fillOpacity: m10Ocre.fillOpacity }).addTo(map);
+            m10Ocre = L.circle([m10Ocre.lat, m10Ocre.long], m10Ocre.size, { color: m10Ocre.color, fillColor: m10Ocre.fillColor, fillOpacity: m10Ocre.fillOpacity }).addTo(map);
 
             var m11Ocre = new Ocre(43.107202, 0.722536);
-            L.circle([m11Ocre.lat, m11Ocre.long], m11Ocre.size, { color: m11Ocre.color, fillColor: m11Ocre.fillColor, fillOpacity: m11Ocre.fillOpacity }).addTo(map);
+            m11Ocre = L.circle([m11Ocre.lat, m11Ocre.long], m11Ocre.size, { color: m11Ocre.color, fillColor: m11Ocre.fillColor, fillOpacity: m11Ocre.fillOpacity }).addTo(map);
 
             var m12Ocre = new Ocre(43.108430, 0.723737);
-            L.circle([m12Ocre.lat, m12Ocre.long], m12Ocre.size, { color: m12Ocre.color, fillColor: m12Ocre.fillColor, fillOpacity: m12Ocre.fillOpacity }).addTo(map);
+            m12Ocre = L.circle([m12Ocre.lat, m12Ocre.long], m12Ocre.size, { color: m12Ocre.color, fillColor: m12Ocre.fillColor, fillOpacity: m12Ocre.fillOpacity }).addTo(map);
 
             var m13Ocre = new Ocre(43.109000, 0.724839);
-            L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
+            m13Ocre =L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
+
+            
+            var latlngsOcre = [
+             [43.108053, 0.725208],
+             [43.107660, 0.724620],
+             [43.107483, 0.725024],
+             [43.107288, 0.724600],
+             [43.107448, 0.725673],
+             [43.107065, 0.725235],
+             [43.107166, 0.725182],
+             [43.106210, 0.720790],
+             [43.106316, 0.720450],
+             [43.106436, 0.719825],
+             [43.106830, 0.720598],
+             [43.107202, 0.722536],
+             [43.107446, 0.723788],
+             [43.108430, 0.723737],
+             [43.108556, 0.724396],
+             [43.108991, 0.724479],
+             [43.109000, 0.724839],
+             [43.108926, 0.725601],
+             [43.108430, 0.725550],
+             [43.108053, 0.725208]
+            ];
+            
+            var polyline = L.polyline(latlngsOcre, {color:'#FF5200'}).addTo(map);
+            map.fitBounds(polyline.getBounds());
+
+
 
            
-
-
-
-
-
-
-
-
-
-
             //circuit vert clair
-            /*var Vert = function(lat, long) {
+            var Vert = function(lat, long) {
                 this.lat = lat;
                 this.long = long;
                 this.size = 5;
-                this.color = '#32CD32';
-                this.fillColor = '#32CD32';
+                this.color = '#00AB39';
+                this.fillColor = '#00AB39';
                 this.fillOpacity = 1;
             };
-            var m1Vert = new Vert(43.108053, 0.725208);
-            L.circle([m1Vert.lat, m1Vert.long], m1Vert.size, { color: m1Vert.color, fillColor: m1Vert.fillColor, fillOpacity: m1Vert.fillOpacity }).addTo(map);
+            var m1Vert = new Vert(43.105065, 0.719648);
+            m1Vert = L.circle([m1Vert.lat, m1Vert.long], m1Vert.size, { color: m1Vert.color, fillColor: m1Vert.fillColor, fillOpacity: m1Vert.fillOpacity }).addTo(map);
 
-            var m2Vert = new Vert(43.108053, 0.725208);
-            L.circle([m2Vert.lat, m2Vert.long], m2Vert.size, { color: m2Vert.color, fillColor: m2Vert.fillColor, fillOpacity: m2Vert.fillOpacity }).addTo(map);
+            var m2Vert = new Vert(43.099973, 0.710764);
+            m2Vert = L.circle([m2Vert.lat, m2Vert.long], m2Vert.size, { color: m2Vert.color, fillColor: m2Vert.fillColor, fillOpacity: m2Vert.fillOpacity }).addTo(map);
 
-            var m3Vert = new Vert(43.108053, 0.725208);
-            L.circle([m3Vert.lat, m3Vert.long], m3Vert.size, { color: m3Vert.color, fillColor: m3Vert.fillColor, fillOpacity: m3Vert.fillOpacity }).addTo(map);
+            var m3Vert = new Vert(43.105457, 0.709841);
+            m3Vert = L.circle([m3Vert.lat, m3Vert.long], m3Vert.size, { color: m3Vert.color, fillColor: m3Vert.fillColor, fillOpacity: m3Vert.fillOpacity }).addTo(map);
 
-            var m4Vert = new Vert(43.108053, 0.725208);
-            L.circle([m4Vert.lat, m4Vert.long], m4Vert.size, { color: m4Vert.color, fillColor: m4Vert.fillColor, fillOpacity: m4Vert.fillOpacity }).addTo(map);   
+            var m4Vert = new Vert(43.108684, 0.708875);
+            m4Vert = L.circle([m4Vert.lat, m4Vert.long], m4Vert.size, { color: m4Vert.color, fillColor: m4Vert.fillColor, fillOpacity: m4Vert.fillOpacity }).addTo(map); 
 
+         
+            var latlngsVert = [
+             [43.105065, 0.719648],
+             [43.099973, 0.710764],
+             [43.105457, 0.709841],
+             [43.108684, 0.708875],
+             [43.105065, 0.719648]
+            ];
 
-            /*  A    var vert = L.circle ([43.108053, 0.725208], 5, {
-                        color:'#32CD32',
-                        fillColor:'#32CD32',
-                        fillOpacity: 1
-                    }).addTo(map);
-
-                B    L.circle ([43.108053, 0.725208], 5, {
-                        color:'#32CD32',
-                        fillColor:'#32CD32',
-                        fillOpacity: 1
-                    }).addTo(map);
-
-                C    L.circle ([43.108053, 0.725208], 5, {
-                        color:'#32CD32',
-                        fillColor:'#32CD32',
-                        fillOpacity: 1
-                    }).addTo(map);
+            var polyline = L.polyline(latlngsVert, {color: '#00AB39'}).addTo(map);
+            map.fitBounds(polyline.getBounds());
+  
 
 
-                D    L.circle ([43.108053, 0.725208], 5, {
-                        color:'#32CD32',
-                        fillColor:'#32CD32',
-                        fillOpacity: 1
-                    }).addTo(map);*/
-
-
-
+            
             //batiments officiels
-
-            /*var Annexes = function(lat, long) {
+            var Annexes = function(lat, long) {
                 this.lat = lat;
                 this.long = long;
                 this.size = 5;
-                this.color = '#32CD32';
-                this.fillColor = '#32CD32';
+                this.color = '#006400';
+                this.fillColor = '#006400';
                 this.fillOpacity = 1;
             };
-            var m1Annexes = new Annexes(43.108053, 0.725208);
-            L.circle([m1Annexes.lat, m1Annexes.long], m1Annexes.size, { color: m1Annexes.color, fillColor: m1Annexes.fillColor, fillOpacity: m1Annexes.fillOpacity }).addTo(map);
+            var m1Annexes = new Annexes(43.106953, 0.723588);
+            m1Annexes = L.circle([m1Annexes.lat, m1Annexes.long], m1Annexes.size, { color: m1Annexes.color, fillColor: m1Annexes.fillColor, fillOpacity: m1Annexes.fillOpacity }).addTo(map);
 
-            var m2Annexes = new Annexes(43.108053, 0.725208);
-            L.circle([m2Annexes.lat, m2Annexes.long], m2Annexes.size, { color: m2Annexes.color, fillColor: m2Annexes.fillColor, fillOpacity: m2Annexes.fillOpacity }).addTo(map);
+            var m2Annexes = new Annexes(43.108865, 0.722527);
+            m2Annexes = L.circle([m2Annexes.lat, m2Annexes.long], m2Annexes.size, { color: m2Annexes.color, fillColor: m2Annexes.fillColor, fillOpacity: m2Annexes.fillOpacity }).addTo(map);
 
-            var m3Annexes = new 3Annexes(43.108053, 0.725208);
-            L.circle([m3Annexes.lat, m3Annexes.long], m3Annexes.size, { color: m3Annexes.color, fillColor: m3Annexes.fillColor, fillOpacity: m3Annexes.fillOpacity }).addTo(map);
+            var m3Annexes = new Annexes(43.107686, 0.722161);
+            m3Annexes = L.circle([m3Annexes.lat, m3Annexes.long], m3Annexes.size, { color: m3Annexes.color, fillColor: m3Annexes.fillColor, fillOpacity: m3Annexes.fillOpacity }).addTo(map);
 
-            var m4Annexes = new Annexes(43.108053, 0.725208);
-            L.circle([m4Annexes.lat, m4Annexes.long], m4Annexes.size, { color: m4Annexes.color, fillColor: m4Annexes.fillColor, fillOpacity: m4Annexes.fillOpacity }).addTo(map);
+            var m4Annexes = new Annexes(43.108639, 0.718733);
+            m4Annexes = L.circle([m4Annexes.lat, m4Annexes.long], m4Annexes.size, { color: m4Annexes.color, fillColor: m4Annexes.fillColor, fillOpacity: m4Annexes.fillOpacity }).addTo(map);
 
-            var m5Annexes = new Annexes(43.108053, 0.725208);
-            L.circle([m5Annexes.lat, m5Annexes.long], m5Annexes.size, { color: m5Annexes.color, fillColor: m5Annexes.fillColor, fillOpacity: m5Annexes.fillOpacity }).addTo(map);
+            var m5Annexes = new Annexes(43.109538, 0.725465);
+            m5Annexes = L.circle([m5Annexes.lat, m5Annexes.long], m5Annexes.size, { color: m5Annexes.color, fillColor: m5Annexes.fillColor, fillOpacity: m5Annexes.fillOpacity }).addTo(map);
 
-            var m6Annexes = new Annexes(43.108053, 0.725208);
-            L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);*/
+            var m6Annexes = new Annexes(43.109163, 0.726533);
+            m6Annexes = L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);
 
          
 
-
-
-
-
-         /* 1 var annexes = L.circle([43.106970, 0.723584], 5, {
-                color: '#006400',
-                fillColor: '#006400',
-                fillOpacity: 1
-            }).addTo(map);
-
-            2    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
-
-            3    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
-
-            4    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
-
-            5    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
-
-            6    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);*/
-
-
-
+ 
 
             $(m1Ocre).on("click", function() { //Julien
 
