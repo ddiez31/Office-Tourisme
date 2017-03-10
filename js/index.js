@@ -179,43 +179,6 @@
 
 
 
-            /* 1 var annexes = L.circle([43.106970, 0.723584], 5, {
-                   color: '#006400',
-                   fillColor: '#006400',
-                   fillOpacity: 1
-               }).addTo(map);
-
-               2    L.circle ([43.108053, 0.725208], 5, {
-                       color:'#006400',
-                       fillColor:'#006400',
-                       fillOpacity: 1
-                   }).addTo(map);
-
-               3    L.circle ([43.108053, 0.725208], 5, {
-                       color:'#006400',
-                       fillColor:'#006400',
-                       fillOpacity: 1
-                   }).addTo(map);
-
-               4    L.circle ([43.108053, 0.725208], 5, {
-                       color:'#006400',
-                       fillColor:'#006400',
-                       fillOpacity: 1
-                   }).addTo(map);
-
-               5    L.circle ([43.108053, 0.725208], 5, {
-                       color:'#006400',
-                       fillColor:'#006400',
-                       fillOpacity: 1
-                   }).addTo(map);
-
-               6    L.circle ([43.108053, 0.725208], 5, {
-                       color:'#006400',
-                       fillColor:'#006400',
-                       fillOpacity: 1
-                   }).addTo(map);*/
-
-
 
             $(m1Ocre).on("click", function() { //Julien
                 m1Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
