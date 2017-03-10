@@ -12,10 +12,19 @@
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
 
-
+            //button pour ouvrir la gallerie sur la map
             $('#btnGalerie').on('click', function() {
                 console.log('ok');
             });
+            L.easyButton('gallerie', function(btn, map){
+                console.log('ok');
+                $( "button" ).click(function() {
+                    $( "#cdf_map" ).remove();
+                    $( "#gallery" ).removeClass('hide');
+                    app.initgallery();
+
+                });
+            }).addTo( map );
 
             //circuit ocre
             var Ocre = function(lat, long) {
@@ -263,31 +272,10 @@
                 console.log(data.etoiles[i]);
             };
 
-
-
-            url = $(".upload").val();
-            $('.send').on('click', function() {
-                theme = $(".theme").val();
-                marqueur = $(".marqueur").val();
-                titre = $(".titre").val();
-                latitude = $(".latidude").val();
-                longitude = $(".longitude").val();
-                description = $(".description").val();
-            });
-
-
         },
-
-        write: function() {
-            console.log("write ok");
-        }
-
-
-    };
-    app.initmap();
-    app.init();
-    // unitegallery
-    $("#gallery").unitegallery({
+            // unitegallery
+            initgallery: function() {
+                $("#gallery").unitegallery({
         //theme options:
 
         theme_gallery_padding: 200, //the horizontal padding of the gallery from the sides
@@ -314,11 +302,18 @@
         tile_enable_textpanel: true,
         tile_textpanel_title_text_align: "center",
         tile_textpanel_always_on: true,
-
+        
+        lightbox_textpanel_enable_description: true,       //enable the description text
+        lightbox_type: "compact",                          //compact / wide - lightbox type
+        lightbox_overlay_opacity:0.8,                     //the opacity of the overlay. for compact type - 0.6
+        lightbox_slider_image_border: false,             //enable border around the image (for compact type only)
 
     });
+            }
 
-    $( "button #cacher" ).click(function() {
-        $( "#gallery" ).toggle( "slow" );
-    });
-})();
+        };
+        app.initmap();
+        app.init();
+
+
+    })();
