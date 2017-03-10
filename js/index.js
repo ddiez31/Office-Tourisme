@@ -220,14 +220,6 @@
 
         // admin David
 
-        theme: null,
-        marqueur: null,
-        titre: null,
-        latitude: null,
-        longitude: null,
-        description: null,
-        url: null,
-
         init: function() {
             console.log("init ok");
             this.url = "../data/galerie.json";
@@ -267,25 +259,7 @@
                 console.log(data.etoiles[i]);
             };
 
-
-
-            url = $(".upload").val();
-            $('.send').on('click', function() {
-                theme = $(".theme").val();
-                marqueur = $(".marqueur").val();
-                titre = $(".titre").val();
-                latitude = $(".latidude").val();
-                longitude = $(".longitude").val();
-                description = $(".description").val();
-            });
-
-
-        },
-
-        write: function() {
-            console.log("write ok");
         }
-
 
     };
     app.initmap();
