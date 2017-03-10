@@ -9,15 +9,15 @@
             },
             "images": [{
                     "nbr": "0",
-                    "url": "images/Boutique office du tourisme.jpg"
+                    "url": "../images/Boutique office du tourisme.jpg"
                 },
                 {
                     "nbr": "1",
-                    "url": "images/Boutique office du tourisme 2.jpg"
-                }
-                 {
+                    "url": "../images/Boutique office du tourisme 2.jpg"
+                },
+                {
                     "nbr": "2",
-                    "url": "images/Faiences artisales Martres Tolosane.jpg"
+                    "url": "../images/Faiences artisales Martres Tolosane.jpg"
                 }
             ],
             "texte": "Boutique de produits régionaux. Galerie photos. Visite libre."

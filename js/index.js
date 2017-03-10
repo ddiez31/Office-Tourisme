@@ -11,11 +11,7 @@
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
-
-
-            $('#btnGalerie').on('click', function() {
-                console.log('ok');
-            });
+            map.scrollWheelZoom.disable();
 
             //circuit ocre
             var Ocre = function(lat, long) {
@@ -65,7 +61,7 @@
             var m13Ocre = new Ocre(43.109000, 0.724839);
             L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
 
-           
+
 
 
 
@@ -153,47 +149,47 @@
             var m6Annexes = new Annexes(43.108053, 0.725208);
             L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);*/
 
-         
 
 
 
 
 
-         /* 1 var annexes = L.circle([43.106970, 0.723584], 5, {
-                color: '#006400',
-                fillColor: '#006400',
-                fillOpacity: 1
-            }).addTo(map);
 
-            2    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
+            /* 1 var annexes = L.circle([43.106970, 0.723584], 5, {
+                   color: '#006400',
+                   fillColor: '#006400',
+                   fillOpacity: 1
+               }).addTo(map);
 
-            3    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
+               2    L.circle ([43.108053, 0.725208], 5, {
+                       color:'#006400',
+                       fillColor:'#006400',
+                       fillOpacity: 1
+                   }).addTo(map);
 
-            4    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
+               3    L.circle ([43.108053, 0.725208], 5, {
+                       color:'#006400',
+                       fillColor:'#006400',
+                       fillOpacity: 1
+                   }).addTo(map);
 
-            5    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);
+               4    L.circle ([43.108053, 0.725208], 5, {
+                       color:'#006400',
+                       fillColor:'#006400',
+                       fillOpacity: 1
+                   }).addTo(map);
 
-            6    L.circle ([43.108053, 0.725208], 5, {
-                    color:'#006400',
-                    fillColor:'#006400',
-                    fillOpacity: 1
-                }).addTo(map);*/
+               5    L.circle ([43.108053, 0.725208], 5, {
+                       color:'#006400',
+                       fillColor:'#006400',
+                       fillOpacity: 1
+                   }).addTo(map);
+
+               6    L.circle ([43.108053, 0.725208], 5, {
+                       color:'#006400',
+                       fillColor:'#006400',
+                       fillOpacity: 1
+                   }).addTo(map);*/
 
 
 
@@ -287,7 +283,7 @@
     app.initmap();
     app.init();
     // unitegallery
-    
+
     $("#gallery").unitegallery({
         //theme options:
 
