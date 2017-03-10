@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.css" />
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
     <!-- Font-Awesome CSS -->
     <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">-->
     <!-- CSS -->
@@ -19,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Unite gallery -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/css/unite-gallery.min.css' type='text/css' />
-
 
 </head>
 
@@ -34,10 +34,18 @@
 
 
     <div id="cdf_map">
-        <div class="leaflet-bottom leaflet-left">
-            <input type="button" id="btnGalerie" value="Galerie photos" />
-        </div>
     </div>
+    <div id="gallery" class="hide">
+
+        <img alt="La collégiale" src="images/1.JPG" data-image="images/1.JPG" data-description="Image 1 Description">
+
+        <img class="portrait" alt="Paysage" src="images/2.JPG" data-image="images/2.JPG" data-description="Image 2 Description">
+
+        <img alt="collégiale2" src="images/3.JPG" data-image="images/3.JPG" data-description="Image 1 Description">
+
+
+    </div>
+    <button type="button" id="btnGalerie" value="Galerie photos"> Galerie photos</button>
 
 
 
@@ -47,58 +55,27 @@
     <!--Odile, Aymeric-->
     <div id="tri">
         <label for="theme">Thème</label>
-        <select id="selectTheme" >
+        <select id="selectTheme">
             <option value="">Tout</option>
             <option id="Ocre" value="">Circuit ocre</option>
             <option id="Vert"value="">Circuit vert</option>
             <option id="autre"value="">Autre</option>
         </select>
         <label for="lieu">Lieu</label>
+
         <select id="selectLieu" >
-           <option value="">Tout</option>
-           <option value="">Office du tourisme</option>
-           <option value="">Collégiale</option>
-           <option value="">Architecture</option>  
-           <option value=""> Monument aux 3 maréchaux</option>  
-           <option value="">Table orientation</option>
-       </select>
-   </div>
-   <div id="gallery">
-
-    <img alt="La collégiale" src="images/1.JPG" data-image="images/1.JPG" data-description="Image 1 Description">
-
-    <img alt="Panorama" src="images/2.JPG" data-image="images/2.JPG" data-description="Panorama">
-
-    <img alt="collégiale2" src="images/3.JPG" data-image="images/3.JPG" data-description="Image 1 Description">
-
-    <img alt="vue esplanade" src="images/pyrenees1.JPG" data-image="images/pyrenees1.JPG" data-description="Image 1 Description">
-
-    <img alt="sport automobile" src="images/sport.JPG" data-image="images/sport.JPG" data-description="Image 1 Description">
-
-    <img alt="boutique office tourisme" src="images/office_bout1.JPG" data-image="images/office_bout1" data-description="Image 1 Description">
-
-    <img alt="collégiale2" src="images/3.JPG" data-image="images/3.JPG" data-description="Image 1 Description">
-
-    <img alt="collégiale2" src="images/3.JPG" data-image="images/3.JPG" data-description="Image 1 Description">
-
-</div>
-
-<!--admin-->
-<!--David-->
-
-<hr>
+         <option value="">Tout</option>
+         <option value="">Office du tourisme</option>
+         <option value="">Collégiale</option>
+         <option value="">Architecture</option>  
+         <option value=""> Monument aux 3 maréchaux</option>  
+         <option value="">Table orientation</option>
+     </select>
+ </div>
 
 
-<input type="text" name="theme" class="theme" placeholder="theme" />
-<input type="text" class="marqueur" placeholder="marqueur" />
-<input type="text" class="titre" placeholder="titre" />
-<input type="text" class="latitude" placeholder="latitude" />
-<input type="text" class="longitude" placeholder="longitude" />
-<textarea type="text" class="description" placeholder="description"></textarea>
-<br>
-<label for="file">Joindre image</label><input type="file" class="upload" />
-<br>
-<button type="submit" class="send">Envoyer</button>
+ <!--admin-->
+ <!--David-->
 
 
 
@@ -107,11 +84,9 @@
 
 
 
+ <footer>
 
-
-<footer>
-
-</footer>
+ </footer>
 
 </body>
 <!-- JQuery -->
@@ -120,9 +95,10 @@
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.js"></script>
 <!-- Unite gallery -->
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.min.js'></script> 
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/tiles/ug-theme-tiles.min.js' type='text/javascript'></script>
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
 <script src="js/index.js"></script>
 
 </html>

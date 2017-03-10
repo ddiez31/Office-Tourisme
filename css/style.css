@@ -2,14 +2,17 @@
   Carole, Julien*/
   
   #cdf_map {
-      height: 690px;
-      width: 680px;
-      margin-left: 3%;
+    height: 690px;
+    width: 680px;
+    margin-left: 3%;
   }
   
   img {
-      width: 50%;
-      height: 50%;
+    width: 50%;
+    height: 50%;
+  }
+  .hide{
+    display: none!important;
   }
   /*phototheque
   Odile, Aymeric*/
