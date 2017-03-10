@@ -156,15 +156,6 @@
             });
            
 
-
-
-
-
-
-
-
-
-
             //circuit vert clair
             /*var Vert = function(lat, long) {
                 this.lat = lat;
