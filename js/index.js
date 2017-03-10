@@ -65,7 +65,7 @@
             var m13Ocre = new Ocre(43.109000, 0.724839);
             L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
 
-           
+
 
 
 
@@ -153,7 +153,7 @@
             var m6Annexes = new Annexes(43.108053, 0.725208);
             L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);*/
 
-         
+
 
 
 
@@ -318,6 +318,7 @@
 
     });
 
-
-
+    $( "button #cacher" ).click(function() {
+        $( "#gallery" ).toggle( "slow" );
+    });
 })();
