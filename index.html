@@ -45,35 +45,51 @@
 
     <!--phototheque-->
     <!--Odile, Aymeric-->
-    <div id="gallery">
+    <div id="tri">
+        <label for="theme">Thème</label>
+        <select id="selectTheme" >
+            <option value="">Tout</option>
+            <option id="cOcre" value="">Circuit ocre</option>
+            <option id="cVert"value="">Circuit vert</option>
+            <option id="autreT"value="">Annexes</option>
+        </select>
+        <label for="lieu">Lieu</label>
+        <select id="selectLieu" >
+         <option value="">Tout</option>
+         <option value="">Office du tourisme</option>
+         <option value=""> Collégiale</option>
+         <option value="">Architecture</option>  
+         <option value=""> Monument aux 3 maréchaux</option>  
+         <option value="">Table orientation</option>
+     </select>
+ </div>
+ <div id="gallery">
 
-        <img alt="La collégiale" src="images/1.JPG" data-image="images/1.JPG" data-description="Image 1 Description">
+    <img alt="La collégiale" src="images/1.JPG" data-image="images/1.JPG" data-description="Image 1 Description">
 
-        <img class="portrait" alt="Paysage" src="images/2.JPG" data-image="images/2.JPG" data-description="Image 2 Description">
+    <img class="portrait" alt="Paysage" src="images/2.JPG" data-image="images/2.JPG" data-description="Image 2 Description">
 
-        <img alt="collégiale2" src="images/3.JPG" data-image="images/3.JPG" data-description="Image 1 Description">
-
-
-    </div>
-
-    <!--admin-->
-    <!--David-->
-
-    <hr>
-
-
-    <input type="text" name="theme" class="theme" placeholder="theme" />
-    <input type="text" class="marqueur" placeholder="marqueur" />
-    <input type="text" class="titre" placeholder="titre" />
-    <input type="text" class="latitude" placeholder="latitude" />
-    <input type="text" class="longitude" placeholder="longitude" />
-    <textarea type="text" class="description" placeholder="description"></textarea>
-    <br>
-    <label for="file">Joindre image</label><input type="file" class="upload" />
-    <br>
-    <button type="submit" class="send">Envoyer</button>
+    <img alt="collégiale2" src="images/3.JPG" data-image="images/3.JPG" data-description="Image 1 Description">
 
 
+</div>
+
+<!--admin-->
+<!--David-->
+
+<hr>
+
+
+<input type="text" name="theme" class="theme" placeholder="theme" />
+<input type="text" class="marqueur" placeholder="marqueur" />
+<input type="text" class="titre" placeholder="titre" />
+<input type="text" class="latitude" placeholder="latitude" />
+<input type="text" class="longitude" placeholder="longitude" />
+<textarea type="text" class="description" placeholder="description"></textarea>
+<br>
+<label for="file">Joindre image</label><input type="file" class="upload" />
+<br>
+<button type="submit" class="send">Envoyer</button>
 
 
 
@@ -82,9 +98,11 @@
 
 
 
-    <footer>
 
-    </footer>
+
+<footer>
+
+</footer>
 
 </body>
 <!-- JQuery -->
