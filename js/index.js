@@ -231,6 +231,7 @@
     app.initmap();
     app.init();
     // unitegallery
+    
     $("#gallery").unitegallery({
         //theme options:
 
