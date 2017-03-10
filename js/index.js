@@ -247,18 +247,33 @@
         read: function(data) {
             console.log("read ok");
             for (i = 0; i < data.ocre.length; i++) {
-                console.log(data.ocre[i]);
+                app.ocre(data.ocre[i]);
             };
             for (i = 0; i < data.vert.length; i++) {
-                console.log(data.vert[i]);
+                app.vert(data.vert[i]);
             };
             for (i = 0; i < data.annexes.length; i++) {
-                console.log(data.annexes[i]);
+                app.annexes(data.annexes[i]);
             };
             for (i = 0; i < data.etoiles.length; i++) {
-                console.log(data.etoiles[i]);
+                app.etoiles(data.etoiles[i]);
             };
+        },
 
+        ocre: function(dataOcre) {
+            console.log(dataOcre);
+        },
+
+        vert: function(dataVert) {
+            console.log(dataVert);
+        },
+
+        annexes: function(dataAnnexes) {
+            console.log(dataAnnexes);
+        },
+
+        etoiles: function(dataEtoiles) {
+            console.log(dataEtoiles);
         }
 
     };
