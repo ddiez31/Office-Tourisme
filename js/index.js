@@ -65,7 +65,7 @@
             var m13Ocre = new Ocre(43.109000, 0.724839);
             L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
 
-           
+
 
 
 
@@ -153,7 +153,7 @@
             var m6Annexes = new Annexes(43.108053, 0.725208);
             L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);*/
 
-         
+
 
 
 
@@ -287,6 +287,8 @@
     app.initmap();
     app.init();
     // unitegallery
+
+    
     
     $("#gallery").unitegallery({
         //theme options:
@@ -302,7 +304,7 @@
         //tiles options:
 
         tiles_type: "justified", //must option for the tiles - justified type
-        tiles_justified_row_height: 60, //base row height of the justified type
+        tiles_justified_row_height: 100, //base row height of the justified type
         tiles_justified_space_between: 3, //space between the tiles justified type
         tiles_set_initial_height: true, //columns type related only
         tiles_enable_transition: true, //enable transition when screen width change
@@ -315,7 +317,10 @@
         tile_enable_textpanel: true,
         tile_textpanel_title_text_align: "center",
         tile_textpanel_always_on: true,
-
+        lightbox_textpanel_enable_description: true,       //enable the description text
+        lightbox_type:"compact",
+        lightbox_overlay_opacity:0.4, //the opacity of the overlay. for compact type - 0.6"
+        
 
     });
 
