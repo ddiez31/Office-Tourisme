@@ -7,9 +7,17 @@
       margin-left: 3%;
   }
   
+  #gallery {
+      margin-left: 3%;
+  }
+  
   img {
       width: 50%;
       height: 50%;
+  }
+  
+  .hide {
+      display: none!important;
   }
   /*phototheque
   Odile, Aymeric*/
