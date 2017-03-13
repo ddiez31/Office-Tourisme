@@ -4,7 +4,7 @@
 
         // carte interactive Carole, Julien
         initmap: function() {
-            var map = new L.Map('cdf_map');
+            var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
@@ -45,7 +45,7 @@
 
             var m1Ocre = new Ocre(43.108053, 0.725208);
             m1Ocre = L.circle([m1Ocre.lat, m1Ocre.long], m1Ocre.size, { color: m1Ocre.color, fillColor: m1Ocre.fillColor, fillOpacity: m1Ocre.fillOpacity, }).addTo(map);
-       
+
 
             var m2Ocre = new Ocre(43.107623, 0.724623);
             m2Ocre = L.circle([m2Ocre.lat, m2Ocre.long], m2Ocre.size, { color: m2Ocre.color, fillColor: m2Ocre.fillColor, fillOpacity: m2Ocre.fillOpacity }).addTo(map);
@@ -81,10 +81,11 @@
             m12Ocre = L.circle([m12Ocre.lat, m12Ocre.long], m12Ocre.size, { color: m12Ocre.color, fillColor: m12Ocre.fillColor, fillOpacity: m12Ocre.fillOpacity }).addTo(map);
 
             var m13Ocre = new Ocre(43.109000, 0.724839);
-            m13Ocre =L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
+            m13Ocre = L.circle([m13Ocre.lat, m13Ocre.long], m13Ocre.size, { color: m13Ocre.color, fillColor: m13Ocre.fillColor, fillOpacity: m13Ocre.fillOpacity }).addTo(map);
 
-            
+
             var latlngsOcre = [
+
              [43.108053, 0.725208],
              [43.107623, 0.724623],
              [43.107483, 0.725024],
@@ -108,13 +109,12 @@
             ];
             
             var polyline = L.polyline (latlngsOcre, {color:'#FF5200'}).addTo(map);
-            map.fitBounds(polyline.getBounds());
-           
-
-
-
 
            
+
+
+
+
 
             //circuit vert clair
             var Vert = function(lat, long) {
@@ -135,9 +135,9 @@
             m3Vert = L.circle([m3Vert.lat, m3Vert.long], m3Vert.size, { color: m3Vert.color, fillColor: m3Vert.fillColor, fillOpacity: m3Vert.fillOpacity }).addTo(map);
 
             var m4Vert = new Vert(43.108684, 0.708875);
-            m4Vert = L.circle([m4Vert.lat, m4Vert.long], m4Vert.size, { color: m4Vert.color, fillColor: m4Vert.fillColor, fillOpacity: m4Vert.fillOpacity }).addTo(map); 
+            m4Vert = L.circle([m4Vert.lat, m4Vert.long], m4Vert.size, { color: m4Vert.color, fillColor: m4Vert.fillColor, fillOpacity: m4Vert.fillOpacity }).addTo(map);
 
-         
+
             var latlngsVert = [
              [43.106140, 0.720790],
              [43.104530, 0.719075],
@@ -210,14 +210,21 @@
              [43.105197, 0.715230],
              [43.106263, 0.718655],
              [43.106436, 0.719725]
+
+                /*[43.105065, 0.719648],
+                [43.099973, 0.710764],
+                [43.105457, 0.709841],
+                [43.108684, 0.708875],
+                [43.105065, 0.719648]*/
+
             ];
 
-            var polyline = L.polyline(latlngsVert, {color: '#00AB39'}).addTo(map);
-            map.fitBounds(polyline.getBounds());
-  
+            var polyline = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
+           
 
 
-            
+
+
             //batiments officiels
             var Annexes = function(lat, long) {
                 this.lat = lat;
@@ -244,9 +251,6 @@
 
             var m6Annexes = new Annexes(43.109163, 0.726533);
             m6Annexes = L.circle([m6Annexes.lat, m6Annexes.long], m6Annexes.size, { color: m6Annexes.color, fillColor: m6Annexes.fillColor, fillOpacity: m6Annexes.fillOpacity }).addTo(map);
-
-
-
 
 
 
@@ -401,7 +405,7 @@
 
                 //gallery options:
 
-                
+
                 gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
                 gallery_width: "60%", //gallery width
                 gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
