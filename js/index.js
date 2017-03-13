@@ -50,6 +50,7 @@
                 });
             }).addTo(map);
 
+
             //circuit ocre
             var latlngsOcre = [];
             for (i = 0; i < data.ocre.length; i++) {
@@ -101,7 +102,6 @@
                 // latlngsVert.push([latVert, longVert]);
             };
             // latlngsVert.push([data.vert[0].geoloc.lat, data.vert[0].geoloc.lng]);
-
 
             var latlngsVert = [
                 [43.106140, 0.720790],
@@ -175,13 +175,11 @@
                 [43.105197, 0.715230],
                 [43.106263, 0.718655],
                 [43.106436, 0.719725]
-
                 /*[43.105065, 0.719648],
                 [43.099973, 0.710764],
                 [43.105457, 0.709841],
                 [43.108684, 0.708875],
                 [43.105065, 0.719648]*/
-
             ];
 
             var polyline = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
@@ -210,91 +208,9 @@
 
             };
 
-
-
-            // $(m1Ocre).on("click", function() { //Julien
-            //     m1Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m2Ocre).on("click", function() { //Julien
-            //     m2Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m3Ocre).on("click", function() { //Julien
-            //     m3Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m4Ocre).on("click", function() { //Julien
-            //     m4Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-
-            // $(m5Ocre).on("click", function() { //Julien
-            //     m5Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m6Ocre).on("click", function() { //Julien
-            //     m6Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m7Ocre).on("click", function() { //Julien
-            //     m7Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m8Ocre).on("click", function() { //Julien
-            //     m8Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m9Ocre).on("click", function() { //Julien
-            //     m9Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m10Ocre).on("click", function() { //Julien
-            //     m10Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m11Ocre).on("click", function() { //Julien
-            //     m11Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m12Ocre).on("click", function() { //Julien
-            //     m12Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
-            // $(m13Ocre).on("click", function() { //Julien
-            //     m13Ocre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
-            //         "<br><p>I am a popup.</p>").openPopup();
-            //     console.log("OK!")
-            // });
-
         },
 
         // phototheque Odile, Aymeric
-
         // unitegallery
         initgallery: function() {
             $("#gallery").unitegallery({
