@@ -13,7 +13,7 @@
             $.ajax({
                 url: url,
                 success: this.initmap,
-                error: function() {
+                error: function(err) {
                     if (err) {
                         console.log(err);
                     };
@@ -62,18 +62,22 @@
                     this.fillOpacity = 1;
                 };
                 var markOcre = new Ocre();
+                var contentPopup = '';
                 var latOcre = data.ocre[i].geoloc.lat;
                 var longOcre = data.ocre[i].geoloc.lng;
+                var titreOcre = data.ocre[i].titre;
+                contentPopup += "<h2>" + titreOcre + "</h2>" + "<br>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
-                    console.log(data.ocre[i].images[j].url);
+                    var imgOcre = data.ocre[i].images[j].url;
+                    contentPopup += '<img src="' + imgOcre + '" width="200" height="150">';
                 }
+
                 markOcre = L.circle([latOcre, longOcre], markOcre.size, { color: markOcre.color, fillColor: markOcre.fillColor, fillOpacity: markOcre.fillOpacity }).addTo(map);
-                //popup
-                $(markOcre).on("click", function() {
-                    markOcre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1-office tourisme1.JPG" width="200" height="150">' + '' + '<img src="../images/1-office tourisme2.JPG" width="200" height="300">' +
-                        "<br><p>I am a popup.</p>").openPopup();
-                    console.log("OK!")
-                });
+                
+                var texteOcre = data.ocre[i].texte;
+                contentPopup += "<p>" + texteOcre + "</p>";
+                markOcre.bindPopup(contentPopup);
+
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
