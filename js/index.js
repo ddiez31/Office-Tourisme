@@ -13,7 +13,7 @@
             $.ajax({
                 url: url,
                 success: this.initmap,
-                error: function() {
+                error: function(err) {
                     if (err) {
                         console.log(err);
                     };
@@ -65,12 +65,17 @@
                 var latOcre = data.ocre[i].geoloc.lat;
                 var longOcre = data.ocre[i].geoloc.lng;
                 markOcre = L.circle([latOcre, longOcre], markOcre.size, { color: markOcre.color, fillColor: markOcre.fillColor, fillOpacity: markOcre.fillOpacity }).addTo(map);
-                // popup
+                //popup
+                var titreOcre = data.ocre[i].titre;
+                var texteOcre = data.ocre[i].texte;
+                var contentPopup = '';
+                contentPopup += "<h2>" + titreOcre + "</h2>" + "<br>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    console.log(imgOcre);
+                    contentPopup += '<img src="' + imgOcre + '" width="200" height="150">';
                 }
-
+                contentPopup += "<p>" + texteOcre + "</p>";
+                markOcre.bindPopup(contentPopup);
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
