@@ -30,6 +30,7 @@
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
+
             map.scrollWheelZoom.disable();
             map.on('fullscreenchange', function() {
                 if (map.isFullscreen()) {
@@ -39,6 +40,7 @@
                     app.initmap();
                 }
             });
+
 
             //button pour ouvrir la galerie sur la map
             L.easyButton('galerie', function(btn, map) {
@@ -80,8 +82,6 @@
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
             var polylineOcre = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
-
-
 
             //circuit vert clair
             for (i = 0; i < data.vert.length; i++) {
