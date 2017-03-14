@@ -64,20 +64,20 @@
                 var markOcre = new Ocre();
                 var latOcre = data.ocre[i].geoloc.lat;
                 var longOcre = data.ocre[i].geoloc.lng;
-                console.log(markOcre)
+                for (j = 0; j < data.ocre[i].images.length; j++) {
+                    console.log(data.ocre[i].images[j].url);
+                }
                 markOcre = L.circle([latOcre, longOcre], markOcre.size, { color: markOcre.color, fillColor: markOcre.fillColor, fillOpacity: markOcre.fillOpacity }).addTo(map);
                 //popup
                 $(markOcre).on("click", function() {
-                    markOcre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1.JPG" width="200" height="150">' + '' + '<img src="../images/3.JPG" width="200" height="300">' +
+                    markOcre.bindPopup("<h2>Hello world!</h2>" + "<br>" + '<img src="../images/1-office tourisme1.JPG" width="200" height="150">' + '' + '<img src="../images/1-office tourisme2.JPG" width="200" height="300">' +
                         "<br><p>I am a popup.</p>").openPopup();
                     console.log("OK!")
                 });
-
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
             var polyline = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
-
 
 
 
@@ -125,7 +125,6 @@
                 //marqueurs
 
             };
-
         },
 
         // phototheque Odile, Aymeric
