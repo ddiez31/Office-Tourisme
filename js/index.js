@@ -68,18 +68,18 @@
                 //popup
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
-                var contentPopup = '';
-                contentPopup += "<h2>" + titreOcre + "</h2>" + "<br>";
+                var contentPopupOcre = '';
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    contentPopup += '<img src="' + imgOcre + '" width="200" height="150">';
+                    contentPopupOcre += '<img src="' + imgOcre + '" width="200" height="150">';
                 }
-                contentPopup += "<p>" + texteOcre + "</p>";
-                markOcre.bindPopup(contentPopup);
+                contentPopupOcre += "<p>" + texteOcre + "</p>";
+                markOcre.bindPopup(contentPopupOcre);
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
-            var polyline = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
+            var polylineOcre = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
 
 
 
@@ -98,11 +98,21 @@
                 var longVert = data.vert[i].geoloc.lng;
                 markVert = L.circle([latVert, longVert], markVert.size, { color: markVert.color, fillColor: markVert.fillColor, fillOpacity: markVert.fillOpacity }).addTo(map);
                 //popup
+                titreVert = data.vert[i].titre;
+                texteVert = data.vert[i].texte;
+                var contentPopupVert = '';
+                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br>";
+                for (j = 0; j < data.vert[i].images.length; j++) {
+                    var imgVert = data.vert[i].images[j].url;
+                    contentPopupVert += '<img src="' + imgVert + '" width="200" height="150">';
+                }
+                contentPopupVert += "<p>" + texteVert + "</p>";
+                markVert.bindPopup(contentPopupVert);
 
             };
             //sentier
             var latlngsVert = data.vert[0].sentier;
-            var polyline = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
+            var polylineVert = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
 
 
             //batiments officiels
@@ -119,6 +129,17 @@
                 var latAnnexes = data.annexes[i].geoloc.lat;
                 var longAnnexes = data.annexes[i].geoloc.lng;
                 markAnnexes = L.circle([latAnnexes, longAnnexes], markAnnexes.size, { color: markAnnexes.color, fillColor: markAnnexes.fillColor, fillOpacity: markAnnexes.fillOpacity }).addTo(map);
+                //popup
+                titreAnnexes = data.annexes[i].titre;
+                texteAnnexes = data.annexes[i].texte;
+                var contentPopupAnnexes = '';
+                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br>";
+                for (j = 0; j < data.annexes[i].images.length; j++) {
+                    var imgAnnexes = data.annexes[i].images[j].url;
+                    contentPopupAnnexes += '<img src="' + imgAnnexes + '" width="200" height="150">';
+                }
+                contentPopupAnnexes += "<p>" + texteAnnexes + "</p>";
+                markAnnexes.bindPopup(contentPopupAnnexes);
             };
 
 
