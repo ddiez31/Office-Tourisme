@@ -1,543 +1,579 @@
 {
     "ocre": [{
-            "id": "0",
-            "marqueur": "1",
-            "titre": "Office de tourisme",
-            "geoloc": {
-                "lat": 43.108053,
-                "lng": 0.725208
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "../images/Boutique office du tourisme.jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "../images/Boutique office du tourisme 2.jpg"
-                },
-                {
-                    "nbr": "2",
-                    "url": "../images/Faiences artisales Martres Tolosane.jpg"
-                }
-            ],
-            "texte": "Boutique de produits régionaux. Galerie photos. Visite libre."
+        "id": "0",
+        "marqueur": "1",
+        "titre": "Office de tourisme",
+        "geoloc": {
+            "lat": 43.108053,
+            "lng": 0.725208
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "../images/1-boutique1.jpg"
         },
         {
-            "id": "1",
-            "marqueur": "2",
-            "titre": "Collégiale Saint-Pierre et Saint-Gaudens",
-            "geoloc": {
-                "lat": 43.107483,
-                "lng": 0.724824
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Chef d'oeuvre d'art roman XIème - XIIème siècles."
+            "nbr": "1",
+            "url": "../images/1-office tourisme2.jpg"
         },
         {
-            "id": "2",
-            "marqueur": "3",
-            "titre": "Cloître roman",
-            "geoloc": {
-                "lat": 43.107288,
-                "lng": 0.724600
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Chef d'oeuvre d'art roman XIIème - XIIIème siècles, chapiteaux sculptés historiés, salle capitulaire du XIIIème siècle. Eléments du cloître des Jacobins exposés."
-        },
-        {
-            "id": "3",
-            "marqueur": "4",
-            "titre": "Musée de céramique et des Beaux-Arts",
-            "geoloc": {
-                "lat": 43.107448,
-                "lng": 0.725673
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Edifice néo-classique de 1875 en pierre calcaire de Nankin. Magnifique collection de porcelaines dites << Bleu de Valentine >>, fabriquées à Saint-Gaudens au XIXème siècle. Arts et traditions populaires. Tableaux du peintre Rixens."
-        },
-        {
-            "id": "4",
-            "marqueur": "5",
-            "titre": "Monument des trois maréchaux",
-            "geoloc": {
-                "lat": 43.107065,
-                "lng": 0.725235
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Maréchaux Foch, Joffre et Galiéni, originaires des Pyrénées, combattants de la guerre 1914-1918. Faisant face, le monument aux morts réalisé en 1923, oeuvre de Paul Ducuing, sculpteur à Lannemezan."
-        },
-        {
-            "id": "5",
-            "marqueur": "6",
-            "titre": "Table d'orientation",
-            "geoloc": {
-                "lat": 43.107166,
-                "lng": 0.725182
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Panorama sur la chaîne des Pyrénées. Face à vous, le pic emblématique de Cagire. Au pied des escaliers, en contrebas, une stèle érigée à la mémoire d'Augustus Saint-Gaudens, sculpteur américain dont la famille était originaire d'Aspet, village à 17km au sud."
-        },
-        {
-            "id": "6",
-            "marqueur": "7",
-            "titre": "Histoire et architecture",
-            "geoloc": {
-                "lat": 43.107483,
-                "lng": 0.725024
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Histoire de l'architecture de Saint-Gaudens et du Comminges."
-        },
-        {
-            "id": "7",
-            "marqueur": "8",
-            "titre": "Square Eugène Azémar",
-            "geoloc": {
-                "lat": 43.106316,
-                "lng": 0.720450
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Galerie du cloître de l'abbaye cistercienne de Bonnefont XIIème siècle, située près de Saint-Martory."
-        },
-        {
-            "id": "8",
-            "marqueur": "9",
-            "titre": "Eugène Azémar 1887-1940",
-            "geoloc": {
-                "lat": 43.106210,
-                "lng": 0.720790
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Homme politique fondateur du Syndicat d'Initiative en 1922 et du circuit auto-motos du Comminges en 1925."
-        },
-        {
-            "id": "9",
-            "marqueur": "10",
-            "titre": "Centre d'art contemporain - Chapelle Saint-Jacques",
-            "geoloc": {
-                "lat": 43.106436,
-                "lng": 0.719825
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lieu d'expositions. Invite des artistes dont les oeuvres incitent à l'exploration des pratiques plastiques contemporaines. Programme d'actions culturelles, conférences, voyages, ..."
-        },
-        {
-            "id": "10",
-            "marqueur": "11",
-            "titre": "Saint-Gaudens, ville fortifiée",
-            "geoloc": {
-                "lat": 43.107202,
-                "lng": 0.722536
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Plan de l'époque médiévale, enceinte du XIème agrandie au XIVème siècle: rues des fossés, Victor Hugo, des remparts, ..."
-        },
-        {
-            "id": "11",
-            "marqueur": "12",
-            "titre": "Place Saint-Raymond",
-            "geoloc": {
-                "lat": 43.108430,
-                "lng": 0.723737
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Autour de cette place, plusieurs immeubles ont abrité les bureaux et laboratoires de la Régie Autonome des Pétroles qui exploita le premier gisement de gaz naturel découvert en France à Saint-Marcet (13km de Saint-Gaudens)."
-        },
-        {
-            "id": "12",
-            "marqueur": "13",
-            "titre": "Architecture de la vieille ville",
-            "geoloc": {
-                "lat": 43.109000,
-                "lng": 0.724839
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Les galeries extérieures, architecture typique du bâti en Comminges viennent agrémenter la construction à ossature bois."
+            "nbr": "2",
+            "url": "../images/faïence-1.jpg"
         }
     ],
-    "vert": [{
-            "id": "0",
-            "marqueur": "A",
-            "titre": "Le Boulevard des Pyrénées",
-            "geoloc": {
-                "lat": 43.105065,
-                "lng": 0.719648
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Promenade arborée face aux plus hauts sommets pyrénéens. Voie cyclable et parcours santé."
+        "texte": "Boutique de produits régionaux. Galerie photos. Visite libre."
+    },
+    {
+        "id": "1",
+        "marqueur": "2",
+        "titre": "Collégiale Saint-Pierre et Saint-Gaudens",
+        "geoloc": {
+            "lat": 43.107483,
+            "lng": 0.724824
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/2-collégiale_Saint_Pierre-1.jpg"
         },
         {
-            "id": "1",
-            "marqueur": "B",
-            "titre": "Pyrénées, Garonne",
-            "geoloc": {
-                "lat": 43.099973,
-                "lng": 0.710764
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Vue panoramique sur les Pyrénées occidentales et la plaine de la Garonne. Sculpture en taille directe d'André Abbal, élève de Rodin."
+            "nbr": "1",
+            "url": "images/2-collégiale_Saint_Pierre-2.jpg"
         },
         {
-            "id": "2",
-            "marqueur": "C",
-            "titre": "La légende de Saint-Gaudens: La Montjoie",
-            "geoloc": {
-                "lat": 43.105457,
-                "lng": 0.709841
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lieu du martyre du jeune Gaudens. Fontaine du bourreau. Chapelle de la Caoue du XIXème siècle, style néo-roman."
-        },
-        {
-            "id": "3",
-            "marqueur": "D",
-            "titre": "Le circuit autos-motos du Comminges (1925-1954)",
-            "geoloc": {
-                "lat": 43.108684,
-                "lng": 0.708875
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Des pilotes, des voitures et motos de légende: Pozzi, Villoresi, Dreyfus, Trintignant, Ascari, ..."
+            "nbr": "2",
+            "url": "images/2-collégiale_Saint_Pierre3.jpg"
         }
     ],
-    "annexes": [{
-            "id": "0",
-            "marqueur": "1",
-            "titre": "Mairie",
-            "geoloc": {
-                "lat": 43.106953,
-                "lng": 0.723588
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
+        "texte": "Chef d'oeuvre d'art roman XIème - XIIème siècles."
+    },
+    {
+        "id": "2",
+        "marqueur": "3",
+        "titre": "Cloître roman",
+        "geoloc": {
+            "lat": 43.107288,
+            "lng": 0.724600
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/3- cloitre_collégiale3.jpg"
         },
         {
-            "id": "1",
-            "marqueur": "2",
-            "titre": "Poste",
-            "geoloc": {
-                "lat": 43.108865,
-                "lng": 0.722527
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
+            "nbr": "1",
+            "url": "images/3-cloitre_collégiale1.jpg"
         },
         {
-            "id": "2",
-            "marqueur": "3",
-            "titre": "Maison de la Communauté",
-            "geoloc": {
-                "lat": 43.107686,
-                "lng": 0.722161
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
-        },
-        {
-            "id": "3",
-            "marqueur": "4",
-            "titre": "Cinéma",
-            "geoloc": {
-                "lat": 43.108639,
-                "lng": 0.718733
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
-        },
-        {
-            "id": "4",
-            "marqueur": "5",
-            "titre": "Théatre Jean Marmignon",
-            "geoloc": {
-                "lat": 43.109538,
-                "lng": 0.725465
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
-        },
-        {
-            "id": "5",
-            "marqueur": "6",
-            "titre": "Cyberbase / MJC",
-            "geoloc": {
-                "lat": 43.109163,
-                "lng": 0.726533
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
+            "nbr": "2",
+            "url": "images/3-cloitre_collégiale1.jpg"
         }
     ],
-    "etoiles": [{
-            "id": "0",
-            "marqueur": "vert",
-            "titre": "Place Armand Marrast",
-            "geoloc": {
-                "lat": 43.1083,
-                "lng": 0.7234
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Né à Saint-Gaudens (1801-1852), homme politique, ancien maire de Paris."
+        "texte": "Chef d'oeuvre d'art roman XIIème - XIIIème siècles, chapiteaux sculptés historiés, salle capitulaire du XIIIème siècle. Eléments du cloître des Jacobins exposés."
+    },
+    {
+        "id": "3",
+        "marqueur": "4",
+        "titre": "Musée de céramique et des Beaux-Arts",
+        "geoloc": {
+            "lat": 43.107448,
+            "lng": 0.725673
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/4-musée_de_la_céramique_et_des_beaux_arts1.jpg"
         },
         {
-            "id": "1",
-            "marqueur": "violet",
-            "titre": "Ancienne banque de France",
-            "geoloc": {
-                "lat": 43.1083,
-                "lng": 0.7234
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
-        },
-        {
-            "id": "2",
-            "marqueur": "orange",
-            "titre": "Halle aux grains 1845",
-            "geoloc": {
-                "lat": 43.1083,
-                "lng": 0.7234
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Lorem ipsum"
-        },
-        {
-            "id": "3",
-            "marqueur": "rose",
-            "titre": "Ancien couvent des Jacobins",
-            "geoloc": {
-                "lat": 43.1083,
-                "lng": 0.7234
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Immeuble de la Caisse d'Epargne."
-        },
-        {
-            "id": "4",
-            "marqueur": "bleu",
-            "titre": "Ancien couvent des Visitandines",
-            "geoloc": {
-                "lat": 43.1083,
-                "lng": 0.7234
-            },
-            "images": [{
-                    "nbr": "0",
-                    "url": "images/.......jpg"
-                },
-                {
-                    "nbr": "1",
-                    "url": "images/.......jpg"
-                }
-            ],
-            "texte": "Immeuble de la Chambre de Commerce."
+            "nbr": "1",
+            "url": "images/.......jpg"
         }
-    ]
+    ],
+        "texte": "Edifice néo-classique de 1875 en pierre calcaire de Nankin. Magnifique collection de porcelaines dites << Bleu de Valentine >>, fabriquées à Saint-Gaudens au XIXème siècle. Arts et traditions populaires. Tableaux du peintre Rixens."
+    },
+    {
+        "id": "4",
+        "marqueur": "5",
+        "titre": "Monument des trois maréchaux",
+        "geoloc": {
+            "lat": 43.107065,
+            "lng": 0.725235
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/5- Monument_des_3_maréchaux2.jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/5- Monument_les_3_maréchaux1.jpg"
+        },
+        {
+            "nbr": "2",
+            "url": "images/5-Monument_des_3_maréchaux-4.jpg"
+        },
+        {
+            "nbr": "3",
+            "url": "images/5-Monument_des_3_maréchaux3.jpg"
+        },
+    ],
+        "texte": "Maréchaux Foch, Joffre et Galiéni, originaires des Pyrénées, combattants de la guerre 1914-1918. Faisant face, le monument aux morts réalisé en 1923, oeuvre de Paul Ducuing, sculpteur à Lannemezan."
+    },
+    {
+        "id": "5",
+        "marqueur": "6",
+        "titre": "Table d'orientation",
+        "geoloc": {
+            "lat": 43.107166,
+            "lng": 0.725182
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/Esplanade.jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/table_orientation1.jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/Panorama-1.jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/Panorama-2.jpg"
+        }
+    ],
+        "texte": "Panorama sur la chaîne des Pyrénées. Face à vous, le pic emblématique de Cagire. Au pied des escaliers, en contrebas, une stèle érigée à la mémoire d'Augustus Saint-Gaudens, sculpteur américain dont la famille était originaire d'Aspet, village à 17km au sud."
+    },
+    {
+        "id": "6",
+        "marqueur": "7",
+        "titre": "Histoire et architecture",
+        "geoloc": {
+            "lat": 43.107483,
+            "lng": 0.725024
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/7-architecture2.jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/7-architecture1.jpg"
+        },
+        {
+            "nbr": "2",
+            "url": "images/7-architecture3.jpg"
+        },
+        {
+            "nbr": "3",
+            "url": "images/7-architecture5.jpg"
+        },
+        {
+            "nbr": "4",
+            "url": "images/7-vue_de_la_vieille_ville1.jpg"
+        }
+    ],
+        "texte": "Histoire de l'architecture de Saint-Gaudens et du Comminges."
+    },
+    {
+        "id": "7",
+        "marqueur": "8",
+        "titre": "Square Eugène Azémar",
+        "geoloc": {
+            "lat": 43.106316,
+            "lng": 0.720450
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/.......jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/.......jpg"
+        }
+    ],
+        "texte": "Galerie du cloître de l'abbaye cistercienne de Bonnefont XIIème siècle, située près de Saint-Martory."
+    },
+    {
+        "id": "8",
+        "marqueur": "9",
+        "titre": "Eugène Azémar 1887-1940",
+        "geoloc": {
+            "lat": 43.106210,
+            "lng": 0.720790
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/.......jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/.......jpg"
+        }
+    ],
+        "texte": "Homme politique fondateur du Syndicat d'Initiative en 1922 et du circuit auto-motos du Comminges en 1925."
+    },
+    {
+        "id": "9",
+        "marqueur": "10",
+        "titre": "Centre d'art contemporain - Chapelle Saint-Jacques",
+        "geoloc": {
+            "lat": 43.106436,
+            "lng": 0.719825
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/.......jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/.......jpg"
+        }
+    ],
+        "texte": "Lieu d'expositions. Invite des artistes dont les oeuvres incitent à l'exploration des pratiques plastiques contemporaines. Programme d'actions culturelles, conférences, voyages, ..."
+    },
+    {
+        "id": "10",
+        "marqueur": "11",
+        "titre": "Saint-Gaudens, ville fortifiée",
+        "geoloc": {
+            "lat": 43.107202,
+            "lng": 0.722536
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/.......jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/.......jpg"
+        }
+    ],
+        "texte": "Plan de l'époque médiévale, enceinte du XIème agrandie au XIVème siècle: rues des fossés, Victor Hugo, des remparts, ..."
+    },
+    {
+        "id": "11",
+        "marqueur": "12",
+        "titre": "Place Saint-Raymond",
+        "geoloc": {
+            "lat": 43.108430,
+            "lng": 0.723737
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/.......jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/.......jpg"
+        }
+    ],
+        "texte": "Autour de cette place, plusieurs immeubles ont abrité les bureaux et laboratoires de la Régie Autonome des Pétroles qui exploita le premier gisement de gaz naturel découvert en France à Saint-Marcet (13km de Saint-Gaudens)."
+    },
+    {
+        "id": "12",
+        "marqueur": "13",
+        "titre": "Architecture de la vieille ville",
+        "geoloc": {
+            "lat": 43.109000,
+            "lng": 0.724839
+        },
+        "images": [{
+            "nbr": "0",
+            "url": "images/.......jpg"
+        },
+        {
+            "nbr": "1",
+            "url": "images/.......jpg"
+        }
+    ],
+        "texte": "Les galeries extérieures, architecture typique du bâti en Comminges viennent agrémenter la construction à ossature bois."
+    }
+],
+"vert": [{
+    "id": "0",
+    "marqueur": "A",
+    "titre": "Le Boulevard des Pyrénées",
+    "geoloc": {
+        "lat": 43.105065,
+        "lng": 0.719648
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Promenade arborée face aux plus hauts sommets pyrénéens. Voie cyclable et parcours santé."
+},
+{
+    "id": "1",
+    "marqueur": "B",
+    "titre": "Pyrénées, Garonne",
+    "geoloc": {
+        "lat": 43.099973,
+        "lng": 0.710764
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Vue panoramique sur les Pyrénées occidentales et la plaine de la Garonne. Sculpture en taille directe d'André Abbal, élève de Rodin."
+},
+{
+    "id": "2",
+    "marqueur": "C",
+    "titre": "La légende de Saint-Gaudens: La Montjoie",
+    "geoloc": {
+        "lat": 43.105457,
+        "lng": 0.709841
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lieu du martyre du jeune Gaudens. Fontaine du bourreau. Chapelle de la Caoue du XIXème siècle, style néo-roman."
+},
+{
+    "id": "3",
+    "marqueur": "D",
+    "titre": "Le circuit autos-motos du Comminges (1925-1954)",
+    "geoloc": {
+        "lat": 43.108684,
+        "lng": 0.708875
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Des pilotes, des voitures et motos de légende: Pozzi, Villoresi, Dreyfus, Trintignant, Ascari, ..."
+}
+],
+"annexes": [{
+    "id": "0",
+    "marqueur": "1",
+    "titre": "Mairie",
+    "geoloc": {
+        "lat": 43.106953,
+        "lng": 0.723588
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "1",
+    "marqueur": "2",
+    "titre": "Poste",
+    "geoloc": {
+        "lat": 43.108865,
+        "lng": 0.722527
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "2",
+    "marqueur": "3",
+    "titre": "Maison de la Communauté",
+    "geoloc": {
+        "lat": 43.107686,
+        "lng": 0.722161
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "3",
+    "marqueur": "4",
+    "titre": "Cinéma",
+    "geoloc": {
+        "lat": 43.108639,
+        "lng": 0.718733
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "4",
+    "marqueur": "5",
+    "titre": "Théatre Jean Marmignon",
+    "geoloc": {
+        "lat": 43.109538,
+        "lng": 0.725465
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "5",
+    "marqueur": "6",
+    "titre": "Cyberbase / MJC",
+    "geoloc": {
+        "lat": 43.109163,
+        "lng": 0.726533
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+}
+],
+"etoiles": [{
+    "id": "0",
+    "marqueur": "vert",
+    "titre": "Place Armand Marrast",
+    "geoloc": {
+        "lat": 43.1083,
+        "lng": 0.7234
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Né à Saint-Gaudens (1801-1852), homme politique, ancien maire de Paris."
+},
+{
+    "id": "1",
+    "marqueur": "violet",
+    "titre": "Ancienne banque de France",
+    "geoloc": {
+        "lat": 43.1083,
+        "lng": 0.7234
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "2",
+    "marqueur": "orange",
+    "titre": "Halle aux grains 1845",
+    "geoloc": {
+        "lat": 43.1083,
+        "lng": 0.7234
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Lorem ipsum"
+},
+{
+    "id": "3",
+    "marqueur": "rose",
+    "titre": "Ancien couvent des Jacobins",
+    "geoloc": {
+        "lat": 43.1083,
+        "lng": 0.7234
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Immeuble de la Caisse d'Epargne."
+},
+{
+    "id": "4",
+    "marqueur": "bleu",
+    "titre": "Ancien couvent des Visitandines",
+    "geoloc": {
+        "lat": 43.1083,
+        "lng": 0.7234
+    },
+    "images": [{
+        "nbr": "0",
+        "url": "images/.......jpg"
+    },
+    {
+        "nbr": "1",
+        "url": "images/.......jpg"
+    }
+],
+    "texte": "Immeuble de la Chambre de Commerce."
+}
+]
 
 }
