@@ -7,14 +7,26 @@
     margin-left: 3%;
   }
   
+  #gallery {
+    margin-left: 3%;
+    width: 1200;
+    height: 2000;
+  }
+  
   img {
     width: 50%;
     height: 50%;
   }
-  .hide{
-    display: none!important;
-  }
+
   /*phototheque
   Odile, Aymeric*/
+  .ui-dialog { 
+    z-index: 1000 !important ;
+
+  }
+  .ui-front { 
+    z-index: 1000 !important; 
+  }
+
   /*admin
     David*/
