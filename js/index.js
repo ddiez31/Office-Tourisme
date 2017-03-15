@@ -6,7 +6,6 @@
             console.log("init ok");
             this.url = "../data/galerie.json";
             this.getGalerie(app.url);
-
         },
 
         getGalerie: function(url) {
@@ -50,8 +49,7 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
 
 
             //button pour ouvrir la galerie sur la map
-
-            $( "#gallery" ).dialog({
+            $("#gallery").dialog({
                 autoOpen: false,
                 width: 1200,
                 resizable: false,
@@ -68,10 +66,10 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 }
             });
 
-            L.easyButton('<strong >O</strong>', function(btn, map){
-                $( "#gallery" ).dialog( "open" );
+            L.easyButton('<strong >O</strong>', function(btn, map) {
+                $("#gallery").dialog("open");
                 app.initgallery()
-            }).addTo( map );
+            }).addTo(map);
 
 
 
@@ -93,12 +91,12 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
                 var contentPopupOcre = '';
-                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br>";
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
                     contentPopupOcre += '<img src="' + imgOcre + '" width="200" height="150">';
                 }
-                contentPopupOcre += "<p>" + texteOcre + "</p>";
+                contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
             };
             //sentier
