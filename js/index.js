@@ -14,6 +14,7 @@
             $.ajax({
                 url: url,
                 success: this.initmap,
+                console.log("")
                 error: function(err) {
                     if (err) {
                         console.log(err);
@@ -48,6 +49,7 @@
             $( "#gallery" ).dialog({
                 autoOpen: false,
                 width: 1200,
+                height: "auto",
                 resizable: false,
                 fluid: true,
                 responsive: true,
@@ -180,7 +182,7 @@
 
                 //tiles options:
                 tiles_type: "justified", //must option for the tiles - justified type
-                tiles_justified_row_height: 120, //base row height of the justified type
+                tiles_justified_row_height: 20, //base row height of the justified type
                 tiles_justified_space_between: 3, //space between the tiles justified type
                 tiles_set_initial_height: true, //columns type related only
                 tiles_enable_transition: true, //enable transition when screen width change
