@@ -13,7 +13,6 @@
             $.ajax({
                 url: url,
                 success: this.initmap,
-                console.log("")
                 error: function(err) {
                     if (err) {
                         console.log(err);
@@ -64,7 +63,7 @@
 
             L.easyButton('<strong >O</strong>', function(btn, map) {
                 $("#gallery").dialog("open");
-                app.initgallery()
+                app.initgallery(data)
             }).addTo(map);
 
 
@@ -168,7 +167,8 @@
 
         // phototheque Odile, Aymeric
         // unitegallery
-        initgallery: function() {
+        initgallery: function(data) {
+            console.log(data.ocre[0].images)
             $("#gallery").unitegallery({
                 //theme options:
                 theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
