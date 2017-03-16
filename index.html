@@ -1,35 +1,45 @@
-    <!DOCTYPE html>
-    <html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 
-    <head>
-      <meta charset="UTF-8">
-      <title>title</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-      <!-- Jquery_ui -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-      <!-- Leaflet -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.css" />
-      <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-      <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
+    <!-- Jquery_ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.css" />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
+    <link rel="stylesheet" href="css/leaflet-beautify-marker-icon.css">
+    <!-- Unite gallery -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/css/unite-gallery.min.css' type='text/css' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.min.css' type='text/css' />
+    <!-- Lightbox -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css' type='text/css' />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-      <!-- CSS -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Unite gallery -->
-      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/css/unite-gallery.min.css' type='text/css' />
-      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.min.css' type='text/css' />
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <!--carte interactive-->
+    <!--Carole, Julien-->
 
 
+    <div id="cdf_map">
+    </div>
+    <div id="gallery" title="Galerie">
 
+    </div>
 
-    </head>
-
-    <body>
-
-      <header>
-
-      </header>
 
       <!--carte interactive-->
       <!--Carole, Julien-->
@@ -39,7 +49,8 @@
       <div id="cdf_map">
       </div>
 
-      <div id="legend" title="Légende">
+     <div id="map"></div>
+     <!--<div id="legend" title="Légende">
 
       <table>
 
@@ -62,69 +73,61 @@
 
       </div>
       
-       <h4>LEGENDE</h4>
-       <br>
-       <br>
+       <h4>LEGENDE</h4>-->
+       
       
-      <div id="gallery" title="Galerie">
+    
+    <hr>
+    <!--phototheque-->
+    <!--Odile, Aymeric-->
+    <div id="tri">
 
-        
-        <img alt="office tourisme" src="images/1-office tourisme2.jpg" data-image="images/1-office tourisme2.jpg" data-description="Boutique de l'office de tourisme de Saint Gaudens">
-
-
-        <img alt="office tourisme" src="images/1-boutique1.jpg" data-image="images/1-boutique1.jpg" data-description="Boutique de l'office de tourisme de Saint Gaudens">
-
-
-      </div>
-
-      <hr>
-      <!--phototheque-->
-      <!--Odile, Aymeric-->
-      <div id="tri">
         <label for="theme">Thème</label>
         <select id="selectTheme">
-          <option value="">Tout</option>
-          <option id="Ocre" value="">Circuit ocre</option>
-          <option id="Vert"value="">Circuit vert</option>
-          <option id="autre"value="">Autre</option>
-        </select>
+      <option value="">Tout</option>
+      <option id="Ocre" value="">Circuit ocre</option>
+      <option id="Vert"value="">Circuit vert</option>
+      <option id="autre"value="">Autre</option>
+    </select>
         <label for="lieu">Lieu</label>
 
         <select id="selectLieu">
-         <option value="">Tout</option>
-         <option value="">Office du tourisme</option>
-         <option value="">Collégiale</option>
-         <option value="">Architecture</option>  
-         <option value=""> Monument aux 3 maréchaux</option>  
-         <option value="">Table orientation</option>
-       </select>
-     </div>
+     <option value="">Tout</option>
+     <option value="">Office du tourisme</option>
+     <option value="">Collégiale</option>
+     <option value="">Architecture</option>  
+     <option value=""> Monument aux 3 maréchaux</option>  
+     <option value="">Table orientation</option>
+   </select>
+    </div>
+
+    <!--admin-->
+    <!--David-->
 
 
+    <footer>
 
-     <!--admin-->
-     <!--David-->
+    </footer>
 
+</body>
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="http://rawgit.com/jasonday/jQuery-UI-Dialog-extended/master/jquery.dialogOptions.js"></script>
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+<script src="js/leaflet-beautify-marker-icon.js"></script>
+<script src="js/leaflet-beautify-marker.js"></script>
+<!-- Unite gallery -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.min.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/tiles/ug-theme-tiles.min.js' type='text/javascript'></script>
+<!-- Lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
 
-     <footer>
+<script src="js/index.js"></script>
 
-     </footer>
-
-   </body>
-   <!-- JQuery -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-   <script src="//rawgit.com/jasonday/jQuery-UI-Dialog-extended/master/jquery.dialogOptions.js"></script>
-   <!-- Leaflet -->
-   <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-   <script src="https://unpkg.com/leaflet-responsive-popup@0.2.0/leaflet.responsive.popup.js"></script>
-   <!-- Unite gallery -->
-   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.min.js'></script>
-   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.min.js'></script>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/tiles/ug-theme-tiles.min.js' type='text/javascript'></script>
-   <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-   <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
-
-   <script src="js/index.js"></script>
-
-   </html>
+</html>

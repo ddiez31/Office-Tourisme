@@ -11,8 +11,11 @@
         getGalerie: function(url) {
             console.log("getGalerie ok");
             $.ajax({
+
                 url: url,
                 success: this.initmap,
+
+
                 error: function(err) {
                     if (err) {
                         console.log(err);
@@ -30,16 +33,10 @@
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
-
-            var bounds = [[43.108110, 0.728145], [43.108005, 0.728127], [43.107952, 0.728019], [43.107873, 0.728109], [43.107735, 0.728100], [43.107781, 0.728145], [43.107696, 0.728244], [43.107742, 0.728271], [43.107821, 0.728389], [43.107840, 0.728244], [43.108110, 0.728145]];
-// create an orange rectangle
-L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
-
-
-
             map.scrollWheelZoom.disable();
             map.on('fullscreenchange', function() {
                 if (map.isFullscreen()) {
+                    bouton.remove();
                     return;
                 } else {
                     map.remove();
@@ -47,11 +44,11 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 }
             });
 
-
             //button pour ouvrir la galerie sur la map
             $("#gallery").dialog({
                 autoOpen: false,
                 width: 1200,
+                height: "auto",
                 resizable: false,
                 fluid: true,
                 responsive: true,
@@ -66,27 +63,40 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 }
             });
 
-            L.easyButton('<strong >O</strong>', function(btn, map) {
+            var bouton = L.easyButton('<strong>O</strong>', function(btn, map) {
                 $("#gallery").dialog("open");
-                app.initgallery()
-            }).addTo(map);
+                app.initgallery(data)
 
+
+            }).addTo(map);
 
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
                 //marqueurs
                 var Ocre = function() {
-                    this.marqueur = data.ocre[i].marqueur;
-                    this.size = 5;
-                    this.color = '#FF5200';
-                    this.fillColor = '#FF5200';
-                    this.fillOpacity = 1;
+                    this.text = data.ocre[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#FF5200';
+                    this.backgroundColor = "rgba(255, 82, 0, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markOcre = new Ocre();
                 var latOcre = data.ocre[i].geoloc.lat;
                 var longOcre = data.ocre[i].geoloc.lng;
-                markOcre = L.circle([latOcre, longOcre], markOcre.size, { color: markOcre.color, fillColor: markOcre.fillColor, fillOpacity: markOcre.fillOpacity }).addTo(map);
+                markOcre = L.marker([latOcre, longOcre], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markOcre.iconSize,
+                        borderColor: markOcre.borderColor,
+                        backgroundColor: markOcre.backgroundColor,
+                        isAlphaNumericIcon: markOcre.isAlphaNumericIcon,
+                        text: markOcre.text,
+                        textColor: markOcre.textColor,
+                        innerIconStyle: markOcre.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
@@ -94,7 +104,7 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    contentPopupOcre += '<img src="' + imgOcre + '" width="200" height="150">';
+                    contentPopupOcre += '<a href="' + imgOcre + '" data-lightbox="' + imgOcre + '"><img class="imgPopup" src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '"></a>';
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
@@ -103,20 +113,33 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
             var latlngsOcre = data.ocre[0].sentier;
             var polylineOcre = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
 
+
             //circuit vert clair
             for (i = 0; i < data.vert.length; i++) {
                 //marqueurs
                 var Vert = function() {
-                    this.marqueur = data.vert[i].marqueur;
-                    this.size = 5;
-                    this.color = '#00AB39';
-                    this.fillColor = '#00AB39';
-                    this.fillOpacity = 1;
+                    this.text = data.vert[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#00AB39';
+                    this.backgroundColor = "rgb(0, 171, 57, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markVert = new Vert();
                 var latVert = data.vert[i].geoloc.lat;
                 var longVert = data.vert[i].geoloc.lng;
-                markVert = L.circle([latVert, longVert], markVert.size, { color: markVert.color, fillColor: markVert.fillColor, fillOpacity: markVert.fillOpacity }).addTo(map);
+                markVert = L.marker([latVert, longVert], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markVert.iconSize,
+                        borderColor: markVert.borderColor,
+                        backgroundColor: markVert.backgroundColor,
+                        isAlphaNumericIcon: markVert.isAlphaNumericIcon,
+                        text: markVert.text,
+                        textColor: markVert.textColor,
+                        innerIconStyle: markVert.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 titreVert = data.vert[i].titre;
                 texteVert = data.vert[i].texte;
@@ -132,7 +155,6 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
             //sentier
             var latlngsVert = data.vert[0].sentier;
             var polylineVert = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
-
 
 
             //batiments officiels
@@ -166,13 +188,25 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
             //batiments etoiles
             for (i = 0; i < data.etoiles.length; i++) {
                 //marqueurs
-
+        
             };
+ 
+            var polylineOcre = [];
+            var polylineVert = [];
+            //background tile set
+            //var tileLayer = {'Gray' : L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade'
+            //})
+            
         },
 
+
         // phototheque Odile, Aymeric
+
+
         // unitegallery
-        initgallery: function() {
+        initgallery: function(data) {
+
             $("#gallery").unitegallery({
                 //theme options:
                 theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
@@ -194,11 +228,25 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 tile_enable_textpanel: true,
                 tile_textpanel_title_text_align: "center",
                 tile_textpanel_always_on: true,
+                tile_enable_action: true,
                 lightbox_textpanel_enable_description: true, //enable the description text
                 lightbox_type: "compact", //compact / wide - lightbox type
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
                 lightbox_slider_image_border: false, //enable border around the image (for compact type only)
             });
+
+            var photoOcre = '';
+            for (x = 0; x < data.ocre.length; x++) {
+                var alt = data.ocre[x].titre;
+
+                for (y = 0; y < data.ocre[x].images.length; y++) {
+                    var imgOcre = data.ocre[x].images[y].url;
+                    var creditOcre = data.ocre[x].images[y].credit;
+                    photoOcre += '<img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px">';
+                }
+            };
+            $('#gallery').append(photoOcre);
+
         }
     }
     app.init();
