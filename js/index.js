@@ -11,11 +11,8 @@
         getGalerie: function(url) {
             console.log("getGalerie ok");
             $.ajax({
-
                 url: url,
                 success: this.initmap,
-
-
                 error: function(err) {
                     if (err) {
                         console.log(err);
@@ -63,11 +60,16 @@
                 }
             });
 
-            var bouton = L.easyButton('<strong>O</strong>', function(btn, map) {
-                $("#gallery").dialog("open");
-                app.initgallery(data)
-
-
+            var bouton = L.easyButton({
+                position: 'bottomleft',
+                states: [{
+                    onClick: function(btn, map) {
+                        $("#gallery").dialog("open");
+                        app.initgallery(data)
+                    },
+                    title: 'Galerie photos',
+                    icon: '<strong>O</strong>'
+                }]
             }).addTo(map);
 
 
@@ -161,16 +163,28 @@
             for (i = 0; i < data.annexes.length; i++) {
                 //marqueurs
                 var Annexes = function() {
-                    this.marqueur = data.annexes[i].marqueur;
-                    this.size = 5;
-                    this.color = '#006400';
-                    this.fillColor = '#006400';
-                    this.fillOpacity = 1;
+                    this.text = data.annexes[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#006400';
+                    this.backgroundColor = "rgb(0, 100, 0, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markAnnexes = new Annexes();
                 var latAnnexes = data.annexes[i].geoloc.lat;
                 var longAnnexes = data.annexes[i].geoloc.lng;
-                markAnnexes = L.circle([latAnnexes, longAnnexes], markAnnexes.size, { color: markAnnexes.color, fillColor: markAnnexes.fillColor, fillOpacity: markAnnexes.fillOpacity }).addTo(map);
+                markAnnexes = L.marker([latAnnexes, longAnnexes], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markAnnexes.iconSize,
+                        borderColor: markAnnexes.borderColor,
+                        backgroundColor: markAnnexes.backgroundColor,
+                        isAlphaNumericIcon: markAnnexes.isAlphaNumericIcon,
+                        text: markAnnexes.text,
+                        textColor: markAnnexes.textColor,
+                        innerIconStyle: markAnnexes.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 titreAnnexes = data.annexes[i].titre;
                 texteAnnexes = data.annexes[i].texte;
@@ -229,11 +243,10 @@
             var photoOcre = '';
             for (x = 0; x < data.ocre.length; x++) {
                 var alt = data.ocre[x].titre;
-
                 for (y = 0; y < data.ocre[x].images.length; y++) {
                     var imgOcre = data.ocre[x].images[y].url;
                     var creditOcre = data.ocre[x].images[y].credit;
-                    photoOcre += '<img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px">';
+                    photoOcre += '<a href="' + imgOcre + '" data-lightbox="' + imgOcre + '"><img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px"></a>';
                 }
             };
             $('#gallery').append(photoOcre);
