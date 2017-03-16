@@ -65,13 +65,13 @@
               position: 'bottomleft',   
               states:[{                 
                 onClick: function(btn, map){
-                 $("#gallery").dialog("open");
-                 app.initgallery(data)
-             },
-             title: 'Galerie Photos',
-             icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
-         }]
-     }).addTo(map);
+                    $("#dialog").dialog("open");
+                    app.initgallery(data)
+                },
+                title: 'Galerie Photos',
+                icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
+            }]
+        }).addTo(map);
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -268,7 +268,7 @@
         //gallery options:
         gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
         gallery_width: "100%", //gallery width
-        gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
+        gallery_background_color: "#C0C0C0", //set custom background color. If not set it will be taken from css.
 
         //navigation option:
         theme_navigation_type: "arrows",       //bullets, arrows
