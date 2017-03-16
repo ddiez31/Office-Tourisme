@@ -3,13 +3,11 @@
     var app = {
         // admin David
         init: function() {
-            console.log("init ok");
             this.url = "../data/galerie.json";
             this.getGalerie(app.url);
         },
 
         getGalerie: function(url) {
-            console.log("getGalerie ok");
             $.ajax({
                 url: url,
                 success: this.initmap,
@@ -64,7 +62,7 @@
                 position: 'bottomleft',
                 states: [{
                     onClick: function(btn, map) {
-                        $("#gallery").dialog("open");
+                        $("#dialog").dialog("open");
                         app.initgallery(data);
                     },
                     title: 'Galerie Photos',
@@ -215,7 +213,6 @@
             var photoOcre = '';
             for (x = 0; x < data.ocre.length; x++) {
                 var alt = data.ocre[x].titre;
-
                 for (y = 0; y < data.ocre[x].images.length; y++) {
                     var imgOcre = data.ocre[x].images[y].url;
                     var creditOcre = data.ocre[x].images[y].credit;
@@ -253,7 +250,7 @@
             //     $("#gallery").html(photoOcre + photoVert);  
             // };
 
-            $('#gallery').html(photoOcre);
+            $('#gallery').html(photoOcre + photoVert);
 
             $("#gallery").unitegallery({
                 //theme options:
