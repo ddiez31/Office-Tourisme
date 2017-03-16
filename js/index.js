@@ -11,11 +11,8 @@
         getGalerie: function(url) {
             console.log("getGalerie ok");
             $.ajax({
-
-                url:url,
+                url: url,
                 success: this.initmap,
-
-
                 error: function(err) {
                     if (err) {
                         console.log(err);
@@ -63,13 +60,17 @@
                 }
             });
 
-            var bouton = L.easyButton('<strong>O</strong>', function(btn, map) {
-              $("#gallery").dialog("open");
-              app.initgallery(data)
-
-
-          }).addTo(map);
-
+            var bouton = L.easyButton({
+              position: 'bottomleft',   
+              states:[{                 
+                onClick: function(btn, map){
+                   $("#gallery").dialog("open");
+                   app.initgallery(data)
+               },
+               title: 'Galerie Photos',
+               icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
+           }]
+       }).addTo(map);
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -101,13 +102,15 @@
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
                 var contentPopupOcre = '';
-                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br>";
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    contentPopupOcre += '<img src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '" width="200" height="150">';
+                    contentPopupOcre += '<a href="' + imgOcre + '" data-lightbox="' + imgOcre + '"><img class="imgPopup" src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '"></a>';
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
+                // var animation = $(".carousel").colorbox({rel:"carousel", transition: "fade", slideshow: true });
+                // console.log(animation)
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
@@ -144,10 +147,10 @@
                 titreVert = data.vert[i].titre;
                 texteVert = data.vert[i].texte;
                 var contentPopupVert = '';
-                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br>";
+                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.vert[i].images.length; j++) {
                     var imgVert = data.vert[i].images[j].url;
-                    contentPopupVert += '<img src="' + imgVert + '" width="200" height="150">';
+                    contentPopupVert += '<a href="' + imgVert + '" data-lightbox="' + imgVert + '"><img class="imgPopup" src="' + imgVert + '" alt="' + titreVert + '" data-image="' + imgVert + '"></a>';
                 }
                 contentPopupVert += "<p>" + texteVert + "</p>";
                 markVert.bindPopup(contentPopupVert);
@@ -161,26 +164,38 @@
             for (i = 0; i < data.annexes.length; i++) {
                 //marqueurs
                 var Annexes = function() {
-                    this.marqueur = data.annexes[i].marqueur;
-                    this.size = 5;
-                    this.color = '#006400';
-                    this.fillColor = '#006400';
-                    this.fillOpacity = 1;
+                    this.text = data.annexes[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#006400';
+                    this.backgroundColor = "rgb(0, 100, 0, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markAnnexes = new Annexes();
                 var latAnnexes = data.annexes[i].geoloc.lat;
                 var longAnnexes = data.annexes[i].geoloc.lng;
-                markAnnexes = L.circle([latAnnexes, longAnnexes], markAnnexes.size, { color: markAnnexes.color, fillColor: markAnnexes.fillColor, fillOpacity: markAnnexes.fillOpacity }).addTo(map);
+                markAnnexes = L.marker([latAnnexes, longAnnexes], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markAnnexes.iconSize,
+                        borderColor: markAnnexes.borderColor,
+                        backgroundColor: markAnnexes.backgroundColor,
+                        isAlphaNumericIcon: markAnnexes.isAlphaNumericIcon,
+                        text: markAnnexes.text,
+                        textColor: markAnnexes.textColor,
+                        innerIconStyle: markAnnexes.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 titreAnnexes = data.annexes[i].titre;
                 texteAnnexes = data.annexes[i].texte;
                 var contentPopupAnnexes = '';
-                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br>";
+                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.annexes[i].images.length; j++) {
                     var imgAnnexes = data.annexes[i].images[j].url;
-                    contentPopupAnnexes += '<img src="' + imgAnnexes + '" width="200" height="150">';
+                    contentPopupAnnexes += '<a href="' + imgAnnexes + '" data-lightbox="' + imgAnnexes + '"><img class="imgPopup" src="' + imgAnnexes + '" alt="' + titreAnnexes + '" data-image="' + imgAnnexes + '"></a>';
                 }
-                contentPopupAnnexes += "<p>" + texteAnnexes + "</p>";
+                contentPopupAnnexes += "</div><p>" + texteAnnexes + "</p>";
                 markAnnexes.bindPopup(contentPopupAnnexes);
             };
 
