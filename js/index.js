@@ -146,10 +146,10 @@
                 titreVert = data.vert[i].titre;
                 texteVert = data.vert[i].texte;
                 var contentPopupVert = '';
-                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br>";
+                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.vert[i].images.length; j++) {
                     var imgVert = data.vert[i].images[j].url;
-                    contentPopupVert += '<img src="' + imgVert + '" width="200" height="150">';
+                    contentPopupVert += '<a href="' + imgVert + '" data-lightbox="' + imgVert + '"><img class="imgPopup" src="' + imgVert + '" alt="' + titreVert + '" data-image="' + imgVert + '"></a>';
                 }
                 contentPopupVert += "<p>" + texteVert + "</p>";
                 markVert.bindPopup(contentPopupVert);
@@ -189,12 +189,12 @@
                 titreAnnexes = data.annexes[i].titre;
                 texteAnnexes = data.annexes[i].texte;
                 var contentPopupAnnexes = '';
-                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br>";
+                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.annexes[i].images.length; j++) {
                     var imgAnnexes = data.annexes[i].images[j].url;
-                    contentPopupAnnexes += '<img src="' + imgAnnexes + '" width="200" height="150">';
+                    contentPopupAnnexes += '<a href="' + imgAnnexes + '" data-lightbox="' + imgAnnexes + '"><img class="imgPopup" src="' + imgAnnexes + '" alt="' + titreAnnexes + '" data-image="' + imgAnnexes + '"></a>';
                 }
-                contentPopupAnnexes += "<p>" + texteAnnexes + "</p>";
+                contentPopupAnnexes += "</div><p>" + texteAnnexes + "</p>";
                 markAnnexes.bindPopup(contentPopupAnnexes);
             };
 
@@ -250,7 +250,6 @@
                 }
             };
             $('#gallery').append(photoOcre);
-
         }
     }
     app.init();
