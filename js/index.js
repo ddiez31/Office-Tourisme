@@ -33,7 +33,6 @@
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
-
             map.scrollWheelZoom.disable();
             map.on('fullscreenchange', function() {
                 if (map.isFullscreen()) {
@@ -45,11 +44,11 @@
                 }
             });
 
-
             //button pour ouvrir la galerie sur la map
-            $("#gallery").dialog({
+            $("#dialog").dialog({
                 autoOpen: false,
                 width: 1200,
+                height: "auto",
                 resizable: false,
                 fluid: true,
                 responsive: true,
@@ -65,9 +64,11 @@
             });
 
             var bouton = L.easyButton('<strong>O</strong>', function(btn, map) {
-                $("#gallery").dialog("open");
-                app.initgallery(data);
-            }).addTo(map);
+              $("#dialog").dialog("open");
+              app.initgallery(data)
+
+
+          }).addTo(map);
 
 
             //circuit ocre
@@ -196,8 +197,49 @@
 
         // unitegallery
         initgallery: function(data) {
+            var photoOcre = '';
+            for (x = 0; x < data.ocre.length; x++) {
+                var alt=data.ocre[x].titre;
+
+                for (y = 0; y < data.ocre[x].images.length; y++) {
+                    var imgOcre = data.ocre[x].images[y].url;
+                    var creditOcre = data.ocre[x].images[y].credit;
+                    photoOcre += '<img alt="' + alt + '" src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '">';
+                }
+            };
+
+            var photoVert = '';
+            for (x = 0; x < data.vert.length; x++) {
+                var alt=data.vert[x].titre;
+
+                for (y = 0; y < data.vert[x].images.length; y++) {
+                    var imgVert = data.vert[x].images[y].url;
+                    var creditVert = data.vert[x].images[y].credit;
+                    photoVert += '<img alt="' + alt + '" src="' + imgVert + '" data-image="' + imgVert + '" data-description="' + creditVert + '">';
+                }
+            };
+        
+            $("#Ocre").is('checked', function(){
+                var test= $("#Ocre").val();
+                console.log(test)
+                console.log("ok");
+            })
+           //  var filterOcre = $("#Ocre").on("click");
+           //  var filterVert = $("#Vert").on("click");
+
+           //  if(filterOcre==true){
+           //      $("#gallery").html(photoOcre)
+           //      console.log("ok")
+           //  }
+           //  else if(filterVert==true){
+           //      $("#gallery").html(photoVert)
+           //  }
+           //  else{
+           //     $("#gallery").html(photoOcre + photoVert);  
+           // };
 
             $("#gallery").unitegallery({
+
         //theme options:
         theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
 
@@ -218,6 +260,7 @@
         tile_enable_textpanel: true,
         tile_textpanel_title_text_align: "center",
         tile_textpanel_always_on: true,
+        tile_textpanel_desc_font_size:0,      //textpanel description font size. if null - take from css
         tile_enable_action:true,
         lightbox_textpanel_enable_description: true, //enable the description text
         lightbox_type: "compact", //compact / wide - lightbox type
@@ -225,19 +268,7 @@
         lightbox_slider_image_border: false, //enable border around the image (for compact type only)
     });
 
-            var photoOcre = '';
-            for (x = 0; x < data.ocre.length; x++) {
-                var alt=data.ocre[x].titre;
-
-                for (y = 0; y < data.ocre[x].images.length; y++) {
-                    var imgOcre = data.ocre[x].images[y].url;
-                    var creditOcre = data.ocre[x].images[y].credit;
-                    photoOcre += '<img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px">'; 
-                }
-            };
-            $('#gallery').append(photoOcre);   
-
-        }
-    }
-    app.init();
+       }
+   }
+   app.init();
 })();
