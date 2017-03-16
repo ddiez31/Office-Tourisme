@@ -11,11 +11,8 @@
         getGalerie: function(url) {
             console.log("getGalerie ok");
             $.ajax({
-
-                url:url,
+                url: url,
                 success: this.initmap,
-
-
                 error: function(err) {
                     if (err) {
                         console.log(err);
@@ -63,13 +60,18 @@
                 }
             });
 
-            var bouton = L.easyButton('<strong>O</strong>', function(btn, map) {
-              $("#dialog").dialog("open");
-              app.initgallery(data)
 
-
-          }).addTo(map);
-
+            var bouton = L.easyButton({
+              position: 'bottomleft',   
+              states:[{                 
+                onClick: function(btn, map){
+                 $("#gallery").dialog("open");
+                 app.initgallery(data)
+             },
+             title: 'Galerie Photos',
+             icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
+         }]
+     }).addTo(map);
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -101,13 +103,15 @@
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
                 var contentPopupOcre = '';
-                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br>";
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    contentPopupOcre += '<img src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '" width="200" height="150">';
+                    contentPopupOcre += '<a href="' + imgOcre + '" data-lightbox="' + imgOcre + '"><img class="imgPopup" src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '"></a>';
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
+                // var animation = $(".carousel").colorbox({rel:"carousel", transition: "fade", slideshow: true });
+                // console.log(animation)
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
@@ -144,10 +148,10 @@
                 titreVert = data.vert[i].titre;
                 texteVert = data.vert[i].texte;
                 var contentPopupVert = '';
-                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br>";
+                contentPopupVert += "<h2>" + titreVert + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.vert[i].images.length; j++) {
                     var imgVert = data.vert[i].images[j].url;
-                    contentPopupVert += '<img src="' + imgVert + '" width="200" height="150">';
+                    contentPopupVert += '<a href="' + imgVert + '" data-lightbox="' + imgVert + '"><img class="imgPopup" src="' + imgVert + '" alt="' + titreVert + '" data-image="' + imgVert + '"></a>';
                 }
                 contentPopupVert += "<p>" + texteVert + "</p>";
                 markVert.bindPopup(contentPopupVert);
@@ -161,26 +165,38 @@
             for (i = 0; i < data.annexes.length; i++) {
                 //marqueurs
                 var Annexes = function() {
-                    this.marqueur = data.annexes[i].marqueur;
-                    this.size = 5;
-                    this.color = '#006400';
-                    this.fillColor = '#006400';
-                    this.fillOpacity = 1;
+                    this.text = data.annexes[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#006400';
+                    this.backgroundColor = "rgb(0, 100, 0, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markAnnexes = new Annexes();
                 var latAnnexes = data.annexes[i].geoloc.lat;
                 var longAnnexes = data.annexes[i].geoloc.lng;
-                markAnnexes = L.circle([latAnnexes, longAnnexes], markAnnexes.size, { color: markAnnexes.color, fillColor: markAnnexes.fillColor, fillOpacity: markAnnexes.fillOpacity }).addTo(map);
+                markAnnexes = L.marker([latAnnexes, longAnnexes], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markAnnexes.iconSize,
+                        borderColor: markAnnexes.borderColor,
+                        backgroundColor: markAnnexes.backgroundColor,
+                        isAlphaNumericIcon: markAnnexes.isAlphaNumericIcon,
+                        text: markAnnexes.text,
+                        textColor: markAnnexes.textColor,
+                        innerIconStyle: markAnnexes.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 titreAnnexes = data.annexes[i].titre;
                 texteAnnexes = data.annexes[i].texte;
                 var contentPopupAnnexes = '';
-                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br>";
+                contentPopupAnnexes += "<h2>" + titreAnnexes + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.annexes[i].images.length; j++) {
                     var imgAnnexes = data.annexes[i].images[j].url;
-                    contentPopupAnnexes += '<img src="' + imgAnnexes + '" width="200" height="150">';
+                    contentPopupAnnexes += '<a href="' + imgAnnexes + '" data-lightbox="' + imgAnnexes + '"><img class="imgPopup" src="' + imgAnnexes + '" alt="' + titreAnnexes + '" data-image="' + imgAnnexes + '"></a>';
                 }
-                contentPopupAnnexes += "<p>" + texteAnnexes + "</p>";
+                contentPopupAnnexes += "</div><p>" + texteAnnexes + "</p>";
                 markAnnexes.bindPopup(contentPopupAnnexes);
             };
 
@@ -218,12 +234,12 @@
                     photoVert += '<img alt="' + alt + '" src="' + imgVert + '" data-image="' + imgVert + '" data-description="' + creditVert + '">';
                 }
             };
-        
-            $("#Ocre").is('checked', function(){
-                var test= $("#Ocre").val();
-                console.log(test)
-                console.log("ok");
-            })
+
+            // $("#Ocre").is('checked', function(){
+            //     var test= $("#Ocre").val();
+            //     console.log(test)
+            //     console.log("ok");
+            // })
            //  var filterOcre = $("#Ocre").on("click");
            //  var filterVert = $("#Vert").on("click");
 
@@ -238,18 +254,30 @@
            //     $("#gallery").html(photoOcre + photoVert);  
            // };
 
-            $("#gallery").unitegallery({
+           $('#gallery').html(photoOcre);
+
+
+           $("#gallery").unitegallery({
 
         //theme options:
-        theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
+        theme_gallery_padding: 0,               //padding from sides of the gallery
+        grid_padding:10,                        //set padding to the grid
+        grid_space_between_cols: 20,            //space between columns
+        grid_space_between_rows: 20,            //space between rows
 
         //gallery options:
-        gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
+        gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
         gallery_width: "100%", //gallery width
-        gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
+        gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
+
+        //navigation option:
+        theme_navigation_type: "arrows",       //bullets, arrows
+        grid_num_rows:4,                        //maximum number of grid rows. If set to big value, the navigation will not appear.
+
+
 
         //tiles options:
-        tiles_type: "justified", //must option for the tiles - justified type
+        //tiles_type: "justified", //must option for the tiles - justified type
         tiles_justified_row_height: 120, //base row height of the justified type
         tiles_justified_space_between: 3, //space between the tiles justified type
         tiles_set_initial_height: true, //columns type related only
@@ -260,7 +288,7 @@
         tile_enable_textpanel: true,
         tile_textpanel_title_text_align: "center",
         tile_textpanel_always_on: true,
-        tile_textpanel_desc_font_size:0,      //textpanel description font size. if null - take from css
+        tile_textpanel_title_font_size:null,     //textpanel title font size. if null - take from css
         tile_enable_action:true,
         lightbox_textpanel_enable_description: true, //enable the description text
         lightbox_type: "compact", //compact / wide - lightbox type
@@ -269,6 +297,7 @@
     });
 
        }
+       
    }
    app.init();
 })();

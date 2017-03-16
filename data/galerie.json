@@ -264,12 +264,14 @@
         "images": [{
             "nbr": "0",
             "url": "../images/9-Eugène_Azemar-1.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
             "url": "../images/9-Maginot-1.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Homme politique fondateur du Syndicat d'Initiative en 1922 et du circuit auto-motos du Comminges en 1925."
@@ -285,12 +287,14 @@
         "images": [{
             "nbr": "0",
             "url": "../images/10-Centre_art_contemporain.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
             "url": "../images/10-centre_art_contemporain2.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Lieu d'expositions. Invite des artistes dont les oeuvres incitent à l'exploration des pratiques plastiques contemporaines. Programme d'actions culturelles, conférences, voyages, ..."
@@ -306,7 +310,8 @@
         "images": [{
             "nbr": "0",
             "url": "../images/11-Saint_Gaudens_ville_fortifiée-1.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
 
     ],
@@ -323,12 +328,14 @@
         "images": [{
             "nbr": "0",
             "url": "../images/12-place_Saint_Raymond1.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
             "url": "../images/12-Place_Saint_Raymond-2.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Autour de cette place, plusieurs immeubles ont abrité les bureaux et laboratoires de la Régie Autonome des Pétroles qui exploita le premier gisement de gaz naturel découvert en France à Saint-Marcet (13km de Saint-Gaudens)."
@@ -344,12 +351,14 @@
         "images": [{
             "nbr": "0",
             "url": "../images/13-Architecture_vieille_ville7.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
             "url": "../images/13-vue_sur_toits-3.jpg",
-            " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Les galeries extérieures, architecture typique du bâti en Comminges viennent agrémenter la construction à ossature bois."
@@ -461,7 +470,8 @@
     "images": [{
         "nbr": "0",
         "url": "images/B-Plaine_de_la_Garonne.jpg",
-        " credit": "photo O.CADIOU/A.GIOIA ERN Simplon"
+
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     },
     {
         "nbr": "1",

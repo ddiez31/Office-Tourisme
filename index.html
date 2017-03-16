@@ -17,7 +17,8 @@
   <!-- Unite gallery -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/css/unite-gallery.min.css' type='text/css' />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.min.css' type='text/css' />
-
+  <!-- Lightbox -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css' type='text/css' />
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -36,24 +37,21 @@
   <div id="cdf_map">
   </div>
   <div id="dialog">
-    <div id="gallery" title="Galerie">
+
+  </div>
 
 
-    </div>
+  <!--phototheque-->
+  <!--Odile, Aymeric-->
+  <div id="tri">
+    <label for="theme">Thème</label>
+    <select id="selectTheme">
+      <option value="">Tout</option>
+      <option id="Ocre" value="">Circuit ocre</option>
+      <option id="Vert" value="">Circuit vert</option>
+      <option id="autre" value="">Autre</option>
+    </select>
 
-
-    <!--phototheque-->
-    <!--Odile, Aymeric-->
-    <div id="tri">
-      <label for="theme">Thème</label>
-      <select id="selectTheme">
-        <option value="">Tout</option>
-        <option id="Ocre" value="">Circuit ocre</option>
-        <option id="Vert" value="">Circuit vert</option>
-        <option id="autre" value="">Autre</option>
-      </select>
-
-    </div>
   </div>
 
   <!--admin-->
@@ -79,7 +77,9 @@
 <!-- Unite gallery -->
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.min.js'></script>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/tiles/ug-theme-tiles.min.js' type='text/javascript'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/tilesgrid/ug-theme-tilesgrid.min.js'></script>
+<!-- Lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
 
 <script src="js/index.js"></script>
 
