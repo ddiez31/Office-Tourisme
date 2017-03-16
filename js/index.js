@@ -60,7 +60,6 @@
                 }
             });
 
-
             var bouton = L.easyButton({
                 position: 'bottomleft',
                 states: [{
@@ -69,9 +68,10 @@
                         app.initgallery(data);
                     },
                     title: 'Galerie Photos',
-                    icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
+                    icon: '<img class="center" src="../images/glyphicons-139-picture.png">'
                 }]
             }).addTo(map);
+
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -208,9 +208,8 @@
             };
         },
 
+
         // phototheque Odile, Aymeric
-
-
         // unitegallery
         initgallery: function(data) {
             var photoOcre = '';
@@ -227,7 +226,6 @@
             var photoVert = '';
             for (x = 0; x < data.vert.length; x++) {
                 var alt = data.vert[x].titre;
-
                 for (y = 0; y < data.vert[x].images.length; y++) {
                     var imgVert = data.vert[x].images[y].url;
                     var creditVert = data.vert[x].images[y].credit;
@@ -240,6 +238,7 @@
             //     console.log(test)
             //     console.log("ok");
             // })
+
             //  var filterOcre = $("#Ocre").on("click");
             //  var filterVert = $("#Vert").on("click");
 
@@ -256,9 +255,7 @@
 
             $('#gallery').html(photoOcre);
 
-
             $("#gallery").unitegallery({
-
                 //theme options:
                 theme_gallery_padding: 0, //padding from sides of the gallery
                 grid_padding: 10, //set padding to the grid
@@ -273,8 +270,6 @@
                 //navigation option:
                 theme_navigation_type: "arrows", //bullets, arrows
                 grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
-
-
 
                 //tiles options:
                 //tiles_type: "justified", //must option for the tiles - justified type
@@ -295,9 +290,7 @@
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
                 lightbox_slider_image_border: false, //enable border around the image (for compact type only)
             });
-
         }
-
     }
     app.init();
 })();
