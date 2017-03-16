@@ -6,6 +6,20 @@
     width: 680px;
     margin-left: 3%;
   }
+
+  #legend{
+    border: solid black 2px;
+    max-width: 180px;
+    max-height: 235px;
+    font-size: 10px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+  }
+
+  h4{
+    padding-left: 20px;
+    font-size: 12px;
+  }
   
   #gallery {
     margin-left: 3%;

@@ -43,7 +43,7 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                     return;
                 } else {
                     map.remove();
-                    app.initmap();
+                    app.init();
                 }
             });
 
