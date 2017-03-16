@@ -63,10 +63,16 @@
                 }
             });
 
-            var bouton = L.easyButton('<img class="center" src="/images/glyphicons-139-picture.png">', function(btn, map) {
-                $("#gallery").dialog("open");
-                app.initgallery(data)
-
+           var bouton = L.easyButton({
+              position: 'bottomleft',   
+              states:[{                 
+                onClick: function(btn, map){
+                 $("#gallery").dialog("open");
+                    app.initgallery(data)
+              },
+              title: 'Galerie Photos',
+              icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
+            }]
             }).addTo(map);
 
             //circuit ocre
