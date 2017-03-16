@@ -12,7 +12,7 @@
             console.log("getGalerie ok");
             $.ajax({
 
-                url:url,
+                url: url,
                 success: this.initmap,
 
 
@@ -101,10 +101,10 @@
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
                 var contentPopupOcre = '';
-                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br>";
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    contentPopupOcre += '<img src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '" width="200" height="150">';
+                    contentPopupOcre += '<a href="' + imgOcre + '" data-lightbox="' + imgOcre + '"><img class="imgPopup" src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '"></a>';
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
@@ -199,44 +199,44 @@
         initgallery: function(data) {
 
             $("#gallery").unitegallery({
-        //theme options:
-        theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
+                //theme options:
+                theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
 
-        //gallery options:
-        gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
-        gallery_width: "100%", //gallery width
-        gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
+                //gallery options:
+                gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
+                gallery_width: "100%", //gallery width
+                gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
 
-        //tiles options:
-        tiles_type: "justified", //must option for the tiles - justified type
-        tiles_justified_row_height: 120, //base row height of the justified type
-        tiles_justified_space_between: 3, //space between the tiles justified type
-        tiles_set_initial_height: true, //columns type related only
-        tiles_enable_transition: true, //enable transition when screen width change
-        tile_overlay_opacity: 0.4, //tile overlay opacity
-        tile_overlay_color: "#000000", //tile overlay color
-        tile_enable_image_effect: false, //enable tile image effect
-        tile_enable_textpanel: true,
-        tile_textpanel_title_text_align: "center",
-        tile_textpanel_always_on: true,
-        tile_enable_action:true,
-        lightbox_textpanel_enable_description: true, //enable the description text
-        lightbox_type: "compact", //compact / wide - lightbox type
-        lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
-        lightbox_slider_image_border: false, //enable border around the image (for compact type only)
-    });
+                //tiles options:
+                tiles_type: "justified", //must option for the tiles - justified type
+                tiles_justified_row_height: 120, //base row height of the justified type
+                tiles_justified_space_between: 3, //space between the tiles justified type
+                tiles_set_initial_height: true, //columns type related only
+                tiles_enable_transition: true, //enable transition when screen width change
+                tile_overlay_opacity: 0.4, //tile overlay opacity
+                tile_overlay_color: "#000000", //tile overlay color
+                tile_enable_image_effect: false, //enable tile image effect
+                tile_enable_textpanel: true,
+                tile_textpanel_title_text_align: "center",
+                tile_textpanel_always_on: true,
+                tile_enable_action: true,
+                lightbox_textpanel_enable_description: true, //enable the description text
+                lightbox_type: "compact", //compact / wide - lightbox type
+                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
+                lightbox_slider_image_border: false, //enable border around the image (for compact type only)
+            });
 
             var photoOcre = '';
             for (x = 0; x < data.ocre.length; x++) {
-                var alt=data.ocre[x].titre;
+                var alt = data.ocre[x].titre;
 
                 for (y = 0; y < data.ocre[x].images.length; y++) {
                     var imgOcre = data.ocre[x].images[y].url;
                     var creditOcre = data.ocre[x].images[y].credit;
-                    photoOcre += '<img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px">'; 
+                    photoOcre += '<img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px">';
                 }
             };
-            $('#gallery').append(photoOcre);   
+            $('#gallery').append(photoOcre);
 
         }
     }
