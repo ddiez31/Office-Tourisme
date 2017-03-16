@@ -62,16 +62,16 @@
 
 
             var bouton = L.easyButton({
-              position: 'bottomleft',   
-              states:[{                 
-                onClick: function(btn, map){
-                 $("#gallery").dialog("open");
-                 app.initgallery(data)
-             },
-             title: 'Galerie Photos',
-             icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
-         }]
-     }).addTo(map);
+                position: 'bottomleft',
+                states: [{
+                    onClick: function(btn, map) {
+                        $("#gallery").dialog("open");
+                        app.initgallery(data);
+                    },
+                    title: 'Galerie Photos',
+                    icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
+                }]
+            }).addTo(map);
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -215,7 +215,7 @@
         initgallery: function(data) {
             var photoOcre = '';
             for (x = 0; x < data.ocre.length; x++) {
-                var alt=data.ocre[x].titre;
+                var alt = data.ocre[x].titre;
 
                 for (y = 0; y < data.ocre[x].images.length; y++) {
                     var imgOcre = data.ocre[x].images[y].url;
@@ -226,7 +226,7 @@
 
             var photoVert = '';
             for (x = 0; x < data.vert.length; x++) {
-                var alt=data.vert[x].titre;
+                var alt = data.vert[x].titre;
 
                 for (y = 0; y < data.vert[x].images.length; y++) {
                     var imgVert = data.vert[x].images[y].url;
@@ -240,64 +240,64 @@
             //     console.log(test)
             //     console.log("ok");
             // })
-           //  var filterOcre = $("#Ocre").on("click");
-           //  var filterVert = $("#Vert").on("click");
+            //  var filterOcre = $("#Ocre").on("click");
+            //  var filterVert = $("#Vert").on("click");
 
-           //  if(filterOcre==true){
-           //      $("#gallery").html(photoOcre)
-           //      console.log("ok")
-           //  }
-           //  else if(filterVert==true){
-           //      $("#gallery").html(photoVert)
-           //  }
-           //  else{
-           //     $("#gallery").html(photoOcre + photoVert);  
-           // };
+            //  if(filterOcre==true){
+            //      $("#gallery").html(photoOcre)
+            //      console.log("ok")
+            //  }
+            //  else if(filterVert==true){
+            //      $("#gallery").html(photoVert)
+            //  }
+            //  else{
+            //     $("#gallery").html(photoOcre + photoVert);  
+            // };
 
-           $('#gallery').html(photoOcre);
-
-
-           $("#gallery").unitegallery({
-
-        //theme options:
-        theme_gallery_padding: 0,               //padding from sides of the gallery
-        grid_padding:10,                        //set padding to the grid
-        grid_space_between_cols: 20,            //space between columns
-        grid_space_between_rows: 20,            //space between rows
-
-        //gallery options:
-        gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
-        gallery_width: "100%", //gallery width
-        gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
-
-        //navigation option:
-        theme_navigation_type: "arrows",       //bullets, arrows
-        grid_num_rows:4,                        //maximum number of grid rows. If set to big value, the navigation will not appear.
+            $('#gallery').html(photoOcre);
 
 
+            $("#gallery").unitegallery({
 
-        //tiles options:
-        //tiles_type: "justified", //must option for the tiles - justified type
-        tiles_justified_row_height: 120, //base row height of the justified type
-        tiles_justified_space_between: 3, //space between the tiles justified type
-        tiles_set_initial_height: true, //columns type related only
-        tiles_enable_transition: true, //enable transition when screen width change
-        tile_overlay_opacity: 0.4, //tile overlay opacity
-        tile_overlay_color: "#000000", //tile overlay color
-        tile_enable_image_effect: false, //enable tile image effect
-        tile_enable_textpanel: true,
-        tile_textpanel_title_text_align: "center",
-        tile_textpanel_always_on: true,
-        tile_textpanel_title_font_size:null,     //textpanel title font size. if null - take from css
-        tile_enable_action:true,
-        lightbox_textpanel_enable_description: true, //enable the description text
-        lightbox_type: "compact", //compact / wide - lightbox type
-        lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
-        lightbox_slider_image_border: false, //enable border around the image (for compact type only)
-    });
+                //theme options:
+                theme_gallery_padding: 0, //padding from sides of the gallery
+                grid_padding: 10, //set padding to the grid
+                grid_space_between_cols: 20, //space between columns
+                grid_space_between_rows: 20, //space between rows
 
-       }
-       
-   }
-   app.init();
+                //gallery options:
+                gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
+                gallery_width: "100%", //gallery width
+                gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
+
+                //navigation option:
+                theme_navigation_type: "arrows", //bullets, arrows
+                grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
+
+
+
+                //tiles options:
+                //tiles_type: "justified", //must option for the tiles - justified type
+                tiles_justified_row_height: 120, //base row height of the justified type
+                tiles_justified_space_between: 3, //space between the tiles justified type
+                tiles_set_initial_height: true, //columns type related only
+                tiles_enable_transition: true, //enable transition when screen width change
+                tile_overlay_opacity: 0.4, //tile overlay opacity
+                tile_overlay_color: "#000000", //tile overlay color
+                tile_enable_image_effect: false, //enable tile image effect
+                tile_enable_textpanel: true,
+                tile_textpanel_title_text_align: "center",
+                tile_textpanel_always_on: true,
+                tile_textpanel_title_font_size: null, //textpanel title font size. if null - take from css
+                tile_enable_action: true,
+                lightbox_textpanel_enable_description: true, //enable the description text
+                lightbox_type: "compact", //compact / wide - lightbox type
+                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
+                lightbox_slider_image_border: false, //enable border around the image (for compact type only)
+            });
+
+        }
+
+    }
+    app.init();
 })();
