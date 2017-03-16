@@ -2,9 +2,9 @@
   Carole, Julien*/
   
   #cdf_map {
-      height: 690px;
-      width: 680px;
-      margin-left: 3%;
+    height: 690px;
+    width: 680px;
+    margin-left: 3%;
   }
   
   #gallery {
@@ -13,15 +13,29 @@
       height: 2000;
   }
   
+  .center{
+  padding: 0.3em;
+  margin-left: -0.50em;
+  }
+
+  .imgPopup{
+  height: 8em;
+  padding: 0.2em;
+  }
+
+  .carousel{
+    text-align: center;
+  }
+  
   /*phototheque
   Odile, Aymeric*/
   
   .ui-dialog {
-      z-index: 1000 !important;
+    z-index: 1000 !important;
   }
   
   .ui-front {
-      z-index: 1000 !important;
+    z-index: 1000 !important;
   }
   /*admin
     David*/
