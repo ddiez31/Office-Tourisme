@@ -15,13 +15,13 @@
 
   /*phototheque
   Odile, Aymeric*/
-  .ui-dialog { 
-    z-index: 1000 !important ;
-
+  
+  .ui-dialog {
+    z-index: 1000 !important;
   }
-  .ui-front { 
-    z-index: 1000 !important; 
+  
+  .ui-front {
+    z-index: 1000 !important;
   }
-
   /*admin
     David*/
