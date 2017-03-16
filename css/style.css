@@ -7,14 +7,11 @@
     margin-left: 3%;
   }
   
-  #gallery {
-    margin-left: 3%;
-    width: 1200;
-    height: 2000;
-  }
   /*phototheque
   Odile, Aymeric*/
-  
+  .ug-lightbox .ug-textpanel-title {
+    font-weight: 700;
+  }
   .ui-dialog {
     z-index: 1000 !important;
   }
