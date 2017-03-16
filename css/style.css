@@ -26,6 +26,23 @@
       width: 1200;
       height: 2000;
   }
+
+
+  .center{
+  padding: 0.3em;
+  margin-left: -0.50em;
+  }
+
+  .imgPopup{
+  height: 8em;
+  padding: 0.2em;
+
+  }
+
+  .carousel{
+    text-align: center;
+  }
+  
   /*phototheque
   Odile, Aymeric*/
   
