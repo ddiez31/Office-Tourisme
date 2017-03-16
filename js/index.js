@@ -37,15 +37,15 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
 
 
 
-            map.scrollWheelZoom.disable();
-            map.on('fullscreenchange', function() {
-                if (map.isFullscreen()) {
-                    return;
-                } else {
-                    map.remove();
-                    app.initmap();
-                }
-            });
+map.scrollWheelZoom.disable();
+map.on('fullscreenchange', function() {
+    if (map.isFullscreen()) {
+        return;
+    } else {
+        map.remove();
+        app.init();
+    }
+});
 
 
             //button pour ouvrir la galerie sur la map
@@ -175,6 +175,7 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
         // unitegallery
         initgallery: function(data) {
             console.log(data.ocre[0].images)
+
             $("#gallery").unitegallery({
                 //theme options:
                 theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
@@ -201,6 +202,18 @@ L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
                 lightbox_slider_image_border: false, //enable border around the image (for compact type only)
             });
+            var photoOcre = '';
+            for (x = 0; x < data.ocre.length; x++) {
+                var alt=data.ocre[x].titre;
+
+                for (y = 0; y < data.ocre[x].images.length; y++) {
+                    var imgOcre = data.ocre[x].images[y].url;
+                    var creditOcre = data.ocre[x].images[y].credit;
+                    photoOcre += '<img src="' + imgOcre + '" alt="' + alt + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px">'; 
+                    console.log(photoOcre)
+                }
+            }
+
         }
     }
     app.init();
