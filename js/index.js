@@ -37,7 +37,7 @@
                     return;
                 } else {
                     map.remove();
-                    app.initmap();
+                    app.init();
                 }
             });
 
@@ -85,13 +85,15 @@
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
                 var contentPopupOcre = '';
-                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div classe='carousel'>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
                     contentPopupOcre += '<img src="' + imgOcre + '" width="200" height="150">';
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
+                // var animation = $(".carousel").colorbox({rel:"carousel", transition: "fade", slideshow: true });
+                // console.log(animation)
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
