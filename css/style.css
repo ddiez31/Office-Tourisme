@@ -2,9 +2,9 @@
   Carole, Julien*/
   
   #cdf_map {
-    height: 690px;
-    width: 680px;
-    margin-left: 3%;
+      height: 690px;
+      width: 680px;
+      margin-left: 3%;
   }
   
   #gallery {
@@ -22,6 +22,7 @@
   .imgPopup{
   height: 8em;
   padding: 0.2em;
+
   }
 
   .carousel{
@@ -32,11 +33,20 @@
   Odile, Aymeric*/
   
   .ui-dialog {
-    z-index: 1000 !important;
+      z-index: 1000 !important;
   }
   
   .ui-front {
-    z-index: 1000 !important;
+      z-index: 1000 !important;
+  }
+  
+  .imgPopup {
+      height: 8em;
+      padding: 0.2em;
+  }
+  
+  .carousel {
+      text-align: center;
   }
   /*admin
     David*/
