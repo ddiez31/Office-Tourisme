@@ -31,22 +31,17 @@
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
 
-            var bounds = [[43.108110, 0.728145], [43.108005, 0.728127], [43.107952, 0.728019], [43.107873, 0.728109], [43.107735, 0.728100], [43.107781, 0.728145], [43.107696, 0.728244], [43.107742, 0.728271], [43.107821, 0.728389], [43.107840, 0.728244], [43.108110, 0.728145]];
-// create an orange rectangle
-L.polyline(bounds, {color: "#ff7800", weight: 1}).addTo(map);
 
-
-
-map.scrollWheelZoom.disable();
-map.on('fullscreenchange', function() {
-    if (map.isFullscreen()) {
-        return;
-    } else {
-        map.remove();
-        app.init();
-    }
-});
-
+            map.scrollWheelZoom.disable();
+            map.on('fullscreenchange', function() {
+                if (map.isFullscreen()) {
+                    bouton.remove();
+                    return;
+                } else {
+                    map.remove();
+                    app.init();
+                }
+            });
 
             //button pour ouvrir la galerie sur la map
             $("#gallery").dialog({
@@ -67,35 +62,46 @@ map.on('fullscreenchange', function() {
                 }
             });
 
-            L.easyButton('<strong >O</strong>', function(btn, map) {
+            var bouton = L.easyButton('<strong>O</strong>', function(btn, map) {
                 $("#gallery").dialog("open");
                 app.initgallery(data)
             }).addTo(map);
-
 
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
                 //marqueurs
                 var Ocre = function() {
-                    this.marqueur = data.ocre[i].marqueur;
-                    this.size = 5;
-                    this.color = '#FF5200';
-                    this.fillColor = '#FF5200';
-                    this.fillOpacity = 1;
+                    this.text = data.ocre[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#FF5200';
+                    this.backgroundColor = "rgba(255, 82, 0, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markOcre = new Ocre();
                 var latOcre = data.ocre[i].geoloc.lat;
                 var longOcre = data.ocre[i].geoloc.lng;
-                markOcre = L.circle([latOcre, longOcre], markOcre.size, { color: markOcre.color, fillColor: markOcre.fillColor, fillOpacity: markOcre.fillOpacity }).addTo(map);
+                markOcre = L.marker([latOcre, longOcre], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markOcre.iconSize,
+                        borderColor: markOcre.borderColor,
+                        backgroundColor: markOcre.backgroundColor,
+                        isAlphaNumericIcon: markOcre.isAlphaNumericIcon,
+                        text: markOcre.text,
+                        textColor: markOcre.textColor,
+                        innerIconStyle: markOcre.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 var titreOcre = data.ocre[i].titre;
                 var texteOcre = data.ocre[i].texte;
                 var contentPopupOcre = '';
-                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br><div class='carousel'>";
+                contentPopupOcre += "<h2>" + titreOcre + "</h2>" + "<br>";
                 for (j = 0; j < data.ocre[i].images.length; j++) {
                     var imgOcre = data.ocre[i].images[j].url;
-                    contentPopupOcre += '<img src="' + imgOcre + '" width="200" height="150">';
+                    contentPopupOcre += '<img src="' + imgOcre + '" alt="' + titreOcre + '" data-image="' + imgOcre + '" width="200" height="150">';
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
@@ -104,20 +110,33 @@ map.on('fullscreenchange', function() {
             var latlngsOcre = data.ocre[0].sentier;
             var polylineOcre = L.polyline(latlngsOcre, { color: '#FF5200' }).addTo(map);
 
+
             //circuit vert clair
             for (i = 0; i < data.vert.length; i++) {
                 //marqueurs
                 var Vert = function() {
-                    this.marqueur = data.vert[i].marqueur;
-                    this.size = 5;
-                    this.color = '#00AB39';
-                    this.fillColor = '#00AB39';
-                    this.fillOpacity = 1;
+                    this.text = data.vert[i].marqueur;
+                    this.iconSize = [15, 15];
+                    this.borderColor = '#00AB39';
+                    this.backgroundColor = "rgb(0, 171, 57, 0.5)";
+                    this.textColor = '#000';
+                    this.isAlphaNumericIcon = true;
+                    this.innerIconStyle = 'margin:auto';
                 };
                 var markVert = new Vert();
                 var latVert = data.vert[i].geoloc.lat;
                 var longVert = data.vert[i].geoloc.lng;
-                markVert = L.circle([latVert, longVert], markVert.size, { color: markVert.color, fillColor: markVert.fillColor, fillOpacity: markVert.fillOpacity }).addTo(map);
+                markVert = L.marker([latVert, longVert], {
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markVert.iconSize,
+                        borderColor: markVert.borderColor,
+                        backgroundColor: markVert.backgroundColor,
+                        isAlphaNumericIcon: markVert.isAlphaNumericIcon,
+                        text: markVert.text,
+                        textColor: markVert.textColor,
+                        innerIconStyle: markVert.innerIconStyle
+                    })
+                }).addTo(map);
                 //popup
                 titreVert = data.vert[i].titre;
                 texteVert = data.vert[i].texte;
@@ -133,7 +152,6 @@ map.on('fullscreenchange', function() {
             //sentier
             var latlngsVert = data.vert[0].sentier;
             var polylineVert = L.polyline(latlngsVert, { color: '#00AB39' }).addTo(map);
-
 
 
             //batiments officiels
