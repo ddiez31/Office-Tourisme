@@ -31,22 +31,6 @@
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
 
-            var bounds = [
-                [43.108110, 0.728145],
-                [43.108005, 0.728127],
-                [43.107952, 0.728019],
-                [43.107873, 0.728109],
-                [43.107735, 0.728100],
-                [43.107781, 0.728145],
-                [43.107696, 0.728244],
-                [43.107742, 0.728271],
-                [43.107821, 0.728389],
-                [43.107840, 0.728244],
-                [43.108110, 0.728145]
-            ];
-            // create an orange rectangle
-            L.polyline(bounds, { color: "#ff7800", weight: 1 }).addTo(map);
-
             map.scrollWheelZoom.disable();
             map.on('fullscreenchange', function() {
                 if (map.isFullscreen()) {
