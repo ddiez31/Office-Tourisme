@@ -26,7 +26,7 @@
             var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-            var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
+            var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib, layers: [latlngsOcre, latlngsVert]});
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
             map.addLayer(osm);
@@ -42,7 +42,7 @@
             });
 
             //button pour ouvrir la galerie sur la map
-            $("#gallery").dialog({
+            $("#dialog").dialog({
                 autoOpen: false,
                 width: 1200,
                 height: "auto",
@@ -60,17 +60,18 @@
                 }
             });
 
-           var bouton = L.easyButton({
-              position: 'bottomleft',   
-              states:[{                 
-                onClick: function(btn, map){
-                 $("#gallery").dialog("open");
-                    app.initgallery(data)
-              },
-              title: 'Galerie Photos',
-              icon: '<img class="center" src="/images/glyphicons-139-picture.png">'
-            }]
+            var bouton = L.easyButton({
+                position: 'bottomleft',
+                states: [{
+                    onClick: function(btn, map) {
+                        $("#gallery").dialog("open");
+                        app.initgallery(data);
+                    },
+                    title: 'Galerie Photos',
+                    icon: '<img class="center" src="../images/glyphicons-139-picture.png">'
+                }]
             }).addTo(map);
+
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -206,33 +207,91 @@
         
             };
  
-            var polylineOcre = [];
-            var polylineVert = [];
+            //var cheminO = [];
+            //var cheminV = [];
+            
             //background tile set
             //var tileLayer = {'Gray' : L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             //attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade'
             //})
+
+         };
+
+        var overlayMaps = {
+            "Sentier Ocre": latlngsOcre,
+            "Sentier vert": latlngsVert
+         };
+
+         L.control.layers(tileLayer, overlayMaps, {position:'bottomright'}).addTo(map);
+
             
         },
 
 
         // phototheque Odile, Aymeric
-
-
         // unitegallery
         initgallery: function(data) {
+            var photoOcre = '';
+            for (x = 0; x < data.ocre.length; x++) {
+                var alt = data.ocre[x].titre;
+
+                for (y = 0; y < data.ocre[x].images.length; y++) {
+                    var imgOcre = data.ocre[x].images[y].url;
+                    var creditOcre = data.ocre[x].images[y].credit;
+                    photoOcre += '<img alt="' + alt + '" src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '">';
+                }
+            };
+
+            var photoVert = '';
+            for (x = 0; x < data.vert.length; x++) {
+                var alt = data.vert[x].titre;
+                for (y = 0; y < data.vert[x].images.length; y++) {
+                    var imgVert = data.vert[x].images[y].url;
+                    var creditVert = data.vert[x].images[y].credit;
+                    photoVert += '<img alt="' + alt + '" src="' + imgVert + '" data-image="' + imgVert + '" data-description="' + creditVert + '">';
+                }
+            };
+
+            // $("#Ocre").is('checked', function(){
+            //     var test= $("#Ocre").val();
+            //     console.log(test)
+            //     console.log("ok");
+            // })
+
+            //  var filterOcre = $("#Ocre").on("click");
+            //  var filterVert = $("#Vert").on("click");
+
+            //  if(filterOcre==true){
+            //      $("#gallery").html(photoOcre)
+            //      console.log("ok")
+            //  }
+            //  else if(filterVert==true){
+            //      $("#gallery").html(photoVert)
+            //  }
+            //  else{
+            //     $("#gallery").html(photoOcre + photoVert);  
+            // };
+
+            $('#gallery').html(photoOcre);
 
             $("#gallery").unitegallery({
                 //theme options:
-                theme_gallery_padding: 0, //the horizontal padding of the gallery from the sides
+                theme_gallery_padding: 0, //padding from sides of the gallery
+                grid_padding: 10, //set padding to the grid
+                grid_space_between_cols: 20, //space between columns
+                grid_space_between_rows: 20, //space between rows
 
                 //gallery options:
-                gallery_theme: "tiles", //choose gallery theme (if more then one themes includes)
+                gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
                 gallery_width: "100%", //gallery width
-                gallery_background_color: "grey", //set custom background color. If not set it will be taken from css.
+                gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
+
+                //navigation option:
+                theme_navigation_type: "arrows", //bullets, arrows
+                grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
 
                 //tiles options:
-                tiles_type: "justified", //must option for the tiles - justified type
+                //tiles_type: "justified", //must option for the tiles - justified type
                 tiles_justified_row_height: 120, //base row height of the justified type
                 tiles_justified_space_between: 3, //space between the tiles justified type
                 tiles_set_initial_height: true, //columns type related only
@@ -243,23 +302,13 @@
                 tile_enable_textpanel: true,
                 tile_textpanel_title_text_align: "center",
                 tile_textpanel_always_on: true,
+                tile_textpanel_title_font_size: null, //textpanel title font size. if null - take from css
                 tile_enable_action: true,
                 lightbox_textpanel_enable_description: true, //enable the description text
                 lightbox_type: "compact", //compact / wide - lightbox type
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
                 lightbox_slider_image_border: false, //enable border around the image (for compact type only)
             });
-
-            var photoOcre = '';
-            for (x = 0; x < data.ocre.length; x++) {
-                var alt = data.ocre[x].titre;
-                for (y = 0; y < data.ocre[x].images.length; y++) {
-                    var imgOcre = data.ocre[x].images[y].url;
-                    var creditOcre = data.ocre[x].images[y].credit;
-                    photoOcre += '<a href="' + imgOcre + '" data-lightbox="' + imgOcre + '"><img src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '" height="120px"></a>';
-                }
-            };
-            $('#gallery').append(photoOcre);
         }
     }
     app.init();

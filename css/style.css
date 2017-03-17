@@ -36,31 +36,32 @@
   .imgPopup{
   height: 8em;
   padding: 0.2em;
-
   }
 
-  .carousel{
-    text-align: center;
-  }
-  
   /*phototheque
   Odile, Aymeric*/
-  
+  .ug-lightbox .ug-textpanel-title {
+    font-weight: 700;
+  }
+  .center{
+    padding: 0.3em;
+    margin-left: -0.50em;
+  }
   .ui-dialog {
-      z-index: 1000 !important;
+    z-index: 1000 !important;
   }
   
   .ui-front {
-      z-index: 1000 !important;
+    z-index: 1000 !important;
   }
   
   .imgPopup {
-      height: 8em;
-      padding: 0.2em;
+    height: 8em;
+    padding: 0.2em;
   }
   
   .carousel {
-      text-align: center;
+    text-align: center;
   }
   /*admin
     David*/

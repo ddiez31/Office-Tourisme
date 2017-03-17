@@ -9,42 +9,42 @@
         },
         "sentier": [
             [43.108053, 0.725208],
-                [43.107704, 0.725009],
-                [43.107680, 0.724660],
-                [43.107288, 0.724600],
-                [43.107448, 0.725673],
-                [43.107166, 0.725182],
-                [43.107065, 0.725235],
-                [43.106758, 0.723920],
-                [43.106619, 0.723067],
-                [43.106405, 0.722257],
-                [43.106210, 0.720790],
-                [43.106316, 0.720450],
-                [43.106436, 0.719825],
-                [43.106780, 0.720404],
-                [43.106910, 0.720769],
-                [43.107020, 0.721251],
-                [43.107115, 0.721792],
-                [43.107170, 0.722580],
-                [43.107188, 0.722315],
-                [43.107568, 0.722371],
-                [43.107785, 0.722390],
-                [43.107845, 0.722441],
-                [43.108085, 0.723008],
-                [43.108274, 0.723443],
-                [43.108279, 0.723594],
-                [43.108213, 0.723720],
-                [43.108237, 0.724074],
-                [43.108248, 0.724426],
-                [43.108544, 0.724422],
-                [43.108962, 0.724485],
-                [43.108970, 0.724829],
-                [43.108956, 0.725035],
-                [43.108906, 0.725628],
-                [43.108609, 0.725542],
-                [43.108415, 0.725572],
-                [43.108053, 0.725208]
-        
+            [43.107704, 0.725009],
+            [43.107680, 0.724660],
+            [43.107288, 0.724600],
+            [43.107448, 0.725673],
+            [43.107166, 0.725182],
+            [43.107065, 0.725235],
+            [43.106758, 0.723920],
+            [43.106619, 0.723067],
+            [43.106405, 0.722257],
+            [43.106210, 0.720790],
+            [43.106316, 0.720450],
+            [43.106436, 0.719825],
+            [43.106780, 0.720404],
+            [43.106910, 0.720769],
+            [43.107020, 0.721251],
+            [43.107115, 0.721792],
+            [43.107170, 0.722580],
+            [43.107188, 0.722315],
+            [43.107568, 0.722371],
+            [43.107785, 0.722390],
+            [43.107845, 0.722441],
+            [43.108085, 0.723008],
+            [43.108274, 0.723443],
+            [43.108279, 0.723594],
+            [43.108213, 0.723720],
+            [43.108237, 0.724074],
+            [43.108248, 0.724426],
+            [43.108544, 0.724422],
+            [43.108962, 0.724485],
+            [43.108970, 0.724829],
+            [43.108956, 0.725035],
+            [43.108906, 0.725628],
+            [43.108609, 0.725542],
+            [43.108415, 0.725572],
+            [43.108053, 0.725208]
+
         ],
         "images": [{
             "nbr": "0",
@@ -58,7 +58,7 @@
         },
         {
             "nbr": "2",
-            "url": "../images/faïence-1.jpg",
+            "url": "../images/1-faience-1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -129,10 +129,6 @@
             "nbr": "0",
             "url": "../images/4-musée_de_la_céramique_et_des_beaux_arts1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "1",
-            "url": "../images/.......jpg"
         }
     ],
         "texte": "Edifice néo-classique de 1875 en pierre calcaire de Nankin. Magnifique collection de porcelaines dites << Bleu de Valentine >>, fabriquées à Saint-Gaudens au XIXème siècle. Arts et traditions populaires. Tableaux du peintre Rixens."
@@ -178,13 +174,13 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/Esplanade.jpg",
+            "url": "../images/6-Esplanade.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
             
         },
         {
             "nbr": "1",
-            "url": "../images/table_orientation1.jpg",
+            "url": "../images/6-table_orientation1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
@@ -210,7 +206,7 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/7-architecture2.jpg",
+            "url": "../images/7-Architecture2.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
@@ -246,11 +242,13 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/.......jpg"
+            "url": "../images/8-square_Azemar1.jpg",
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/.......jpg"
+            "url": "../images/8-square_Azemar.jpg",
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Galerie du cloître de l'abbaye cistercienne de Bonnefont XIIème siècle, située près de Saint-Martory."
@@ -265,11 +263,15 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/.......jpg"
+            "url": "../images/9-Eugène_Azemar-1.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/.......jpg"
+            "url": "../images/9-Maginot-1.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Homme politique fondateur du Syndicat d'Initiative en 1922 et du circuit auto-motos du Comminges en 1925."
@@ -284,11 +286,15 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/.......jpg"
+            "url": "../images/10-Centre_art_contemporain.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/.......jpg"
+            "url": "../images/10-centre_art_contemporain2.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Lieu d'expositions. Invite des artistes dont les oeuvres incitent à l'exploration des pratiques plastiques contemporaines. Programme d'actions culturelles, conférences, voyages, ..."
@@ -303,12 +309,11 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/.......jpg"
-        },
-        {
-            "nbr": "1",
-            "url": "../images/.......jpg"
+            "url": "../images/11-Saint_Gaudens_ville_fortifiée-1.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
+
     ],
         "texte": "Plan de l'époque médiévale, enceinte du XIème agrandie au XIVème siècle: rues des fossés, Victor Hugo, des remparts, ..."
     },
@@ -322,11 +327,15 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/.......jpg"
+            "url": "../images/12-place_Saint_Raymond1.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/.......jpg"
+            "url": "../images/12-Place_Saint_Raymond-2.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Autour de cette place, plusieurs immeubles ont abrité les bureaux et laboratoires de la Régie Autonome des Pétroles qui exploita le premier gisement de gaz naturel découvert en France à Saint-Marcet (13km de Saint-Gaudens)."
@@ -341,11 +350,15 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/.......jpg"
+            "url": "../images/13-Architecture_vieille_ville7.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/.......jpg"
+            "url": "../images/13-vue_sur_toits-3.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Les galeries extérieures, architecture typique du bâti en Comminges viennent agrémenter la construction à ossature bois."
@@ -361,11 +374,13 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "../images/.......jpg"
+        "url": "../images/A-boulevard_des_Pyrenées.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     },
     {
         "nbr": "1",
-        "url": "../images/.......jpg"
+        "url": "../images/A -boulevard_des_Pyrenées2.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "sentier": [
@@ -455,11 +470,14 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
+        "url": "images/B-Plaine_de_la_Garonne.jpg",
+
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     },
     {
         "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/B-Sculpture de André Abbal.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Vue panoramique sur les Pyrénées occidentales et la plaine de la Garonne. Sculpture en taille directe d'André Abbal, élève de Rodin."
@@ -474,11 +492,18 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
+        "url": "images/C- Chapelle de Caoue.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     },
     {
         "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/C-La_légende_de_Saint_Gaudens.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
+    },
+    {
+        "nbr": "2",
+        "url": "images/C-la_légende_de_saint_gaudens.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lieu du martyre du jeune Gaudens. Fontaine du bourreau. Chapelle de la Caoue du XIXème siècle, style néo-roman."
@@ -493,11 +518,13 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
+        "url": "images/D-sport.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     },
     {
         "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/D-sport.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Des pilotes, des voitures et motos de légende: Pozzi, Villoresi, Dreyfus, Trintignant, Ascari, ..."
@@ -513,11 +540,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/Mairie-1.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -532,11 +556,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "http://placehold.it/600x900",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -551,11 +572,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "Maison de la communauté-7.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -570,11 +588,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "http://placehold.it/600x900",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -589,11 +604,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "theatre Marmignon-1.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -608,11 +620,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "Cyberbase.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -628,12 +637,10 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/Place_Armand_Marrast.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
+
 ],
     "texte": "Né à Saint-Gaudens (1801-1852), homme politique, ancien maire de Paris."
 },
@@ -647,11 +654,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/11Maison_des_communautés1.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -666,11 +670,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/Halle aux grains-1.jpg",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Lorem ipsum"
@@ -685,11 +686,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "http://placehold.it/600x900",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Immeuble de la Caisse d'Epargne."
@@ -704,11 +702,8 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/.......jpg"
-    },
-    {
-        "nbr": "1",
-        "url": "images/.......jpg"
+        "url": "images/http://placehold.it/600x900",
+        "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
     "texte": "Immeuble de la Chambre de Commerce."
