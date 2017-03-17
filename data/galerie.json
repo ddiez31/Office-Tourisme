@@ -135,10 +135,10 @@
     },
     {
         "id": "4",
-        "marqueur": "5",
+        "marqueur": "6",
         "titre": "Monument des trois maréchaux",
         "geoloc": {
-            "lat": 43.107065,
+            "lat": 43.106905,
             "lng": 0.725235
         },
         "images": [{
@@ -166,7 +166,7 @@
     },
     {
         "id": "5",
-        "marqueur": "6",
+        "marqueur": "5",
         "titre": "Table d'orientation",
         "geoloc": {
             "lat": 43.107166,
@@ -629,11 +629,11 @@
 ],
 "etoiles": [{
     "id": "0",
-    "marqueur": "vert",
+    "marqueur": "#5BDD45",
     "titre": "Place Armand Marrast",
     "geoloc": {
-        "lat": 43.1083,
-        "lng": 0.7234
+        "lat": 43.107176,
+        "lng": 0.723988
     },
     "images": [{
         "nbr": "0",
@@ -646,11 +646,11 @@
 },
 {
     "id": "1",
-    "marqueur": "violet",
+    "marqueur": " #7C2250",
     "titre": "Ancienne banque de France",
     "geoloc": {
-        "lat": 43.1083,
-        "lng": 0.7234
+        "lat": 43.107427,
+        "lng": 0.722332
     },
     "images": [{
         "nbr": "0",
@@ -662,11 +662,11 @@
 },
 {
     "id": "2",
-    "marqueur": "orange",
+    "marqueur": "#FF7200",
     "titre": "Halle aux grains 1845",
     "geoloc": {
-        "lat": 43.1083,
-        "lng": 0.7234
+        "lat": 43.107876,
+        "lng": 0.722409
     },
     "images": [{
         "nbr": "0",
@@ -678,11 +678,11 @@
 },
 {
     "id": "3",
-    "marqueur": "rose",
+    "marqueur": "#FF3485",
     "titre": "Ancien couvent des Jacobins",
     "geoloc": {
-        "lat": 43.1083,
-        "lng": 0.7234
+        "lat": 43.108653,
+        "lng": 0.723184
     },
     "images": [{
         "nbr": "0",
@@ -694,11 +694,11 @@
 },
 {
     "id": "4",
-    "marqueur": "bleu",
+    "marqueur": "#00A7D8",
     "titre": "Ancien couvent des Visitandines",
     "geoloc": {
-        "lat": 43.1083,
-        "lng": 0.7234
+        "lat": 43.108472,
+        "lng": 0.726339
     },
     "images": [{
         "nbr": "0",

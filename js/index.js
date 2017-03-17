@@ -23,7 +23,7 @@
         initmap: function(data) {
             var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © CloudMade';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib, layers: [latlngsOcre, latlngsVert]});
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
@@ -122,7 +122,7 @@
                 var Vert = function() {
                     this.text = data.vert[i].marqueur;
                     this.iconSize = [15, 15];
-                    this.borderColor = '#00AB39';
+                    this.borderColor = '#18453B';
                     this.backgroundColor = "rgb(0, 171, 57, 0.5)";
                     this.textColor = '#000';
                     this.isAlphaNumericIcon = true;
@@ -165,7 +165,7 @@
                 var Annexes = function() {
                     this.text = data.annexes[i].marqueur;
                     this.iconSize = [15, 15];
-                    this.borderColor = '#006400';
+                    this.borderColor = ' #193025';
                     this.backgroundColor = "rgb(0, 100, 0, 0.5)";
                     this.textColor = '#000';
                     this.isAlphaNumericIcon = true;
@@ -202,26 +202,35 @@
             //batiments etoiles
             for (i = 0; i < data.etoiles.length; i++) {
                 //marqueurs
-        
+                var Etoiles = function(){
+                    this.borderColor = data.etoiles[i].marqueur;
+                    this.backgroundColor = data.etoiles[i].marqueur;
+                    this.iconSize = [8, 8];
+                };
+                var markEtoiles = new Etoiles();
+                var latEtoiles = data.etoiles[i].geoloc.lat;
+                var longEtoiles = data.etoiles[i].geoloc.lng;
+                markEtoiles = L.marker([latEtoiles, longEtoiles],{
+                    icon: L.BeautifyIcon.icon({
+                        iconSize: markEtoiles.iconSize,
+                        borderColor:markEtoiles.borderColor,
+                        backgroundColor:markEtoiles.backgroundColor
+                    })
+                }).addTo(map);
+                   //popup
+                titreEtoiles = data.etoiles[i].titre;
+                texteEtoiles = data.etoiles[i].texte;
+                var contentPopupEtoiles= '';
+                contentPopupEtoiles+= "<h2>" + titreEtoiles+ "</h2>" + "<br><div class='carousel'>";
+                for (j = 0; j < data.etoiles[i].images.length; j++) {
+                    var imgEtoiles= data.etoiles[i].images[j].url;
+                    contentPopupEtoiles+= '<a href="' + imgEtoiles+ '" data-lightbox="' + imgEtoiles+ '"><img class="imgPopup" src="' + imgEtoiles+ '" alt="' + titreEtoiles+ '" data-image="' + imgEtoiles+ '"></a>';
+                }
+                contentPopupEtoiles+= "</div><p>" + texteEtoiles+ "</p>";
+                markEtoiles.bindPopup(contentPopupEtoiles);
             };
- 
-            //var cheminO = [];
-            //var cheminV = [];
             
-            //background tile set
-            //var tileLayer = {'Gray' : L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            //attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade'
-            //})
-
-        /*var overlayMaps = {
-            "Sentier Ocre": latlngsOcre,
-            "Sentier vert": latlngsVert
-         };
-
-         L.control.layers(tileLayer, overlayMaps, {position:'bottomright'}).addTo(map);*/
-
-            
-        },
+            },
 
 
         // phototheque Odile, Aymeric
@@ -235,8 +244,9 @@
                     var creditOcre = data.ocre[x].images[y].credit;
                     photoOcre += '<img alt="' + alt + '" src="' + imgOcre + '" data-image="' + imgOcre + '" data-description="' + creditOcre + '">';
                 }
-            };
 
+            };
+            
             var photoVert = '';
             for (x = 0; x < data.vert.length; x++) {
                 var alt = data.vert[x].titre;
