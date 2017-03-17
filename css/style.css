@@ -2,39 +2,42 @@
   Carole, Julien*/
   
   #cdf_map {
-      height: 690px;
-      width: 680px;
-      margin-left: 3%;
+    height: 690px;
+    width: 680px;
+    margin-left: 3%;
   }
   /*phototheque
   Odile, Aymeric*/
   
   .ug-lightbox .ug-textpanel-title {
-      font-weight: 700;
+    font-weight: 700;
+    font-size: 20px;
+
   }
-  
+
   .center {
-      padding: 0.3em;
-      margin-left: -0.50em;
+    padding: 0.3em;
+    margin-left: -0.50em;
   }
   
   .ui-dialog {
-      z-index: 1000 !important;
+    z-index: 1000 !important;
+    box-shadow: #000 5px 5px 5px;
   }
   
   .ui-front {
-      z-index: 1000 !important;
+    z-index: 1000 !important;
   }
   
   .imgPopup {
-      height: 8em;
-      padding: 0.2em;
-      z-index: 2000 !important;
+    height: 8em;
+    padding: 0.2em;
+    z-index: 2000 !important;
   }
   
   .carousel {
-      text-align: center;
-      z-index: 2000 !important;
+    text-align: center;
+    z-index: 2000 !important;
   }
   /*admin
     David*/

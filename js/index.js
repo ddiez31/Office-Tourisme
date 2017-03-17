@@ -48,6 +48,7 @@
                 fluid: true,
                 responsive: true,
                 clickOut: true,
+
                 show: {
                     effect: "fade",
                     duration: 2500
@@ -57,7 +58,6 @@
                     duration: 1000
                 }
             });
-
             var bouton = L.easyButton({
                 position: 'bottomleft',
                 states: [{
@@ -253,35 +253,47 @@
             $('#gallery').html(photoOcre + photoVert);
 
             $("#gallery").unitegallery({
-                //theme options:
-                theme_gallery_padding: 0, //padding from sides of the gallery
-                grid_padding: 10, //set padding to the grid
-                grid_space_between_cols: 20, //space between columns
-                grid_space_between_rows: 20, //space between rows
+                //main options:
+
+                grid_padding:10, //set padding to the grid
+                    grid_space_between_cols: 10,            //space between columns
+                    grid_space_between_rows: 10,            //space between rows
 
                 //gallery options:
+
                 gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
                 gallery_width: "100%", //gallery width
                 gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
 
                 //navigation option:
-                theme_navigation_type: "arrows", //bullets, arrows
-                grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
 
-                //tiles options:
+                grid_num_rows: 3, //maximum number of grid rows. If set to big value, the navigation will not appear.
+                theme_navigation_type: "arrows", //bullets, arrows
+
+                theme_space_between_arrows: 5, //horizontal space between arrows
+
+                //tile design options:
+
                 //tiles_type: "justified", //must option for the tiles - justified type
-                tiles_justified_row_height: 120, //base row height of the justified type
-                tiles_justified_space_between: 3, //space between the tiles justified type
-                tiles_set_initial_height: true, //columns type related only
-                tiles_enable_transition: true, //enable transition when screen width change
+                // tiles_justified_row_height: 120, //base row height of the justified type
+                // tiles_justified_space_between: 3, //space between the tiles justified type
+                // tiles_set_initial_height: true, //columns type related only
+                // tiles_enable_transition: true, //enable transition when screen width change
                 tile_overlay_opacity: 0.4, //tile overlay opacity
                 tile_overlay_color: "#000000", //tile overlay color
                 tile_enable_image_effect: false, //enable tile image effect
+                
+                //tile text panel options:
+
                 tile_enable_textpanel: true,
                 tile_textpanel_title_text_align: "center",
                 tile_textpanel_always_on: true,
-                tile_textpanel_title_font_size: null, //textpanel title font size. if null - take from css
+                tile_textpanel_title_font_size:null, //textpanel title font size. if null - take from css
                 tile_enable_action: true,
+
+                //lightbox options:
+
+                lightbox_slider_control_zoom:false,              //true, false - enable zooming control
                 lightbox_textpanel_enable_description: true, //enable the description text
                 lightbox_type: "compact", //compact / wide - lightbox type
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6

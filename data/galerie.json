@@ -48,17 +48,17 @@
         ],
         "images": [{
             "nbr": "0",
-            "url": "../images/1-boutique1.jpg",
+            "url": "images/1-boutique1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/1-office tourisme2.jpg",
+            "url": "images/1-office tourisme2.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "2",
-            "url": "../images/1-faience-1.jpg",
+            "url": "images/1-faience-1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -74,18 +74,18 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/2-collégiale_Saint_Pierre-1.jpg",
+            "url": "images/2-collégiale_Saint_Pierre-1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/2-collégiale_Saint_Pierre-2.jpg",
+            "url": "images/2-collégiale_Saint_Pierre-2.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
 
             "nbr": "2",
-            "url": "../images/2-collégiale_Saint_Pierre3.jpg",
+            "url": "images/2-collégiale_Saint_Pierre3.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -101,17 +101,17 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/3- cloitre_collégiale3.jpg",
+            "url": "images/3- cloitre_collégiale3.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/3-cloitre_collégiale1.jpg",
+            "url": "images/3-cloitre_collégiale1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "2",
-            "url": "../images/3-cloitre_collégiale1.jpg",
+            "url": "images/3-cloitre_collégiale1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -127,7 +127,7 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/4-musée_de_la_céramique_et_des_beaux_arts1.jpg",
+            "url": "images/4-musée_de_la_céramique_et_des_beaux_arts1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -143,22 +143,22 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/5- Monument_des_3_maréchaux2.jpg",
+            "url": "images/5- Monument_des_3_maréchaux2.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/5- Monument_les_3_maréchaux1.jpg",
+            "url": "images/5- Monument_les_3_maréchaux1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "2",
-            "url": "../images/5-Monument_des_3_maréchaux-4.jpg",
+            "url": "images/5-Monument_des_3_maréchaux-4.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "3",
-            "url": "../images/5-Monument_des_3_maréchaux3.jpg",
+            "url": "images/5-Monument_des_3_maréchaux3.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -174,23 +174,23 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/6-Esplanade.jpg",
+            "url": "images/6-Esplanade.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
             
         },
         {
             "nbr": "1",
-            "url": "../images/6-table_orientation1.jpg",
+            "url": "images/6-table_orientation1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/Panorama-1.jpg",
+            "url": "images/Panorama-1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/Panorama-2.jpg",
+            "url": "images/Panorama-2.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -206,27 +206,27 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/7-Architecture2.jpg",
+            "url": "images/7-Architecture2.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/7-architecture1.jpg",
+            "url": "images/7-architecture1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "2",
-            "url": "../images/7-architecture3.jpg",
+            "url": "images/7-architecture3.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "3",
-            "url": "../images/7-architecture5.jpg",
+            "url": "images/7-architecture5.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "4",
-            "url": "../images/7-vue_de_la_vieille_ville1.jpg",
+            "url": "images/7-vue_de_la_vieille_ville1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -242,12 +242,12 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/8-square_Azemar1.jpg",
+            "url": "images/8-square_Azemar1.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/8-square_Azemar.jpg",
+            "url": "images/8-square_Azemar.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
@@ -263,13 +263,13 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/9-Eugène_Azemar-1.jpg",
+            "url": "images/9-Eugène_Azemar-1.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/9-Maginot-1.jpg",
+            "url": "images/9-Maginot-1.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
@@ -286,13 +286,13 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/10-Centre_art_contemporain.jpg",
+            "url": "images/10-Centre_art_contemporain.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/10-centre_art_contemporain2.jpg",
+            "url": "images/10-centre_art_contemporain2.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
@@ -309,7 +309,7 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/11-Saint_Gaudens_ville_fortifiée-1.jpg",
+            "url": "images/11-Saint_Gaudens_ville_fortifiée-1.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
@@ -327,13 +327,13 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/12-place_Saint_Raymond1.jpg",
+            "url": "images/12-place_Saint_Raymond1.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/12-Place_Saint_Raymond-2.jpg",
+            "url": "images/12-Place_Saint_Raymond-2.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
@@ -350,13 +350,13 @@
         },
         "images": [{
             "nbr": "0",
-            "url": "../images/13-Architecture_vieille_ville7.jpg",
+            "url": "images/13-Architecture_vieille_ville7.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
             "nbr": "1",
-            "url": "../images/13-vue_sur_toits-3.jpg",
+            "url": "images/13-vue_sur_toits-3.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
@@ -374,12 +374,12 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "../images/A-boulevard_des_Pyrenées.jpg",
+        "url": "images/A-boulevard_des_Pyrenées.jpg",
         "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     },
     {
         "nbr": "1",
-        "url": "../images/A -boulevard_des_Pyrenées2.jpg",
+        "url": "images/A -boulevard_des_Pyrenées2.jpg",
         "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
@@ -571,7 +571,7 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "Maison de la communauté-7.jpg",
+        "url": "images/Maison de la communauté-7.jpg",
         "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
@@ -603,7 +603,7 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "theatre Marmignon-1.jpg",
+        "url": "images/theatre_Marmignon-1.jpg",
         "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
@@ -619,7 +619,7 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "Cyberbase.jpg",
+        "url": "images/Cyberbase.jpg",
         "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
@@ -701,7 +701,7 @@
     },
     "images": [{
         "nbr": "0",
-        "url": "images/http://placehold.it/600x900",
+        "url": "http://placehold.it/600x900",
         "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
     }
 ],
