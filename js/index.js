@@ -107,8 +107,6 @@
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
-                // var animation = $(".carousel").colorbox({rel:"carousel", transition: "fade", slideshow: true });
-                // console.log(animation)
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
@@ -204,22 +202,13 @@
 
             };
 
-
-
-            //add the groups of markers to layerGroups
-            var groupOcre = L.layerGroup(markOcre);
-            var groupVert = L.layerGroup(markVert);
-            //Control on the Top Left that handles the switching between A and B
+            //filtres sentiers
             var overlayMaps = {
                 "Circuit Ocre": polylineOcre,
                 "Circuit Vert": polylineVert
             };
             L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
-
-
-
         },
-
 
         // phototheque Odile, Aymeric
         // unitegallery
@@ -244,30 +233,6 @@
                 }
             };
 
-            $("#selectTheme").on("click change", function() {
-                console.log($(this).val());
-            });
-
-            // $("#Ocre").is('checked', function(){
-            //     var test= $("#Ocre").val();
-            //     console.log(test)
-            //     console.log("ok");
-            // })
-
-            //  var filterOcre = $("#Ocre").on("click");
-            //  var filterVert = $("#Vert").on("click");
-
-            //  if(filterOcre==true){
-            //      $("#gallery").html(photoOcre)
-            //      console.log("ok")
-            //  }
-            //  else if(filterVert==true){
-            //      $("#gallery").html(photoVert)
-            //  }
-            //  else{
-            //     $("#gallery").html(photoOcre + photoVert);  
-            // };
-
             $('#gallery').html(photoOcre + photoVert);
 
             $("#gallery").unitegallery({
@@ -276,16 +241,13 @@
                 grid_padding: 10, //set padding to the grid
                 grid_space_between_cols: 20, //space between columns
                 grid_space_between_rows: 20, //space between rows
-
                 //gallery options:
                 gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
                 gallery_width: "100%", //gallery width
                 gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
-
                 //navigation option:
                 theme_navigation_type: "arrows", //bullets, arrows
                 grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
-
                 //tiles options:
                 //tiles_type: "justified", //must option for the tiles - justified type
                 tiles_justified_row_height: 120, //base row height of the justified type
