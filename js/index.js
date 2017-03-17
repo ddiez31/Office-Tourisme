@@ -46,8 +46,8 @@
                 height: "auto",
                 resizable: false,
                 fluid: true,
+                clickOut: false,
                 responsive: true,
-                clickOut: true,
                 show: {
                     effect: "fade",
                     duration: 2500
@@ -63,6 +63,7 @@
                 states: [{
                     onClick: function(btn, map) {
                         $("#dialog").dialog("open");
+                        $("#cdf_map").css("opacity", "0.1");
                         app.initgallery(data);
                     },
                     title: 'Galerie Photos',
@@ -287,6 +288,9 @@
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
                 lightbox_slider_image_border: false, //enable border around the image (for compact type only)
             });
+            $(".ui-dialog-titlebar-close").on("click", function(){
+                $("#cdf_map").css("opacity", "1")
+            })
         }
     }
     app.init();
