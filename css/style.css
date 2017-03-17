@@ -36,5 +36,19 @@
       text-align: center;
       z-index: 2000 !important;
   }
+
+  .lightbox{
+    position: absolute;
+    z-index: 2147483647 !important;
+  }
+
+  .lightboxOverlay{
+    position: absolute;
+    z-index: 2147483647 !important;
+  }
+
+  #galleryOverlay{
+
+  }
   /*admin
     David*/
