@@ -23,7 +23,7 @@
         initmap: function(data) {
             var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © CloudMade';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
@@ -45,8 +45,9 @@
                 width: 1200,
                 resizable: false,
                 fluid: true,
+                clickOut: false,
                 responsive: true,
-                clickOut: true,
+
                 show: {
                     effect: "fade",
                     duration: 1000
@@ -56,19 +57,18 @@
                     duration: 1000
                 }
             });
-
             var bouton = L.easyButton({
                 position: 'bottomleft',
                 states: [{
                     onClick: function(btn, map) {
                         $("#dialog").dialog("open");
+                        $("#cdf_map").css("opacity", "0.1");
                         app.initgallery(data);
                     },
                     title: 'Galerie Photos',
                     icon: '<img class="center" src="../images/glyphicons-139-picture.png">'
                 }]
             }).addTo(map);
-
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -107,8 +107,6 @@
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
-                // var animation = $(".carousel").colorbox({rel:"carousel", transition: "fade", slideshow: true });
-                // console.log(animation)
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
@@ -203,8 +201,14 @@
                 //marqueurs
 
             };
-        },
 
+            //filtres sentiers
+            var overlayMaps = {
+                "Circuit Ocre": polylineOcre,
+                "Circuit Vert": polylineVert
+            };
+            L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
+        },
 
         // phototheque Odile, Aymeric
         // unitegallery
@@ -247,20 +251,32 @@
                 }
             };
 
+
             $('#gallery').html(photoOcre + photoVert + photoAnnexes + photoEtoiles );
 
             $("#gallery").unitegallery({
                 //main options:
                 grid_padding:10, //set padding to the grid
+
+                
+                    grid_space_between_cols: 10,            //space between columns
+                    grid_space_between_rows: 10,            //space between rows
+
+
                 //gallery options:
+
                 gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
                 gallery_width: "100%", //gallery width
                 gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
                 //navigation option:
-                grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
+
+
+                grid_num_rows: 3, //maximum number of grid rows. If set to big value, the navigation will not appear.
                 theme_navigation_type: "arrows", //bullets, arrows
                 theme_space_between_arrows: 5, //horizontal space between arrows
+
                 //tile design options:
+
                 //tiles_type: "justified", //must option for the tiles - justified type
                 // tiles_justified_row_height: 120, //base row height of the justified type
                 // tiles_justified_space_between: 3, //space between the tiles justified type
@@ -270,14 +286,18 @@
                 tile_enable_overlay: false,   
                 tile_overlay_color: "#000000", //tile overlay color
                 tile_enable_image_effect: false, //enable tile image effect
-                                //tile text panel options:
-                                tile_enable_textpanel: true,
-                                tile_textpanel_title_text_align: "center",
-                                tile_textpanel_always_on: true,
+                
+                //tile text panel options:
+
+                tile_enable_textpanel: true,
+                tile_textpanel_title_text_align: "center",
+                tile_textpanel_always_on: true,
                 tile_textpanel_title_font_size:null, //textpanel title font size. if null - take from css
                 tile_enable_action: true,
+
                 //lightbox options:
-                lightbox_arrows_offset: 500, //The horizontal offset of the arrows
+
+                lightbox_slider_control_zoom:false,              //true, false - enable zooming control
                 lightbox_textpanel_enable_description: true, //enable the description text
                 lightbox_type: "compact", //compact / wide - lightbox type
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
@@ -285,13 +305,16 @@
             });
 
             select(photoOcre, photoVert, photoAnnexes, photoEtoiles);
+            $(".ui-dialog-titlebar-close").on("click", function(){
+                $("#cdf_map").css("opacity", "1")
+            })
         }
     }
     app.init();
 })();
 
 function select(photoOcre, photoVert, photoAnnexes, photoEtoiles) {
- $("#selectTheme").on("change", function() {
+   $("#selectTheme").on("change", function() {
     if($(this).val()=="Ocre"){
         console.log("ocre");
         $("#gallery").html(photoOcre);
