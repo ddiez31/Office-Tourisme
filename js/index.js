@@ -216,11 +216,11 @@
                     })
                 }).addTo(map);
                    //popup
-                titreEtoiles = data.etoiles[i].titre;
-                texteEtoiles = data.etoiles[i].texte;
-                var contentPopupEtoiles= '';
-                contentPopupEtoiles+= "<h2>" + titreEtoiles+ "</h2>" + "<br><div class='carousel'>";
-                for (j = 0; j < data.etoiles[i].images.length; j++) {
+                   titreEtoiles = data.etoiles[i].titre;
+                   texteEtoiles = data.etoiles[i].texte;
+                   var contentPopupEtoiles= '';
+                   contentPopupEtoiles+= "<h2>" + titreEtoiles+ "</h2>" + "<br><div class='carousel'>";
+                   for (j = 0; j < data.etoiles[i].images.length; j++) {
                     var imgEtoiles= data.etoiles[i].images[j].url;
                     contentPopupEtoiles+= '<a href="' + imgEtoiles+ '" data-lightbox="' + imgEtoiles+ '"><img class="imgPopup" src="' + imgEtoiles+ '" alt="' + titreEtoiles+ '" data-image="' + imgEtoiles+ '"></a>';
                 }
@@ -228,7 +228,7 @@
                 markEtoiles.bindPopup(contentPopupEtoiles);
             };
 
-        
+            
 
 
             //filtres sentiers
@@ -284,120 +284,39 @@
 
             $('#gallery').html(photoOcre + photoVert + photoAnnexes + photoEtoiles );
 
-            $("#gallery").unitegallery({
-                //main options:
-                grid_padding:10, //set padding to the grid
-
-                
-                    grid_space_between_cols: 10,            //space between columns
-                    grid_space_between_rows: 10,            //space between rows
-
-
-                //gallery options:
-
-                gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
-                gallery_width: "100%", //gallery width
-                gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
-                //navigation option:
-
-
-                grid_num_rows: 3, //maximum number of grid rows. If set to big value, the navigation will not appear.
-                theme_navigation_type: "arrows", //bullets, arrows
-                theme_space_between_arrows: 5, //horizontal space between arrows
-
-                //tile design options:
-
-                //tiles_type: "justified", //must option for the tiles - justified type
-                // tiles_justified_row_height: 120, //base row height of the justified type
-                // tiles_justified_space_between: 3, //space between the tiles justified type
-                // tiles_set_initial_height: true, //columns type related only
-                // tiles_enable_transition: true, //enable transition when screen width change
-                tile_overlay_opacity: 0.4, //tile overlay opacity
-                tile_enable_overlay: false,   
-                tile_overlay_color: "#000000", //tile overlay color
-                tile_enable_image_effect: false, //enable tile image effect
-                
-                //tile text panel options:
-
-                tile_enable_textpanel: true,
-                tile_textpanel_title_text_align: "center",
-                tile_textpanel_always_on: true,
-                tile_textpanel_title_font_size:null, //textpanel title font size. if null - take from css
-                tile_enable_action: true,
-
-                //lightbox options:
-
-                lightbox_slider_control_zoom:false,              //true, false - enable zooming control
-                lightbox_textpanel_enable_description: true, //enable the description text
-                lightbox_type: "compact", //compact / wide - lightbox type
-                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
-                lightbox_slider_image_border: false, //enable border around the image (for compact type only)
-            });
-
-            select(photoOcre, photoVert, photoAnnexes, photoEtoiles);
-            $(".ui-dialog-titlebar-close").on("click", function(){
-                $("#cdf_map").css("opacity", "1")
-            })
+            $("#gallery").unitegallery({                //main options:                grid_padding:10, //set padding to the grid                    grid_space_between_cols: 10,            //space between columns                    grid_space_between_rows: 10,            //space between rows                //gallery options:                gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)                gallery_width: "100%", //gallery width                gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.                //navigation option:                grid_num_rows: 3, //maximum number of grid rows. If set to big value, the navigation will not appear.                theme_navigation_type: "arrows", //bullets, arrows                theme_space_between_arrows: 5, //horizontal space between arrows                //tile design options:                //tiles_type: "justified", //must option for the tiles - justified type                // tiles_justified_row_height: 120, //base row height of the justified type                // tiles_justified_space_between: 3, //space between the tiles justified type                // tiles_set_initial_height: true, //columns type related only                // tiles_enable_transition: true, //enable transition when screen width change                tile_overlay_opacity: 0.4, //tile overlay opacity                tile_overlay_color: "#000000", //tile overlay color                tile_enable_image_effect: false, //enable tile image effect                                //tile text panel options:                tile_enable_textpanel: true,                tile_textpanel_title_text_align: "center",                tile_textpanel_always_on: true,                tile_textpanel_title_font_size:null, //textpanel title font size. if null - take from css                tile_enable_action: true,                //lightbox options:                lightbox_slider_control_zoom:false,              //true, false - enable zooming control                lightbox_textpanel_enable_description: true, //enable the description text                lightbox_type: "compact", //compact / wide - lightbox type                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6                lightbox_slider_image_border: false, //enable border around the image (for compact type only)            });
+                select(photoOcre, photoVert, photoAnnexes, photoEtoiles);
+                $(".ui-dialog-titlebar-close").on("click", function(){
+                    $("#cdf_map").css("opacity", "1")
+                })
+            }
         }
-    }
-    app.init();
-})();
+        app.init();
+    })();
 
-function select(photoOcre, photoVert, photoAnnexes, photoEtoiles) {
-   $("#selectTheme").on("change", function() {
-    if($(this).val()=="Ocre"){
-        console.log("ocre");
-        $("#gallery").html(photoOcre);
-    } else if ($(this).val()=="Vert"){
-        console.log("vert");
-        $("#gallery").html(photoVert);
-    }
-    else if ($(this).val()=="Annexes"){
-        console.log("annexes");
-        $("#gallery").html(photoAnnexes);
-    }
-    else if ($(this).val()=="Etoiles"){
-        console.log("etoiles");
-        $("#gallery").html(photoEtoiles);
-    }
-    else{
-      $('#gallery').html(photoOcre + photoVert + photoAnnexes + photoEtoiles );
-  };
+    function select(photoOcre, photoVert, photoAnnexes, photoEtoiles) {
+     $("#selectTheme").on("change", function() {
+        if($(this).val()=="Ocre"){
+            console.log("ocre");
+            $("#gallery").html(photoOcre);
+        } else if ($(this).val()=="Vert"){
+            console.log("vert");
+            $("#gallery").html(photoVert);
+        }
+        else if ($(this).val()=="Annexes"){
+            console.log("annexes");
+            $("#gallery").html(photoAnnexes);
+        }
+        else if ($(this).val()=="Etoiles"){
+            console.log("etoiles");
+            $("#gallery").html(photoEtoiles);
+        }
+        else{
+          $('#gallery').html(photoOcre + photoVert + photoAnnexes + photoEtoiles );
+      };
 
 
-  $("#gallery").unitegallery({
-                //main options:
-                grid_padding:10, //set padding to the grid
-                //gallery options:
-                gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
-                gallery_width: "100%", //gallery width
-                gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
-                //navigation option:
-                grid_num_rows: 4, //maximum number of grid rows. If set to big value, the navigation will not appear.
-                theme_navigation_type: "arrows", //bullets, arrows
-                theme_space_between_arrows: 5, //horizontal space between arrows
-                //tile design options:
-                //tiles_type: "justified", //must option for the tiles - justified type
-                // tiles_justified_row_height: 120, //base row height of the justified type
-                // tiles_justified_space_between: 3, //space between the tiles justified type
-                // tiles_set_initial_height: true, //columns type related only
-                // tiles_enable_transition: true, //enable transition when screen width change
-                tile_overlay_opacity: 0.4, //tile overlay opacity
-                tile_overlay_color: "#000000", //tile overlay color
-                tile_enable_image_effect: false, //enable tile image effect
-                                //tile text panel options:
-                                tile_enable_textpanel: true,
-                                tile_textpanel_title_text_align: "center",
-                                tile_textpanel_always_on: true,
-                tile_textpanel_title_font_size:null, //textpanel title font size. if null - take from css
-                tile_enable_action: true,
-                //lightbox options:
-                lightbox_arrows_offset: 500, //The horizontal offset of the arrows
-                lightbox_textpanel_enable_description: true, //enable the description text
-                lightbox_type: "compact", //compact / wide - lightbox type
-                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
-                lightbox_slider_image_border: false, //enable border around the image (for compact type only)
-            });
+  $("#gallery").unitegallery({                //main options:                grid_padding:10, //set padding to the grid                    grid_space_between_cols: 10,            //space between columns                    grid_space_between_rows: 10,            //space between rows                //gallery options:                gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)                gallery_width: "100%", //gallery width                gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.                //navigation option:                grid_num_rows: 3, //maximum number of grid rows. If set to big value, the navigation will not appear.                theme_navigation_type: "arrows", //bullets, arrows                theme_space_between_arrows: 5, //horizontal space between arrows                //tile design options:                //tiles_type: "justified", //must option for the tiles - justified type                // tiles_justified_row_height: 120, //base row height of the justified type                // tiles_justified_space_between: 3, //space between the tiles justified type                // tiles_set_initial_height: true, //columns type related only                // tiles_enable_transition: true, //enable transition when screen width change                tile_overlay_opacity: 0.4, //tile overlay opacity                tile_overlay_color: "#000000", //tile overlay color                tile_enable_image_effect: false, //enable tile image effect                                //tile text panel options:                tile_enable_textpanel: true,                tile_textpanel_title_text_align: "center",                tile_textpanel_always_on: true,                tile_textpanel_title_font_size:null, //textpanel title font size. if null - take from css                tile_enable_action: true,                //lightbox options:                lightbox_slider_control_zoom:false,              //true, false - enable zooming control                lightbox_textpanel_enable_description: true, //enable the description text                lightbox_type: "compact", //compact / wide - lightbox type                lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6                lightbox_slider_image_border: false, //enable border around the image (for compact type only)            });
 
 })
 };
