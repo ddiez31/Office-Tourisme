@@ -6,62 +6,34 @@
       width: 680px;
       margin-left: 3%;
   }
-
-  #legend{
-    border: solid black 2px;
-    max-width: 180px;
-    max-height: 235px;
-    font-size: 10px;
-    margin-bottom: 100px;
-    padding-bottom: 20px;
-  }
-
-  h4{
-    padding-left: 20px;
-    font-size: 12px;
-  }
   
-  #gallery {
-      margin-left: 3%;
-      width: 1200;
-      height: 2000;
+  .ug-lightbox .ug-textpanel-title {
+      font-weight: 700;
   }
-
 
   .center{
   padding: 0.3em;
   margin-left: -0.50em;
   }
-
-  .imgPopup{
-  height: 8em;
-  padding: 0.2em;
-  }
-
-  /*phototheque
-  Odile, Aymeric*/
-  .ug-lightbox .ug-textpanel-title {
-    font-weight: 700;
-  }
-  .center{
-    padding: 0.3em;
-    margin-left: -0.50em;
-  }
+  
   .ui-dialog {
-    z-index: 1000 !important;
+      z-index: 1000 !important;
   }
   
-  .ui-front {
-    z-index: 1000 !important;
+ .ui-front {
+      z-index: 1000 !important;
   }
+
   
   .imgPopup {
-    height: 8em;
-    padding: 0.2em;
+      height: 8em;
+      padding: 0.2em;
+      z-index: 2000 !important;
   }
-  
-  .carousel {
-    text-align: center;
+
+.carousel {
+      text-align: center;
+      z-index: 2000 !important;
   }
   /*admin
     David*/
