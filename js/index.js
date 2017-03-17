@@ -23,7 +23,7 @@
         initmap: function(data) {
             var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © CloudMade';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
@@ -69,7 +69,6 @@
                     icon: '<img class="center" src="../images/glyphicons-139-picture.png">'
                 }]
             }).addTo(map);
-
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -204,6 +203,21 @@
                 //marqueurs
 
             };
+
+
+
+            //add the groups of markers to layerGroups
+            var groupOcre = L.layerGroup(markOcre);
+            var groupVert = L.layerGroup(markVert);
+            //Control on the Top Left that handles the switching between A and B
+            var overlayMaps = {
+                "Circuit Ocre": polylineOcre,
+                "Circuit Vert": polylineVert
+            };
+            L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
+
+
+
         },
 
 
@@ -229,6 +243,10 @@
                     photoVert += '<img alt="' + alt + '" src="' + imgVert + '" data-image="' + imgVert + '" data-description="' + creditVert + '">';
                 }
             };
+
+            $("#selectTheme").on("click change", function() {
+                console.log($(this).val());
+            });
 
             // $("#Ocre").is('checked', function(){
             //     var test= $("#Ocre").val();
