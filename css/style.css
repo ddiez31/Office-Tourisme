@@ -29,12 +29,10 @@
   .imgPopup {
     height: 8em;
     padding: 0.2em;
-    z-index: 2000 !important;
   }
   
   .carousel {
     text-align: center;
-    z-index: 2000 !important;
   }
 
   .lightbox{
