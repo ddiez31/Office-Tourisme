@@ -23,7 +23,7 @@
         initmap: function(data) {
             var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, Imagery © CloudMade';
             var osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 19, attribution: osmAttrib });
 
             map.setView(new L.LatLng(43.1083, 0.7234), 16);
@@ -46,8 +46,8 @@
                 height: "auto",
                 resizable: false,
                 fluid: true,
+                clickOut: false,
                 responsive: true,
-                clickOut: true,
 
                 show: {
                     effect: "fade",
@@ -63,13 +63,13 @@
                 states: [{
                     onClick: function(btn, map) {
                         $("#dialog").dialog("open");
+                        $("#cdf_map").css("opacity", "0.1");
                         app.initgallery(data);
                     },
                     title: 'Galerie Photos',
                     icon: '<img class="center" src="../images/glyphicons-139-picture.png">'
                 }]
             }).addTo(map);
-
 
             //circuit ocre
             for (i = 0; i < data.ocre.length; i++) {
@@ -108,8 +108,6 @@
                 }
                 contentPopupOcre += "</div><p>" + texteOcre + "</p>";
                 markOcre.bindPopup(contentPopupOcre);
-                // var animation = $(".carousel").colorbox({rel:"carousel", transition: "fade", slideshow: true });
-                // console.log(animation)
             };
             //sentier
             var latlngsOcre = data.ocre[0].sentier;
@@ -204,8 +202,14 @@
                 //marqueurs
 
             };
-        },
 
+            //filtres sentiers
+            var overlayMaps = {
+                "Circuit Ocre": polylineOcre,
+                "Circuit Vert": polylineVert
+            };
+            L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
+        },
 
         // phototheque Odile, Aymeric
         // unitegallery
@@ -230,26 +234,6 @@
                 }
             };
 
-            // $("#Ocre").is('checked', function(){
-            //     var test= $("#Ocre").val();
-            //     console.log(test)
-            //     console.log("ok");
-            // })
-
-            //  var filterOcre = $("#Ocre").on("click");
-            //  var filterVert = $("#Vert").on("click");
-
-            //  if(filterOcre==true){
-            //      $("#gallery").html(photoOcre)
-            //      console.log("ok")
-            //  }
-            //  else if(filterVert==true){
-            //      $("#gallery").html(photoVert)
-            //  }
-            //  else{
-            //     $("#gallery").html(photoOcre + photoVert);  
-            // };
-
             $('#gallery').html(photoOcre + photoVert);
 
             $("#gallery").unitegallery({
@@ -264,12 +248,10 @@
                 gallery_theme: "tilesgrid", //choose gallery theme (if more then one themes includes)
                 gallery_width: "100%", //gallery width
                 gallery_background_color: "œ#C0C0C0", //set custom background color. If not set it will be taken from css.
-
                 //navigation option:
 
                 grid_num_rows: 3, //maximum number of grid rows. If set to big value, the navigation will not appear.
                 theme_navigation_type: "arrows", //bullets, arrows
-
                 theme_space_between_arrows: 5, //horizontal space between arrows
 
                 //tile design options:
@@ -299,6 +281,9 @@
                 lightbox_overlay_opacity: 0.8, //the opacity of the overlay. for compact type - 0.6
                 lightbox_slider_image_border: false, //enable border around the image (for compact type only)
             });
+            $(".ui-dialog-titlebar-close").on("click", function(){
+                $("#cdf_map").css("opacity", "1")
+            })
         }
     }
     app.init();

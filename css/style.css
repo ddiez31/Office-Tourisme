@@ -12,7 +12,6 @@
   .ug-lightbox .ug-textpanel-title {
     font-weight: 700;
     font-size: 20px;
-
   }
 
   .center {
@@ -32,12 +31,21 @@
   .imgPopup {
     height: 8em;
     padding: 0.2em;
-    z-index: 2000 !important;
   }
   
   .carousel {
     text-align: center;
-    z-index: 2000 !important;
   }
+
+  .lightbox{
+    position: absolute;
+    z-index: 2147483647 !important;
+  }
+
+  .lightboxOverlay{
+    position: absolute;
+    z-index: 2147483647 !important;
+  }
+  
   /*admin
     David*/

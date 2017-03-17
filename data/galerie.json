@@ -106,7 +106,7 @@
         },
         {
             "nbr": "1",
-            "url": "images/3-cloitre_collégiale1.jpg",
+            "url": "images/3-cloitre_collégiale4.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
@@ -215,11 +215,6 @@
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         },
         {
-            "nbr": "2",
-            "url": "images/7-architecture3.jpg",
-            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
             "nbr": "3",
             "url": "images/7-architecture5.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
@@ -249,6 +244,12 @@
             "nbr": "1",
             "url": "images/8-square_Azemar.jpg",
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
+        },
+        {
+            "nbr": "1",
+            "url": "images/9-Maginot-1.jpg",
+
+            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
         "texte": "Galerie du cloître de l'abbaye cistercienne de Bonnefont XIIème siècle, située près de Saint-Martory."
@@ -264,12 +265,6 @@
         "images": [{
             "nbr": "0",
             "url": "images/9-Eugène_Azemar-1.jpg",
-
-            "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "1",
-            "url": "images/9-Maginot-1.jpg",
 
             "credit":" credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
