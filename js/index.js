@@ -1,7 +1,6 @@
 (function() {
 
     var app = {
-        // admin David
         init: function() {
             this.url = "../data/galerie.json";
             this.getGalerie(app.url);
