@@ -2,7 +2,7 @@
 
     var app = {
         init: function() {
-            this.url = "../data/galerie.json";
+            this.url = "/data/galerie.json";
             this.getGalerie(app.url);
         },
 
