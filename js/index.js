@@ -40,7 +40,7 @@
                 }
             });
 
-            //button pour ouvrir la galerie sur la map
+            //bouton pour ouvrir la galerie sur la map
             $("#dialog").dialog({
                 autoOpen: false,
                 width: 1200,
@@ -235,6 +235,7 @@
                     photoVert += '<img alt="' + alt + '" src="' + imgVert + '" data-image="' + imgVert + '" data-description="' + creditVert + '">';
                 }
             };
+
             var photoAnnexes = '';
             for (x = 0; x < data.annexes.length; x++) {
                 var alt = data.annexes[x].titre;
@@ -244,6 +245,7 @@
                     photoAnnexes += '<img alt="' + alt + '" src="' + imgAnnexes + '" data-image="' + imgAnnexes + '" data-description="' + creditAnnexes + '">';
                 }
             };
+
             var photoEtoiles = '';
             for (x = 0; x < data.etoiles.length; x++) {
                 var alt = data.etoiles[x].titre;
