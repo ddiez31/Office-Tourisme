@@ -65,7 +65,7 @@
                         app.initgallery(data);
                     },
                     title: 'Galerie Photos',
-                    icon: '<img class="center" src="../images/glyphicons-139-picture.png">'
+                    icon: '<img class="center" src="images/glyphicons-139-picture.png">'
                 }]
             }).addTo(map);
 
