@@ -1,32 +1,43 @@
-  /*carte interactive
-  Carole, Julien*/
-  
   #cdf_map {
-    height: 690px;
-    width: 680px;
-    margin-left: 3%;
+      height: 690px;
+      width: 680px;
+      margin-left: 3%;
   }
   
-  #gallery {
-    margin-left: 3%;
-    width: 1200;
-    height: 2000;
+  .ug-lightbox .ug-textpanel-title {
+      font-weight: 700;
+      font-size: 20px;
   }
   
-  img {
-    width: 50%;
-    height: 50%;
+  .center {
+      padding: 0.3em;
+      margin-left: -0.50em;
   }
-
-  /*phototheque
-  Odile, Aymeric*/
-  .ui-dialog { 
-    z-index: 1000 !important ;
-
+  
+  .ui-dialog {
+      z-index: 1000 !important;
+      box-shadow: #000 5px 5px 5px;
   }
-  .ui-front { 
-    z-index: 1000 !important; 
+  
+  .ui-front {
+      z-index: 1000 !important;
   }
-
-  /*admin
-    David*/
+  
+  .imgPopup {
+      height: 8em;
+      padding: 0.2em;
+  }
+  
+  .carousel {
+      text-align: center;
+  }
+  
+  .lightbox {
+      position: absolute;
+      z-index: 2147483647 !important;
+  }
+  
+  .lightboxOverlay {
+      position: absolute;
+      z-index: 2147483647 !important;
+  }
