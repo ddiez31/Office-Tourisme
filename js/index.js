@@ -19,7 +19,7 @@
             });
         },
 
-        // carte interactive Carole, Julien
+        // carte interactive
         initmap: function(data) {
             var map = new L.Map('cdf_map', { fullscreenControl: true });
             var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -48,7 +48,6 @@
                 fluid: true,
                 clickOut: false,
                 responsive: true,
-
                 show: {
                     effect: "fade",
                     duration: 1000
@@ -196,7 +195,6 @@
                 markAnnexes.bindPopup(contentPopupAnnexes);
             };
 
-
             //batiments etoiles
             for (i = 0; i < data.etoiles.length; i++) {
                 //marqueurs
@@ -228,7 +226,6 @@
                 markEtoiles.bindPopup(contentPopupEtoiles);
             };
 
-
             //filtres sentiers
             var overlayMaps = {
                 "Circuit Ocre": polylineOcre,
@@ -237,8 +234,7 @@
             L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
         },
 
-        // phototheque Odile, Aymeric
-        // unitegallery
+        // phototheque
         initgallery: function(data) {
             var photoOcre = '';
             for (x = 0; x < data.ocre.length; x++) {
@@ -277,7 +273,6 @@
                     photoEtoiles += '<img alt="' + alt + '" src="' + imgEtoiles + '" data-image="' + imgEtoiles + '" data-description="' + creditEtoiles + '">';
                 }
             };
-
 
             $('#gallery').html(photoOcre + photoVert + photoAnnexes + photoEtoiles);
 
@@ -329,21 +324,16 @@
 function select(photoOcre, photoVert, photoAnnexes, photoEtoiles) {
     $("#selectTheme").on("change", function() {
         if ($(this).val() == "Ocre") {
-            console.log("ocre");
             $("#gallery").html(photoOcre);
         } else if ($(this).val() == "Vert") {
-            console.log("vert");
             $("#gallery").html(photoVert);
         } else if ($(this).val() == "Annexes") {
-            console.log("annexes");
             $("#gallery").html(photoAnnexes);
         } else if ($(this).val() == "Etoiles") {
-            console.log("etoiles");
             $("#gallery").html(photoEtoiles);
         } else {
             $('#gallery').html(photoOcre + photoVert + photoAnnexes + photoEtoiles);
         };
-
 
         $("#gallery").unitegallery({
             //main options:
